@@ -4,22 +4,53 @@
     box-sizing: border-box;
 }
 
-header {
-    display: flex;
-    flex-wrap: wrap;
-    padding 5%;
+body {
+    font-family: 'Montserrat', sans-serif;
 }
 
-header div.logo-principal {
-    width: 30%;
+main {
+    text-align: center;
 }
 
-img {
-    height: 180px;
+main section {
+    padding: 20px;
+}
+
+nav ul li, a {
+    text-decoration: none;
+    font-size: 16px;
+}
+
+.main-logo, .footer-logo {
     width: 180px;
+    height: 180px;
+    cursor: pointer;
 }
 
-header nav{
-    font-size: 12px;
-    margin-left: 20px;
+header, footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #D9D7D7;
+}
+
+footer div{
+    width: 33%;
+}
+
+.nav-links {
+    list-style: none;
+}
+
+.nav-links li {
+    display: inline-block;
+    padding: 0px 20px;
+}
+
+.nav-links li a {
+    transition: all 0.3s ease 0s;
+}
+
+.nav-links li a:hover {
+    color: blue;
 }
