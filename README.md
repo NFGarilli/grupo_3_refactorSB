@@ -13,7 +13,6 @@ la persona mas joven a la mas adulta que desee disfrutar un buen mate.
 
 ### Integrantes: 
 - **Nicolas Garilli** 
-- **Walter Pachado** 
 - **Tomas Sanchez** : Estudiante de Informatica en la UNQ. Poseo algunos conocimientos de programacion en general aunque tambien me interesa todo lo que envuelve el diseño.
 
 ### Páginas como inspiración: 
