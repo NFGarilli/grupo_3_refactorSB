@@ -1,4 +1,25 @@
-h1 {
-    text-align: center;
-    font-family: sans-serif;
+*{
+    margin: 0px;
+    padding: 0px;    
+    box-sizing: border-box;
+}
+
+header {
+    display: flex;
+    flex-wrap: wrap;
+    padding 5%;
+}
+
+header div.logo-principal {
+    width: 30%;
+}
+
+img {
+    height: 180px;
+    width: 180px;
+}
+
+header nav{
+    font-size: 12px;
+    margin-left: 20px;
 }
