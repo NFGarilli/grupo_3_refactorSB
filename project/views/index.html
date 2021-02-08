@@ -13,7 +13,7 @@
 
 <body>
     <header>
-        <div class="top-header">
+        <!-- <div class="top-header">
             <i class="fas fa-bars"></i>
             <img src="/images/Matienzos.png" alt="logo-matienzos" class="logo-header">
             <div class="usuario">
@@ -40,6 +40,59 @@
             <button type="submit" class="searchButton">
               <i class="fa fa-search"></i>
            </button>
+         </div> -->
+
+         <div class="desktop-header">
+            <div class="top-bar">
+                <div class="container">
+                    <div class="table-row">
+                        <div class="header-contact-box">
+                            <ul class="list-inline">
+                                <li>
+                                    <span>112345678</span>
+                                </li>
+                                <li>
+                                    <span>xxxxx@gmail.com</span>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="top-bar-right">
+                            <ul class="list-inline">
+                                <li class="customer-account">
+                                    <a href="/views/register.html">Registrate</a>
+                                    <span>o</span>
+                                    <a href="/views/login.html">Ingresa</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="header-main">
+                <div class="container">
+                    <div class="table-row">
+                        <div class="header-menu-logo">
+                            <div class="header-logo">
+                                <a href="/">
+                                <img src="images/matienzos.png" alt="logo matienzos">
+                                </a>
+                            </div>
+                        </div>
+                        <div class="header-search-menu">
+                            <div class="searchbox">
+                                <form action="/search" method="GET" class="navbar-formsearch">
+                                    <input type="text" class="product-search" placeholder="Que estas buscando?">
+                                    <button type="submit" class="search-icon">
+                                        <span>
+                                            <i class="fa fa-search"></i>                              
+                                        </span>
+                                      </button>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
          </div>
     </header>
 
@@ -50,7 +103,7 @@
     <main>
         <section class="destacados">
             <h3>Productos Destacados</h3>
-            <div class="destacados">
+            <div class="productos-container">
                 <article>
                     <img src="/images/mate.jpg" alt="mate1">
                     <div class="main-article">
@@ -85,11 +138,36 @@
 
         <section class="ofertas">
             <h3>Ofertas de la Semana</h3>
-            <div class="ofertas">
-                <article></article>
-                <article></article>
-                <article></article>
-                <article></article>
+            <div class="productos-container">
+                <article>
+                    <img src="/images/mate.jpg" alt="mate1">
+                    <div class="main-article">
+                        <p class="price">$1.000</p>
+                        <p class="discount">40% off</p>
+                        <h4 class="description">Mate Negro</h4>
+                    </div>
+                </article>
+                <article>
+                    <img src="/images/mate.jpg" alt="mate1">
+                    <div class="main-article">
+                        <p class="price">$1.000</p>
+                        <p class="discount">40% off</p>
+                        <h4 class="description">Mate Negro</h4>
+                </article>
+                <article>
+                    <img src="/images/mate.jpg" alt="mate1">
+                    <div class="main-article">
+                        <p class="price">$1.000</p>
+                        <p class="discount">40% off</p>
+                        <h4 class="description">Mate Negro</h4>
+                </article>
+                <article>
+                    <img src="/images/mate.jpg" alt="mate1">
+                    <div class="main-article">
+                        <p class="price">$1.000</p>
+                        <p class="discount">40% off</p>
+                        <h4 class="description">Mate Negro</h4>
+                </article>
             </div>
         </section>
 

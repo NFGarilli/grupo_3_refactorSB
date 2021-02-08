@@ -22,6 +22,10 @@ main section article img{
     width: 100%;
 }
 
+.desktop-header {
+    display:none;
+}
+
 article div.main-article{
     width: 100%;
     display: flex;
@@ -32,7 +36,7 @@ article div.main-article{
     padding: 15px;
 }
 
-main section div.products{
+main section div.productos-container{
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -40,8 +44,8 @@ main section div.products{
     align-items: flex-start;
 }
 
-main section div.products article{
-    width: 45%;
+main section div.productos-container article{
+    cursor: pointer;
 }
 
 main section article{
@@ -98,6 +102,7 @@ main section article{
     border: none;
     background-color: white;
     color: #777777;
+    cursor: pointer;
 }
 
 footer {
@@ -133,6 +138,179 @@ div.ofertas{
     font-weight: normal;
 }
 
+.destacados-container {
+    display: flex;
+    width: auto;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.discount {
+    padding-left: 15px;
+}
+
 @media (min-width: 361px) {
+    .productos-container article {
+        width: 45%;
+    }
+}
+
+@media (min-width: 769px) {
+    /* header */
+    .desktop-header {
+        display: block;
+    }
+
+    .top-bar {
+        border-bottom: 1px solid rgba(51, 62, 72, 0.1);
+    }
+
+    .container {
+        max-width: auto;
+    }
+
+    .container {
+        width: 100%;
+        padding-right: 15px;
+        padding-left: 15px;
+        margin-right: auto;
+        margin-left: auto;
+    }
+
+    .table-row {
+        width: 100%;
+        margin: 0 auto;
+        padding: 4px 0;
+        align-items: center;
+        justify-content: space-between;
+        display: flex;
+    }
+
+    .list-inline {
+        margin: 0;
+        padding-left: 0;
+        list-style: none;
+    }
+
+    .top-bar .table-row .list-inline li {
+        line-height: 28px;
+        font-size: 13px;
+        padding: 0 15px;
+        position: relative;
+        color: #333e48;
+        vertical-align: middle;
+        cursor: pointer;
+    }
+
+    .top-bar .table-row .list-inline  li  i {
+        font-size: 14px;
+        margin: 0;
+        margin-inline-end: 5px;
+    }
+
+    .list-inline li {
+        margin: 0;
+        display: inline-block;
+    }
+
+    .top-bar-right {
+        text-align: end;
+    }
+
+    .top-bar-right a {
+        outline: none;
+        text-decoration: none;
+        transition: 0.5s;
+        color: #333e48;
+    }
+
+    .top-bar-right li a:hover {
+        color: #BFAB49;
+    }
+
+    .header-main{
+        padding-top: 22px;
+        padding-bottom: 22px;
+        border-bottom: 1px solid rgba(51, 62, 72, 0.1);
+        padding: 32px 0;
+    }
+
+    .header-logo img {
+        max-width: 250px;
+        height: auto;
+        border: none;
+        vertical-align: middle;
+    };
+
+    .header-search-menu {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        flex: 1;
+        width: 
+    }
+
+    .searchbox {
+        padding: 0;
+        flex: 1;
+        margin-inline-end: 32px;
+    }
+
+    .navbar-formsearch {
+        margin: 0;
+        padding: 0;
+        display: block;
+        height: 42px;
+        background: white;
+        position: relative;
+        border: 2px solid #BFAB49;
+        box-shadow: 0 0 0 white;
+        -webkit-border-radius: 25px 25px 25px 25px;   
+    }
+
+    .product-search {
+        width: 100%;
+        height: 38px;
+        border: none;
+        line-height: 18px;
+        text-transform: none;
+        padding: 10px 30px;
+        padding-inline-end: 60px;
+        -webkit-border-radius: 25px 25px 25px 25px; 
+    }
+
+    .search-icon {
+        position: absolute;
+        display: block;
+        top: -2px;
+        right: -3px;
+        z-index: 3;
+        width: 60px;
+        min-width: 60px;
+        height: 42px;
+        text-align: center;
+        line-height: 42px;
+        padding: 0;
+        margin: 0;
+        border: none;
+        background: #BFAB49;
+        color: white;
+        border-radius: 25px;
+    }
+    /* header */
+
+    main section article {
+        transition: 0.5s;
+    }
+
+    main section div.productos-container article {
+        width: 22%;
+    }
+
+    .productos-container article:hover {
+        box-shadow: 0px 0px 10px rgb(100, 100, 100);
+    }
     
 }
