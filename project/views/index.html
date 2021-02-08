@@ -7,28 +7,40 @@
     <title>Matienzos Materazzi</title>
     <link rel="stylesheet" href="css/styles.css">
     <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,700;1,400&display=swap"
-        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/64db13f2fb.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
     <header>
         <div class="top-header">
-            <div class="logo-principal">
-                <img class="main-logo" src="images/LogoPng2.png" alt="Logo Matienzos Materazzi">
+            <i class="fas fa-bars"></i>
+            <img src="/images/Matienzos.png" alt="logo-matienzos" class="logo-header">
+            <div class="usuario">
+                <div>
+                    <i class="fas fa-user"></i><a href="/views/login.html">Logueate</a>
+                </div>
+                <div>
+                    <i class="fas fa-address-card"></i><a href="/views/register.html">Registrate</a>
+                </div>
             </div>
         </div>
-
-        <nav>
-            <ul class="nav-links">
-                <li><a href="#">INICIO</a></li>
-                <li><a href="#">PRODUCTOS</a></li>
-                <li><a href="#">CONTACTO</a></li>
-                <li><a href="#">SOBRE NOSOTROS</a></li>
-                <li><a href="#">REGISTRATE</a></li>
-                <li><a href="#">INGRESA</a></li>
-            </ul>
-        </nav>
+        <div class="bottom-header">
+            <nav>
+                <ul class="nav-elements">
+                    <li class="nav-element"><a href="#">Inicio</a></li>
+                    <li class="nav-element"><a href="#">Productos</a></li>
+                    <li class="nav-element"><a href="#">Ofertas</a></li>
+                    <li class="nav-element"><a href="#">Sobre Nosotros</a></li>
+                </ul>
+            </nav>
+        </div>
+        <div class="search">
+            <input type="text" class="searchTerm" placeholder="Que estas buscando?">
+            <button type="submit" class="searchButton">
+              <i class="fa fa-search"></i>
+           </button>
+         </div>
     </header>
 
     <!-- <section class="banner">
@@ -36,17 +48,42 @@
     </section> -->
 
     <main>
-        <section class="productos-destacados">
+        <section class="destacados">
             <h3>Productos Destacados</h3>
             <div class="destacados">
-                <article></article>
-                <article></article>
-                <article></article>
-                <article></article>
+                <article>
+                    <img src="/images/mate.jpg" alt="mate1">
+                    <div class="main-article">
+                        <p class="price">$1.000</p>
+                        <p class="discount">40% off</p>
+                        <h4 class="description">Mate Negro</h4>
+                    </div>
+                </article>
+                <article>
+                    <img src="/images/mate.jpg" alt="mate1">
+                    <div class="main-article">
+                        <p class="price">$1.000</p>
+                        <p class="discount">40% off</p>
+                        <h4 class="description">Mate Negro</h4>
+                </article>
+                <article>
+                    <img src="/images/mate.jpg" alt="mate1">
+                    <div class="main-article">
+                        <p class="price">$1.000</p>
+                        <p class="discount">40% off</p>
+                        <h4 class="description">Mate Negro</h4>
+                </article>
+                <article>
+                    <img src="/images/mate.jpg" alt="mate1">
+                    <div class="main-article">
+                        <p class="price">$1.000</p>
+                        <p class="discount">40% off</p>
+                        <h4 class="description">Mate Negro</h4>
+                </article>
             </div>
         </section>
 
-        <section class="ofertas-de-la-semana">
+        <section class="ofertas">
             <h3>Ofertas de la Semana</h3>
             <div class="ofertas">
                 <article></article>
@@ -63,14 +100,14 @@
     </main>
 
     <footer>
+        <div class="logo-footer">
+            <img class="footer-logo" src="images/Matienzos.png" alt="logo-matienzos">
+        </div>
+
         <div class="redes">
             <p>Facebook</p>
             <p>Instagram</p>
             <p>Twitter</p>
-        </div>
-
-        <div class="logo-footer">
-            <img class="footer-logo" src="images/LogoPng1.png" alt="logo-matienzos">
         </div>
 
         <div class="informacion">

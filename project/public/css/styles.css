@@ -6,51 +6,133 @@
 
 body {
     font-family: 'Montserrat', sans-serif;
+    background-color: #FFFFFF;
 }
 
-main {
-    text-align: center;
+main{
+    width: 90%;
+    margin: 0 auto;
 }
 
 main section {
     padding: 20px;
 }
 
-nav ul li, a {
-    text-decoration: none;
-    font-size: 16px;
+main section article img{
+    width: 100%;
 }
 
-.main-logo, .footer-logo {
-    width: 180px;
-    height: 180px;
-    cursor: pointer;
-}
-
-header, footer {
+article div.main-article{
+    width: 100%;
     display: flex;
+    flex-wrap: wrap;
+    align-items: baseline;
+    border-top: 1px solid #ebebeb;
+    position: relative;
+    padding: 15px;
+}
+
+main section div.products{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
     justify-content: space-between;
-    align-items: center;
-    background-color: #D9D7D7;
+    align-items: flex-start;
 }
 
-footer div{
-    width: 33%;
+main section div.products article{
+    width: 45%;
 }
 
-.nav-links {
-    list-style: none;
+main section article{
+    background-color: #fff;    
+    margin: 10px 0px;
 }
 
-.nav-links li {
-    display: inline-block;
-    padding: 0px 20px;
+.top-header {
+    display: flex;
+    justify-content: space-around;
+    padding: 15px;
+    border-bottom: 1px solid lightgray;
+    background-color: #EFEFEF;
+    text-align: center;
 }
 
-.nav-links li a {
-    transition: all 0.3s ease 0s;
+.usuario div {
+    display: block;
+    font-size: 12px;
+    padding: 0px;
 }
 
-.nav-links li a:hover {
-    color: blue;
+.usuario div a {
+    text-decoration: none;
+    color: black;
+    padding: 5px;
+}
+
+.logo-header, .footer-logo {
+    max-width: 200px;
+    max-height: 36.5px;
+}
+
+.bottom-header {
+    display: none;
+}
+
+.search {
+    width: 100%;
+    display: flex;
+    padding: 10px;
+}
+
+.searchTerm {
+    width: auto;
+    padding: 3px;
+    height: 20px;
+    outline: none;
+    border: none;
+    border-bottom: #777777 1px solid;
+}
+
+.searchButton{
+    border: none;
+    background-color: white;
+    color: #777777;
+}
+
+footer {
+    text-align:center;
+    padding: 15px;
+    border-top: 1px solid lightgray;
+    background-color: #EFEFEF;
+}
+
+footer div {
+    padding: 10px;
+}
+
+
+div.destacados,
+div.ofertas{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.price{
+    font-size: 18px;
+    width: 30%;
+}
+
+.discount{
+    width: 70%;
+}
+
+.discount,
+.description{
+    font-size: 16px;
+    font-weight: normal;
+}
+
+@media (min-width: 361px) {
+    
 }
