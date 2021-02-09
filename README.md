@@ -12,7 +12,7 @@ por ser los paises que mas consumen mate en el mundo. Nuestro margen de clientel
 la persona mas joven a la mas adulta que desee disfrutar un buen mate.
 
 ### Integrantes: 
-- **Nicolas Garilli** 
+- **Nicolas Garilli**: Estudiante de Informatica en la UNQ. Me gustaria complementar mis conocimientos de programacion adquiridos en la facultad con este curso de programacion web full stack.
 - **Tomas Sanchez** : Estudiante de Informatica en la UNQ. Poseo algunos conocimientos de programacion en general aunque tambien me interesa todo lo que envuelve el diseño.
 
 ### Páginas como inspiración: 
