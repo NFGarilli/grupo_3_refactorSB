@@ -13,36 +13,26 @@
 
 <body>
     <header>
-        <!-- <div class="top-header">
-            <i class="fas fa-bars"></i>
-            <img src="/images/Matienzos.png" alt="logo-matienzos" class="logo-header">
-            <div class="usuario">
-                <div>
-                    <i class="fas fa-user"></i><a href="/views/login.html">Logueate</a>
+        <div class="mobile-header">
+            <div class="container">
+                <div class="mobile-header-logo">
+                    <img src="/images/Matienzos.png" alt="logo-matienzos" class="logo-header">
                 </div>
-                <div>
-                    <i class="fas fa-address-card"></i><a href="/views/register.html">Registrate</a>
+                <div class="table-row">
+                    <div class="hamburguer-menu">
+                        <i class="fas fa-bars"></i>
+                    </div>
+                    <div class="usuario-container">
+                        <div class="login-menu">
+                            <i class="fas fa-user"></i><a href="/views/login.html">Logueate</a>
+                            <i class="fas fa-address-card"></i><a href="/views/register.html">Registrate</a>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
-        <div class="bottom-header">
-            <nav>
-                <ul class="nav-elements">
-                    <li class="nav-element"><a href="#">Inicio</a></li>
-                    <li class="nav-element"><a href="#">Productos</a></li>
-                    <li class="nav-element"><a href="#">Ofertas</a></li>
-                    <li class="nav-element"><a href="#">Sobre Nosotros</a></li>
-                </ul>
-            </nav>
-        </div>
-        <div class="search">
-            <input type="text" class="searchTerm" placeholder="Que estas buscando?">
-            <button type="submit" class="searchButton">
-              <i class="fa fa-search"></i>
-           </button>
-         </div> -->
 
-         <div class="desktop-header">
+        <div class="desktop-header">
             <div class="top-bar">
                 <div class="container">
                     <div class="table-row">
@@ -59,9 +49,9 @@
                         <div class="top-bar-right">
                             <ul class="list-inline">
                                 <li class="customer-account">
-                                    <a href="/views/register.html">Registrate</a>
+                                    <a href="#">Registrate</a>
                                     <span>o</span>
-                                    <a href="/views/login.html">Ingresa</a>
+                                    <a href="/login">Ingresa</a>
                                 </li>
                             </ul>
                         </div>
@@ -90,6 +80,14 @@
                                 </form>
                             </div>
                         </div>
+                        <div class="header-cart-menu">
+                            <div class="cart-menu">
+                                <a href="/views/product-cart.html">
+                                    <i class="fas fa-shopping-cart"></i>
+                                    <span>Tu carrito</span>
+                                </a>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -102,7 +100,8 @@
 
     <main>
         <section class="destacados">
-            <h3>Productos Destacados</h3>
+            <h3 class="titulo-separador">Productos Destacados</h3>
+            <br class="separador">
             <div class="productos-container">
                 <article>
                     <img src="/images/mate.jpg" alt="mate1">
@@ -137,7 +136,7 @@
         </section>
 
         <section class="ofertas">
-            <h3>Ofertas de la Semana</h3>
+            <h3 class="titulo-separador">Ofertas de la Semana</h3>
             <div class="productos-container">
                 <article>
                     <img src="/images/mate.jpg" alt="mate1">
