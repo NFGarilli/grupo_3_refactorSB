@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Matienzos Materazzi</title>
+        <link rel="stylesheet" href="css/styles.css">
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+        <script src="https://kit.fontawesome.com/64db13f2fb.js" crossorigin="anonymous"></script>
+    </head>
+    
+    <body>
+        <header>
+            <div class="mobile-header">
+                <div class="container">
+                    <div class="mobile-header-logo">
+                        <img src="/images/Matienzos.png" alt="logo-matienzos" class="logo-header">
+                    </div>
+                    <div class="table-row">
+                        <div class="hamburguer-menu">
+                            <i class="fas fa-bars"></i>
+                        </div>
+                        <div class="usuario-container">
+                            <div class="login-menu">
+                                <i class="fas fa-user"></i><a href="/views/login.html">Logueate</a>
+                                <i class="fas fa-address-card"></i><a href="/views/login.html">Registrate</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    
+            <div class="desktop-header">
+                <div class="top-bar">
+                    <div class="container">
+                        <div class="table-row">
+                            <div class="header-contact-box">
+                                <ul class="list-inline">
+                                    <li>
+                                        <span>112345678</span>
+                                    </li>
+                                    <li>
+                                        <span>xxxxx@gmail.com</span>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="top-bar-right">
+                                <ul class="list-inline">
+                                    <li class="customer-account">
+                                        <a href="/login">Registrate</a>
+                                        <span>o</span>
+                                        <a href="/login">Ingresa</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="header-main">
+                    <div class="container">
+                        <div class="table-row">
+                            <div class="header-menu-logo">
+                                <div class="header-logo">
+                                    <a href="/">
+                                    <img src="images/matienzos.png" alt="logo matienzos">
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="header-search-menu">
+                                <div class="searchbox">
+                                    <form action="/search" method="GET" class="navbar-formsearch">
+                                        <input type="text" class="product-search" placeholder="Que estas buscando?">
+                                        <button type="submit" class="search-icon">
+                                            <span>
+                                                <i class="fa fa-search"></i>                              
+                                            </span>
+                                          </button>
+                                    </form>
+                                </div>
+                            </div>
+                            <div class="header-cart-menu">
+                                <div class="cart-menu">
+                                    <a href="/product-cart">
+                                        <i class="fas fa-shopping-cart"></i>
+                                        <span>Tu carrito</span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+             </div>
+        </header>
+    
+
+    <!-- <section class="banner">
+        <img src="images/img-home-banner.jpg" alt="Banner de ofertas">
+    </section> -->
+
+    <!---- items del carrito --->
+
+    <div class="small-container cart-page">
+
+        <table>
+            <tr>
+                <th>Producto</th>
+                <th>Cantidad</th>
+                <th>Total</th>
+            </tr>
+            <tr>
+                <td>
+                    <div class="cart-info">
+                        <img src="/images/mate.jpg">
+                    <div>
+                        <p> Mate negro </p>
+                        <small>Precio: $1000.00</small>
+                        <br>
+                        <br>
+                        <a href="">Remove</a>
+                    </div>
+                </div>
+                
+                </td>
+                <td><input type="number" value="1"></td>
+                <td>$1000.00</td>
+            </tr>
+            <tr>
+                <td>
+                    <div class="cart-info">
+                        <img src="/images/mate.jpg">
+                    <div>
+                        <p> Mate negro </p>
+                        <small>Precio: $1000.00</small>
+                        <br>
+                        <br>
+                        <a href="">Remove</a>
+                    </div>
+                </div>
+                
+                </td>
+                <td><input type="number" value="1"></td>
+                <td>$1000.00</td>
+            </tr>
+            <tr>
+                <td>
+                    <div class="cart-info">
+                        <img src="/images/mate.jpg">
+                    <div>
+                        <p> Mate negro </p>
+                        <small>Precio: $1000.00</small>
+                        <br>
+                        <br>
+                        <a href="">Remove</a>
+                    </div>
+                </div>
+                
+                </td>
+                <td><input type="number" value="1"></td>
+                <td>$1000.00</td>
+            </tr>
+        </table>
+
+        <div class="total-price">
+            <table>
+                <tr>
+                    <td>Subtotal</td>
+                    <td>$3000.00</td>
+                </tr>
+                <tr>
+                    <td>Envio</td>
+                    <td>$250.00</td>
+                </tr>
+                <tr>
+                    <td>Total</td>
+                    <td>$3250.00</td>
+                </tr>
+                
+            </table>
+
+        </div>
+
+    </div>
+
+    
+    <!---- footer --->
+
+    <footer>
+        <div class="logo-footer">
+            <img class="footer-logo" src="images/Matienzos.png" alt="logo-matienzos">
+        </div>
+
+        <div class="redes">
+            <p>Facebook</p>
+            <p>Instagram</p>
+            <p>Twitter</p>
+        </div>
+
+        <div class="informacion">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum natus quas quaerat voluptatem cum
+                similique officiis impedit at deserunt repellat, odit temporibus tenetur reiciendis cupiditate, qui
+                dolorem beatae nobis in!</p>
+        </div>
+    </footer>
+
+
+
+
+</body>
+
+</html>

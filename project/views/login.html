@@ -10,27 +10,30 @@
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/64db13f2fb.js" crossorigin="anonymous"></script>
 </head>
+
 <body>
     <div class="hero">
-        <div class="form-box"></div>
+        <div class="form-box">
             <div class="button-box">
                 <div id="btn"></div>
-                <button type="button" class="toggle-btn" onclick="login()"> Log In</button>
-                <button type="button" class="toggle-btn" onclick="register()"> Register</button>
+                <button type="button" class="toggle-btn" onclick="login()"> Acceder</button>
+                <button type="button" class="toggle-btn" onclick="register()"> Registrarse</button>
             </div>
+        
             <form id="login" class="input-group">
-                <input type="text" class="input-field" placeholder="User ID" required>
-                <input type="text" class="input-field" placeholder="Password" required>
-                <input type="checkbox" class="check-box"><span class="spanlogin">Remember Password</span>
-                <button type="submit" class="submit-btn">Log In</button>
+                <input type="text" class="input-field" placeholder="Usuario" required>
+                <input type="text" class="input-field" placeholder="Contraseña" required>
+                <input type="checkbox" class="check-box"><span class="spanlogin">Recordar Contraseña</span>
+                <button type="submit" class="submit-btn">Acceder</button>
             </form>
             <form id="register" class="input-group">
-                <input type="text" class="input-field" placeholder="User ID" required>
+                <input type="text" class="input-field" placeholder="Usuario" required>
                 <input type="email" class="input-field" placeholder="Email ID" required>               
-                <input type="text" class="input-field" placeholder="Password" required>
-                <input type="checkbox" class="check-box"><span>I agree to the terms & conditions.</span>
-                <button type="submit" class="submit-btn">Register</button>
+                <input type="text" class="input-field" placeholder="Contraseña" required>
+                <input type="checkbox" class="check-box"><span>Acepto terminos y condiciones.</span>
+                <button type="submit" class="submit-btn">Registrarse</button>
             </form>
+        </div>
     </div>
 
     <script>
