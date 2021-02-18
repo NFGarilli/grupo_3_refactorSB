@@ -1,24 +1,23 @@
-# Matienzos
+# Refactor Skateboarding
 
 ### Trello:
 https://trello.com/b/mFVDvh26/matienzos-materazzi
 
 ### Descripcion:
-Venta de mates y accesorios para una mejor experiencia a la hora de cebar.
+Venta de indumentaria y hardware para skateboarding.
 
 ### Publico:
-Nuestro e-commerce apunta al publico latinoamericano, mas que nada centrado en Argentina y Uruguay
-por ser los paises que mas consumen mate en el mundo. Nuestro margen de clientela abarca desde 
-la persona mas joven a la mas adulta que desee disfrutar un buen mate.
+Nuestro e-commerce apunta a cualquier persona que practica o quiera empezar a practicar este deporte. Tambien
+a todo aquel que quiera complementar su estilo con las mejores marcas que se encuentran compitiendo en el
+mercado del skateboarding.
 
 ### Integrantes: 
 - **Nicolas Garilli**: Estudiante de Informatica en la UNQ. Me gustaria complementar mis conocimientos de programacion adquiridos en la facultad con este curso de programacion web full stack.
 - **Tomas Sanchez** : Estudiante de Informatica en la UNQ. Poseo algunos conocimientos de programacion en general aunque tambien me interesa todo lo que envuelve el diseño.
 
 ### Páginas como inspiración: 
-1. https://www.un-mate.com.ar/
-2. https://salemate.mitiendanube.com/
-3. https://todomates.com.ar/
-4. https://www.elclubdelmate.com/
-5. https://www.ar-mate.com.ar/
-6. https://bombillasymatesuruguayos.com/
+1. https://underwavebrand.com/
+2. https://www.vans.com.ar/homevans/
+3. https://www.volcom.com.ar/
+4. https://www.dcshoes.com.ar/
+5. https://www.quiksilver.com.ar/
