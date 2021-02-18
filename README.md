@@ -1,7 +1,7 @@
 # Refactor Skateboarding
 
 ### Trello:
-https://trello.com/b/mFVDvh26/matienzos-materazzi
+https://trello.com/b/mFVDvh26/refactorsb
 
 ### Descripcion:
 Venta de indumentaria y hardware para skateboarding.
