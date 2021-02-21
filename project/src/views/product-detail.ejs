@@ -1,17 +1,71 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Refactor Skateboarding</title>
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
-    <script src="https://kit.fontawesome.com/64db13f2fb.js" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="https://use.typekit.net/mei1fth.css">
-    <link rel="stylesheet" href="stylesheets/styles.css">
-</head>
+<%- include('./partials/head')  %>
+
 <body>
-    
+    <%- include('./partials/header')  %>
+    <main>
+        <div class="product-detail-container">
+            <div class="product-gallery">
+                <div class="product-image">
+                    <img src="/images/giovanni.jpg" alt="giovanni-board">
+                </div>
+                <div class="gallery-carrousel"></div>
+            </div>
+            <div class="product-details">
+                <div class="header-product-details">
+                    <h2>LA TABLITA DE GIOVANNI</h2>
+                    <div class="product-details-price">
+                        <span>AR$6,300.00</span>
+                    </div>
+                </div>
+                <div class="options">
+                    <form action="post">
+                        <div class="product-form-grid">
+                            <div class="option-header"><span>SIZE</span></div>
+                            <div class="option-values">
+                                <div class="option-value">
+                                    <input type="radio">
+                                    <span class="option-value-name">S</span>
+                                </div>
+                                <div class="option-value">
+                                    <input type="radio">
+                                    <span class="option-value-name">M</span>
+                                </div>
+                                <div class="option-value">
+                                    <input type="radio">
+                                    <span class="option-value-name">L</span>
+                                </div>
+                                <div class="option-value">
+                                    <input type="radio">
+                                    <span class="option-value-name">XL</span>
+                                </div>
+                                <div class="option-value">
+                                    <input type="radio">
+                                    <span class="option-value-name">XXL</span>
+                                </div>
+                            </div>
+                            <div class="option-header"><span>COLOR</span></div>
+                            <div class="option-values">
+                                <div class="option-value">
+                                    <input type="radio">
+                                    <span class="option-value-name">BLACK</span>
+                                </div>
+                                <div class="option-value">
+                                    <input type="radio">
+                                    <span class="option-value-name">WHITE</span>
+                                </div>
+                            </div>
+                            <div class="option-header"><span>QUANTITY</span></div>
+                            <input type="number" class="product-quantity-input" name="quantity" value="1" min="0">
+                            <button class="product-submit" value="Add to cart">
+                                <span>ADD TO CART</span>
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </main>
+    <%- include('./partials/footer')  %>
 </body>
+
 </html>

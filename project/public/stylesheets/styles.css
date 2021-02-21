@@ -423,6 +423,36 @@ article:hover .producto-footer .title {
     padding-bottom: 5px;
 }
 
+/* DETALLE PRODUCTO */
+.product-gallery {
+    width: 100%;
+}
+
+.product-gallery img {
+    display: block;
+    width: 100%;
+    height: auto;
+    max-width: 100%;
+}
+
+.product-details {
+    text-align: left;
+}
+
+.header-product-details h2 {
+    margin-bottom: 10px;
+}
+
+.options {
+    width: 100%;
+}
+
+.options form {
+    width: 100%;
+    max-width: 100%;
+}
+
+
 
 @media (min-width: 480px)  {
     main section div.productos-container{
