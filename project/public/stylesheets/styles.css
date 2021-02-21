@@ -39,6 +39,7 @@ a {
     flex-direction: row;
 }
 
+
 .hamburger-search {
     display: flex;
     flex-wrap: nowrap;
@@ -537,7 +538,7 @@ article:hover .producto-footer .title {
         width: 80%;
         height: 30px;
         line-height: 25px;
-        font-size: 16px;
+        font-size: 14px;
         padding: 0 10px;
         border: none;
         border-bottom: 1px solid rgb(187, 187, 187);
