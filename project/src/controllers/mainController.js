@@ -7,7 +7,10 @@ let mainController = {
     },
     register: (req, res) => {
         res.render('register');
-    }
+    },
+    productdetail: (req, res) => {
+        res.render('product-detail');
+    }   
 }
 
 module.exports = mainController;
