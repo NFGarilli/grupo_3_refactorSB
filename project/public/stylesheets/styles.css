@@ -463,7 +463,6 @@ article:hover .producto-footer .title {
     max-width: 100%;
 }
 
-<<<<<<< HEAD
 /* CARRITO CSS */
 
 .small-container {
@@ -474,6 +473,15 @@ article:hover .producto-footer .title {
 
 .cart-page {
     margin: 80px auto;
+}
+
+.cart-table {
+    width: 100%;
+}
+
+.cart-info {
+    display: flex;
+    flex-wrap: wrap;
 }
 
 th{
@@ -523,12 +531,6 @@ th:last-child{
     text-align: right;
 }
 
-
-
-
-
-=======
->>>>>>> 77a99d4745250cb152a57ae02ca8b1b59a979f45
 @media (min-width: 480px)  {
     main section div.productos-container{
         display: flex;

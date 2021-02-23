@@ -2,6 +2,8 @@
 <body>
     <%- include('./partials/header') %> 
     <main>
+        
+        <!-- Banner -->
         <div class="banner-container">
             <section class="banner">
                 <div class="banner-img-elements">
@@ -9,6 +11,8 @@
                 </div>
             </section>
         </div>
+
+        <!-- New Arrival Section -->
 
         <section class="new-arrivals">
             <h3 class="titulo-section">ULTIMOS INGRESOS</h3>
@@ -18,7 +22,7 @@
                 <% for (let i = 0; i < 4; i++) { %> 
                 <article class="producto">
                     <div class="producto-image">
-                        <a href="/product/product-detail"><img src=<%="/images/product-images/" + productList[i].img + ".jpg" %>   alt=<%= productList[i].nombre %> ></a>
+                        <a href=<%= "/product/product-detail/" + productList[i].id %>> <img src=<%="/images/product-images/" + productList[i].img + ".jpg" %>   alt=<%= productList[i].nombre %> ></a>
                     </div>
                     <div class="producto-footer">
                         <h2 class="title"><%= productList[i].nombre %></h2>
@@ -28,7 +32,8 @@
                     </div>
                 </article>
                 <% } %>
-
+        
+        <!-- Triple Banner -->
         <section class="triple-banner">
             <div class="listSimple">
                 <div class="items-3">
@@ -39,24 +44,25 @@
             </div>
         </section>
 
+        <!-- Last Visit Section -->
         <section class="on-your-last-visit">
             <h3 class="titulo-section">BASADOS EN TU ULTIMA VISITA</h3>
             <div class="productos-container">
                 
                 <!-- Producto -->
                 <% for (let i = 0; i < 4; i++) { %> 
-                    <article class="producto">
-                        <div class="producto-image">
-                            <a href="/product/product-detail"><img src=<%="/images/product-images/" + productList[i].img + ".jpg" %>   alt=<%= productList.nombre %> ></a>
-                        </div>
-                        <div class="producto-footer">
-                            <h2 class="title"><%= productList[i].nombre %></h2>
-                            <span class="title-meta">
-                                <span class="title-price"><%= 'AR$' + productList[i].precio + '.00' %></span>
-                            </span>
-                        </div>
-                    </article>
-                    <% } %>
+                <article class="producto">
+                    <div class="producto-image">
+                        <a href=<%= "/product/product-detail/" + productList[i].id %>><img src=<%="/images/product-images/" + productList[i].img + ".jpg" %>   alt=<%= productList.nombre %> ></a>
+                    </div>
+                    <div class="producto-footer">
+                        <h2 class="title"><%= productList[i].nombre %></h2>
+                        <span class="title-meta">
+                            <span class="title-price"><%= 'AR$' + productList[i].precio + '.00' %></span>
+                        </span>
+                    </div>
+                </article>
+                <% } %>
 
             </div>
         </section>
