@@ -200,6 +200,8 @@ article div.producto-footer{
 h2.title {
     display: block;
     width: 100%;
+    text-transform: uppercase;
+
 }
 
 /* FOOTER */
@@ -451,8 +453,6 @@ article:hover .producto-footer .title {
     width: 100%;
     max-width: 100%;
 }
-
-
 
 @media (min-width: 480px)  {
     main section div.productos-container{
