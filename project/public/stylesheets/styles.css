@@ -424,19 +424,32 @@ article:hover .producto-footer .title {
 }
 
 /* DETALLE PRODUCTO */
+
+.product-detail-container {
+    margin: auto;
+}
+
+.row {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
 .product-gallery {
-    width: 100%;
+    flex-basis: 50%;
 }
 
 .product-gallery img {
-    display: block;
-    width: 100%;
-    height: auto;
     max-width: 100%;
 }
 
+.product-details h2 {
+    
+}
+
 .product-details {
-    text-align: left;
+    flex-basis: 50%;
 }
 
 .header-product-details h2 {
