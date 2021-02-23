@@ -6,10 +6,6 @@ const mainController = require('../controllers/mainController')
 
 router.get('/', mainController.index);
 
-router.get('/login', mainController.login);
-
-router.get('/register', mainController.register);
-
-router.get('/product-detail', mainController.productdetail);
+router.get('/cart', mainController.cart);
 
 module.exports = router;
