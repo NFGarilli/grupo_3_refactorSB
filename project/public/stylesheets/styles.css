@@ -200,6 +200,8 @@ article div.producto-footer{
 h2.title {
     display: block;
     width: 100%;
+    text-transform: uppercase;
+
 }
 
 /* FOOTER */
@@ -465,6 +467,7 @@ article:hover .producto-footer .title {
     max-width: 100%;
 }
 
+<<<<<<< HEAD
 /* CARRITO CSS */
 
 .small-container {
@@ -528,6 +531,8 @@ th:last-child{
 
 
 
+=======
+>>>>>>> 77a99d4745250cb152a57ae02ca8b1b59a979f45
 @media (min-width: 480px)  {
     main section div.productos-container{
         display: flex;
