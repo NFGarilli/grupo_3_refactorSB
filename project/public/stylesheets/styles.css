@@ -581,10 +581,12 @@ article:hover .producto-footer .title {
     margin: auto;
     padding-left: 25px;
     padding-right: 25px;
+    padding-top: 25px;
+    box-shadow: 0px 0px 3px rgb(100, 100, 100);
 }
 
 .cart-page {
-    margin: 80px auto;
+    margin: 60px auto;
 }
 
 .cart-table {
@@ -600,7 +602,7 @@ th{
     text-align: left;
     padding: 5px;
     color: #FFFFFF;
-    background: tomato;
+    background: #333;
     font-weight: normal;
 }
 
@@ -615,7 +617,7 @@ td input{
 }
 
 td a{
-    color: tomato;
+    color: #666;
     font-size: 12px;
 }
 
@@ -631,7 +633,7 @@ td img{
 }
 
 .total-price table{
-    border-top: 3px solid tomato;
+    border-top: 3px solid #333;
     width: 100%;
 }
 
@@ -641,6 +643,32 @@ td:last-child{
 
 th:last-child{
     text-align: right;
+}
+
+/* PANEL */
+.product-creation {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+.product-creation-container {
+    padding-top: 15px ;
+    width: 70%;
+    margin-bottom: 15px;
+    padding-bottom: 0px;
+}
+
+.header-panel {
+    background-color: #333;
+    text-align: center;
+    padding: 10px;
+    color: white;
+    border-bottom: 3px solid black ;
+}
+
+.descripcion input {
+    height: 80px;
+    line-height: 80px;
 }
 
 @media (min-width: 480px)  {
@@ -768,9 +796,19 @@ th:last-child{
         text-align: center;
         margin: 0 auto;
     }
+
+    .product-detail-container {
+        margin: auto;
+        width: 80%;
+    }
+    
 }
 
 @media (min-width: 1199px) {
+    .small-container {
+        width: 70%;
+    }
+
     input[type='email'] {
         width: 600px;
     }

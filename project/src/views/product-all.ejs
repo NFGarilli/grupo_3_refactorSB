@@ -10,7 +10,7 @@
             <% for (let i = 0; i < productList.length; i++) { %> 
             <article class="producto">
                 <div class="producto-image">
-                    <a href="/product/product-detail"><img src=<%="/images/product-images/" + productList[i].img + ".jpg" %>   alt=<%= productList[i].nombre %> ></a>
+                    <a href=<%= "/product/product-detail/" + productList[i].id %>> <img src=<%="/images/product-images/" + productList[i].img + ".jpg" %>   alt=<%= productList[i].nombre %> ></a>
                 </div>
                 <div class="producto-footer">
                     <h2 class="title"><%= productList[i].nombre %></h2>
