@@ -22,12 +22,12 @@
                 <% for (let i = 0; i < 4; i++) { %> 
                 <article class="producto">
                     <div class="producto-image">
-                        <a href=<%= "/product/product-detail/" + productList[i].id %>> <img src=<%="/images/product-images/" + productList[i].img + ".jpg" %>   alt=<%= productList[i].nombre %> ></a>
+                        <a href=<%= "product/products/" + products[i].id %>> <img src=<%="/images/product-images/" + products[i].img + ".jpg" %>   alt=<%= products[i].name %> ></a>
                     </div>
                     <div class="producto-footer">
-                        <h2 class="title"><%= productList[i].nombre %></h2>
+                        <h2 class="title"><%= products[i].name %></h2>
                         <span class="title-meta">
-                            <span class="title-price"><%= 'AR$' + productList[i].precio + '.00' %></span>
+                            <span class="title-price"><%= 'AR$' + products[i].price + '.00' %></span>
                         </span>
                     </div>
                 </article>
@@ -53,12 +53,12 @@
                 <% for (let i = 0; i < 4; i++) { %> 
                 <article class="producto">
                     <div class="producto-image">
-                        <a href=<%= "/product/product-detail/" + productList[i].id %>><img src=<%="/images/product-images/" + productList[i].img + ".jpg" %>   alt=<%= productList.nombre %> ></a>
+                        <a href=<%= "product/products/" + products[i].id %>><img src=<%="/images/product-images/" + products[i].img + ".jpg" %>   alt=<%= products.name %> ></a>
                     </div>
                     <div class="producto-footer">
-                        <h2 class="title"><%= productList[i].nombre %></h2>
+                        <h2 class="title"><%= products[i].name %></h2>
                         <span class="title-meta">
-                            <span class="title-price"><%= 'AR$' + productList[i].precio + '.00' %></span>
+                            <span class="title-price"><%= 'AR$' + products[i].price + '.00' %></span>
                         </span>
                     </div>
                 </article>
