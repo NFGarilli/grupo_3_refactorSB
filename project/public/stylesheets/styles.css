@@ -671,6 +671,43 @@ th:last-child{
     line-height: 80px;
 }
 
+.create-button {
+    display: block;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 15px;
+    width: 45%;
+    height: 30%;
+    top: 35%;
+    right: 50%;
+    position: absolute;
+    line-height: 1.5;
+    letter-spacing: 0.08em;
+}
+
+.edit-button {
+    display: block;
+    font-size: 60px;
+    margin-bottom: 15px;
+    position: absolute;
+    width: 45%;
+    height: 30%;
+    top: 35%;
+    left: 50%;
+    line-height: 1.5;
+    letter-spacing: 0.08em;
+}
+
+.create-edit-button-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-bottom: 10px;
+    margin-top: 29px;
+    
+}
+
+
 @media (min-width: 480px)  {
     main section div.productos-container{
         display: flex;
