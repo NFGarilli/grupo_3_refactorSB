@@ -26,7 +26,7 @@ router.get('/products', productosController.index);
 router.get('/products/:id', productosController.detail);
 
 // /*** CREATE ONE PRODUCT ***/ 
-// router.get('/product-create-form', productosController.create);
+router.get('/product-create-form', productosController.create);
 // router.post('/', upload.single('image'), productosController.store);
 
 // /*** EDIT ONE PRODUCT ***/ 

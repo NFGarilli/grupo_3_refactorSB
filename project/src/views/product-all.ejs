@@ -10,7 +10,7 @@
             <% for (let i = 0; i < products.length; i++) { %> 
             <article class="producto">
                 <div class="producto-image">
-                    <a href=<%= "/products/" + products[i].id %>> <img src=<%="/images/product-images/" + products[i].img + ".jpg" %>   alt=<%= products[i].name %> ></a>
+                    <a href=<%= "/product/products/" + products[i].id %>> <img src=<%="/images/product-images/" + products[i].img + ".jpg" %>   alt=<%= products[i].name %> ></a>
                 </div>
                 <div class="producto-footer">
                     <h2 class="title"><%= products[i].name %></h2>
@@ -20,6 +20,7 @@
                 </div>
             </article>
             <% } %>
+            
         </main>
     <%- include('./partials/footer') %>
 </body>
