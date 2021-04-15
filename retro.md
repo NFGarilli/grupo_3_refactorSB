@@ -35,3 +35,23 @@ Trabajar mejor con los tiempos de entrega.
 
 5. **Dejar de hacer** ->
 Dejar de pensar en que somos uno menos e intentar hacer lo mejor que podamos.
+
+----
+
+### Sprint4
+
+1. **Comenzar a hacer** ->
+Comenzamos a organizarnos mejor los tiempos de trabajo y la división de tareas. Aunque seamos 2 en el grupo debemos tener mas comunicacion
+en cuanto a que vamos a hacer cada uno en los diferentes sprints.
+
+2. **Hacer mas** ->
+Repito lo del sprint anterior "Juntarnos mas a hacer el trabajo en equipo y no dejarlo a individualidades".  
+
+3. **Continuar haciendo** ->
+Debemos seguir motivandonos para poder terminar el proyecto en tiempo informa aunque nos cueste.
+
+4. **Hacer menos** ->
+-
+
+5. **Dejar de hacer** ->
+No dedicarle al menos 1 hora del dia al proyecto. Esto hace que podamos tener constancia en el mismo.

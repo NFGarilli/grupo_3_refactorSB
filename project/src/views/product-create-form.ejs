@@ -12,7 +12,7 @@
                 
                 <div class="product-form">
                     
-                    <form class="login-form">
+                    <form class="login-form" action='/product/product-create' method="POST">
                         <div class="wrap-around id">
                             <label>Identificador</label>
                             <input type="text" placeholder="Identificador" value="" name="id" class="field">
@@ -27,7 +27,7 @@
                         </div>
                         <div class="wrap-around image">
                             <label>Imagen</label>
-                            <input type="file" name="image" class="field">
+                            <input type="file" name="img" class="field">
                         </div>
                         <div class="wrap-around category">
                             <label>Categoria</label>
@@ -39,7 +39,7 @@
                         </div>
                         <div class="wrap-around size">
                             <label>Talles</label>
-                            <input type="text" name="size" class="field">
+                            <input type="text" name="sizes" class="field">
                         </div>
                         <div class="wrap-around price">
                             <label>Precio</label>

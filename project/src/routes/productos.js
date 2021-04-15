@@ -27,11 +27,11 @@ router.get('/products/:id', productosController.detail);
 
 // /*** CREATE ONE PRODUCT ***/ 
 router.get('/product-create-form', productosController.create);
-// router.post('/', upload.single('image'), productosController.store);
+router.post('/product-create', upload.single('image'), productosController.store);
 
 // /*** EDIT ONE PRODUCT ***/ 
-// router.get('/edit/:id', productosController.edit); 
-// router.put('/:id', upload.single('image'), productosController.update); 
+router.get('/:id/product-edit-form', productosController.edit); 
+router.put('/:id/actulizar', upload.single('image'), productosController.update); 
 
 // /*** DELETE ONE PRODUCT***/ 
 // router.delete('/:id', productosController.destroy); 

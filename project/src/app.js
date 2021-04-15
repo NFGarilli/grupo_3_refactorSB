@@ -4,6 +4,12 @@ const rutasMain = require('./routes/main');
 const rutasProductos = require('./routes/productos');
 const rutasUsers = require('./routes/users');
 const rutasPanel = require('./routes/panel');
+const methodOverride = require('method-override');
+
+app.use(express.urlencoded({extended:false}));
+app.use(express.json());
+
+app.use(methodOverride('_method'));
 
 app.use(express.static('../public'));
 app.set('view engine', 'ejs');

@@ -15,39 +15,39 @@
 
                 <div class="product-form">
 
-                    <form class="login-form">
+                    <form class="login-form" action="/product/:id/actualizar?_method=PUT" method="POST">
                         <div class="wrap-around id">
                             <label>Identificador</label>
-                            <input type="text" placeholder="Identificador" value="" name="id" class="field">
+                            <input type="text" placeholder="Identificador" value="<%= productToEdit.id %>" name="id" class="field">
                         </div>
                         <div class="wrap-around nombre">
                             <label>Nombre</label>
-                            <input type="text" placeholder="Nombre" value="" name="name" class="field">
+                            <input type="text" placeholder="Nombre" value="<%= productToEdit.name %>" name="name" class="field">
                         </div>
                         <div class="wrap-around descripcion">
                             <label>Descripcion</label>
-                            <input type="text" placeholder="max. 140 caracteres" value="" name="description"
+                            <input type="text" placeholder="max. 140 caracteres" value="<%= productToEdit.description %>" name="description"
                                 class="field">
                         </div>
                         <div class="wrap-around image">
                             <label>Imagen</label>
-                            <input type="file" name="image" class="field">
+                            <input type="file" name="image" value="<%= productToEdit.img %>" class="field">
                         </div>
                         <div class="wrap-around category">
                             <label>Categoria</label>
-                            <input type="text" name="category" class="field">
+                            <input type="text" name="category" value="<%= productToEdit.category %>" class="field">
                         </div>
                         <div class="wrap-around color">
                             <label>Colores</label>
-                            <input type="text" name="colors" class="field">
+                            <input type="text" name="colors" value="<%= productToEdit.colors %>" class="field">
                         </div>
                         <div class="wrap-around size">
                             <label>Talles</label>
-                            <input type="text" name="size" class="field">
+                            <input type="text" name="size" value="<%= productToEdit.sizes %>" class="field">
                         </div>
                         <div class="wrap-around price">
                             <label>Precio</label>
-                            <input type="number" name="price" class="field">
+                            <input type="number" name="price" value="<%= productToEdit.price %>" class="field">
                         </div>
                         <div class="login-button-container">
                             <button type="submit" class="login-button">CREAR PRODUCTO</button>

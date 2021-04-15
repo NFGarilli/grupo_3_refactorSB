@@ -1,4 +1,5 @@
 const fs = require('fs');
+// const { createBrotliCompress } = require('node:zlib');
 const path = require('path');
 
 const productsFilePath = path.join(__dirname, '../data/productsDB.json');
@@ -25,6 +26,18 @@ let productosController = {
 
     /*** PRODUCT CREATE STORAGE ***/
     store: (req, res) => {
+
+        // let producto = {
+        //     id: req.body.id,
+        //     name: req.body.name,
+        //     description: req.body.description,
+        //     img: req.body.img,
+        //     category: req.body.category,
+        //     colors: req.body.colors,
+        //     sizes: req.body.sizes,
+        //     price: req.body.price
+        // }
+
         let image 
 
         if (req.file != undefined){
@@ -33,11 +46,13 @@ let productosController = {
             image = "default-image.png"
         }
 
+        //FALTA ALMACENARLO EN EL JSON.
+
         let ids = products.map(p => p.id)
         let newProduct = {
             id: Math.max(...ids) +1,
             ...req.body,
-            iamge: image
+            image: image
         }
 
         products.push(newProduct)
