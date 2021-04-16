@@ -1,82 +1,132 @@
-[   
-    {
-        "id": 1,
-        "name": "Giovanni Vianna Pro Tamarin Deck",
-        "price": 6300.00,
-        "img": 1,
-        "category": "",
-        "description": "",
-        "colors": "",
-        "sizes": ""
-    },
-    {
-        "id": 2,
-        "name": "Rueda Rosa",
-        "price": 2500.00,
-        "img": 2,
-        "category": "",
-        "description": "",
-        "colors": "",
-        "sizes": ""
-    },
-    {
-        "id": 3,
-        "name": "Truth Hood",
-        "price": 7350.00,
-        "img": 3,
-        "category": "",
-        "description": "",
-        "colors": "",
-        "sizes": ""
-    },
-    {
-        "id": 4,
-        "name": "Vans New Era",
-        "price": 5500.00,
-        "img": 4,
-        "category": "",
-        "description": "",
-        "colors": "",
-        "sizes": ""
-    },
-    {
-        "id": 5,
-        "name": "Wolverine Strapback",
-        "price": 3750.00,
-        "img": 5,
-        "category": "",
-        "description": "",
-        "colors": "",
-        "sizes": ""
-    },
-    {
-        "id": 6,
-        "name": "Hilton S/S Woven",
-        "price": 5300.00,
-        "img": 6,
-        "category": "",
-        "description": "",
-        "colors": "",
-        "sizes": ""
-    },
-    {
-        "id": 7,
-        "name": "Tailwind Jacket",
-        "price": 12800.00,
-        "img": 7,
-        "category": "",
-        "description": "",
-        "colors": "",
-        "sizes": ""
-    },
-    {
-        "id": 8,
-        "name": "Midtown Jacket",
-        "price": 8500.00,
-        "img": 8,
-        "category": "",
-        "description": "",
-        "colors": "",
-        "sizes": ""
-    }
+[
+ {
+  "id": 1,
+  "name": "Giovanni Vianna Pro Tamarin Deck",
+  "price": 6300,
+  "img": "1.jpg",
+  "category": "",
+  "description": "",
+  "colors": "",
+  "sizes": ""
+ },
+ {
+  "id": "2",
+  "name": "Rueda Rosa",
+  "description": "",
+  "img": "2.jpg",
+  "category": "",
+  "colors": "",
+  "sizes": "",
+  "price": "2600"
+ },
+ {
+  "id": 3,
+  "name": "Truth Hood",
+  "price": 7350,
+  "img": "3.jpg",
+  "category": "",
+  "description": "",
+  "colors": "",
+  "sizes": ""
+ },
+ {
+  "id": 4,
+  "name": "Vans New Era",
+  "price": 5500,
+  "img": "4.jpg",
+  "category": "",
+  "description": "",
+  "colors": "",
+  "sizes": ""
+ },
+ {
+  "id": 5,
+  "name": "Wolverine Strapback",
+  "price": 3750,
+  "img": "5.jpg",
+  "category": "",
+  "description": "",
+  "colors": "",
+  "sizes": ""
+ },
+ {
+  "id": 6,
+  "name": "Hilton S/S Woven",
+  "price": 5300,
+  "img": "6.jpg",
+  "category": "",
+  "description": "",
+  "colors": "",
+  "sizes": ""
+ },
+ {
+  "id": 7,
+  "name": "Tailwind Jacket",
+  "price": 12800,
+  "img": "7.jpg",
+  "category": "",
+  "description": "",
+  "colors": "",
+  "sizes": ""
+ },
+ {
+  "id": 8,
+  "name": "Midtown Jacket",
+  "price": 8500,
+  "img": "8.jpg",
+  "category": "",
+  "description": "",
+  "colors": "",
+  "sizes": ""
+ },
+ {
+  "id": "9",
+  "img": "",
+  "name": "CAMBIO 2",
+  "description": "Una re campera",
+  "category": "",
+  "colors": "",
+  "sizes": "",
+  "price": "6500"
+ },
+ {
+  "id": "10",
+  "img": "default-image.png",
+  "name": "TEST",
+  "description": "Una re campera",
+  "category": "",
+  "colors": "",
+  "sizes": "",
+  "price": "6500"
+ },
+ {
+  "id": "11",
+  "img": "default-image.png",
+  "name": "TEST 2",
+  "description": "Una re campera",
+  "category": "",
+  "colors": "",
+  "sizes": "",
+  "price": "6500"
+ },
+ {
+  "id": "12",
+  "img": "default-image.png",
+  "name": "TEST 3",
+  "description": "Una re campera",
+  "category": "",
+  "colors": "",
+  "sizes": "",
+  "price": "6500"
+ },
+ {
+  "id": "13",
+  "img": "",
+  "name": "TEST 4",
+  "description": "lorem",
+  "category": "Mates",
+  "colors": "Negro",
+  "sizes": "S",
+  "price": "100"
+ }
 ]

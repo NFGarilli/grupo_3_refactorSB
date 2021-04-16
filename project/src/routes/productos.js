@@ -31,9 +31,9 @@ router.post('/product-create', upload.single('image'), productosController.store
 
 // /*** EDIT ONE PRODUCT ***/ 
 router.get('/:id/product-edit-form', productosController.edit); 
-router.put('/:id/actulizar', upload.single('image'), productosController.update); 
+router.put('/:id/actualizar', upload.single('image'), productosController.update); 
 
 // /*** DELETE ONE PRODUCT***/ 
-// router.delete('/:id', productosController.destroy); 
+router.delete('/:id/delete', productosController.destroy); 
 
 module.exports = router;

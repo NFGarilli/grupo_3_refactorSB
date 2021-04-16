@@ -15,7 +15,7 @@
 
                 <div class="product-form">
 
-                    <form class="login-form" action="/product/:id/actualizar?_method=PUT" method="POST">
+                    <form class="login-form" action="/product/<%= productToEdit.id %>/actualizar?_method=PUT" method="POST">
                         <div class="wrap-around id">
                             <label>Identificador</label>
                             <input type="text" placeholder="Identificador" value="<%= productToEdit.id %>" name="id" class="field">
@@ -31,7 +31,7 @@
                         </div>
                         <div class="wrap-around image">
                             <label>Imagen</label>
-                            <input type="file" name="image" value="<%= productToEdit.img %>" class="field">
+                            <input type="file" name="img" value="<%= productToEdit.img %>" class="field">
                         </div>
                         <div class="wrap-around category">
                             <label>Categoria</label>
@@ -43,15 +43,20 @@
                         </div>
                         <div class="wrap-around size">
                             <label>Talles</label>
-                            <input type="text" name="size" value="<%= productToEdit.sizes %>" class="field">
+                            <input type="text" name="sizes" value="<%= productToEdit.sizes %>" class="field">
                         </div>
                         <div class="wrap-around price">
                             <label>Precio</label>
                             <input type="number" name="price" value="<%= productToEdit.price %>" class="field">
                         </div>
                         <div class="login-button-container">
-                            <button type="submit" class="login-button">CREAR PRODUCTO</button>
+                            <button type="submit" class="login-button">EDITAR PRODUCTO</button>
                         </div>
+                        <form action="<%= productToEdit.id %>/delete/?_method=DELETE/" method="POST">
+                            <div class="login-button-container">
+                                <button type="submit" class="login-button">BORRAR PRODUCTO</button>
+                            </div>
+                        </form>
                     </form>
 
                 </div>

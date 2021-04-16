@@ -27,23 +27,23 @@ let productosController = {
     /*** PRODUCT CREATE STORAGE ***/
     store: (req, res) => {
 
-        // let producto = {
-        //     id: req.body.id,
-        //     name: req.body.name,
-        //     description: req.body.description,
-        //     img: req.body.img,
-        //     category: req.body.category,
-        //     colors: req.body.colors,
-        //     sizes: req.body.sizes,
-        //     price: req.body.price
-        // }
+        let producto = {
+            id: req.body.id,
+            name: req.body.name,
+            description: req.body.description,
+            img: req.body.img,
+            category: req.body.category,
+            colors: req.body.colors,
+            sizes: req.body.sizes,
+            price: req.body.price
+        }
 
         let image 
 
         if (req.file != undefined){
             image = req.file.filename
         } else {
-            image = "default-image.png"
+            image = 0
         }
 
         //FALTA ALMACENARLO EN EL JSON.
@@ -51,8 +51,8 @@ let productosController = {
         let ids = products.map(p => p.id)
         let newProduct = {
             id: Math.max(...ids) +1,
-            ...req.body,
-            image: image
+            img: image,
+            ...req.body
         }
 
         products.push(newProduct)
@@ -75,13 +75,13 @@ let productosController = {
         if(req.file != undefined){
 			image = req.file.filename
 		} else {
-			image = productToEdit.image
+			image = productToEdit.img
 		}
 
         productToEdit = {
 			id: productToEdit.id,
-			...req.body,
-			image: image,
+			img: image,
+            ...req.body
 		};
 
         let newProducts = products.map(product => {

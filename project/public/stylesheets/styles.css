@@ -704,9 +704,18 @@ th:last-child{
     justify-content: center;
     padding-bottom: 10px;
     margin-top: 29px;
-    
 }
 
+/* Not found */
+.not-found-container {
+    display: inline-block;
+    width: 100%;
+    text-align: center;
+}
+
+.not-found {
+    font-size: 40px;
+}
 
 @media (min-width: 480px)  {
     main section div.productos-container{

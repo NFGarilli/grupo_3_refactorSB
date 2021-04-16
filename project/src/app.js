@@ -19,6 +19,10 @@ app.use('/product', rutasProductos);
 app.use('/user', rutasUsers);
 app.use('/panel', rutasPanel);
 
+app.use((req, res, next) => {
+    res.status(404).render('404');
+})
+
 app.listen(3000, ()=>{
     console.log('Servidor funcionando');
 });
