@@ -60,73 +60,23 @@
   "sizes": ""
  },
  {
-  "id": 7,
-  "name": "Tailwind Jacket",
-  "price": 12800,
-  "img": "7.jpg",
-  "category": "",
-  "description": "",
-  "colors": "",
-  "sizes": ""
+  "id": "7",
+  "name": "TAILWIND JACKET",
+  "description": "lorem ipsum",
+  "category": "Buzos",
+  "colors": "Negro",
+  "sizes": "S",
+  "price": "6000",
+  "img": "product-1619018614498.jpg"
  },
  {
-  "id": 8,
-  "name": "Midtown Jacket",
-  "price": 8500,
-  "img": "8.jpg",
-  "category": "",
-  "description": "",
-  "colors": "",
-  "sizes": ""
- },
- {
-  "id": "9",
-  "img": "",
-  "name": "CAMBIO 2",
-  "description": "Una re campera",
-  "category": "",
-  "colors": "",
-  "sizes": "",
-  "price": "6500"
- },
- {
-  "id": "10",
-  "img": "default-image.png",
-  "name": "TEST",
-  "description": "Una re campera",
-  "category": "",
-  "colors": "",
-  "sizes": "",
-  "price": "6500"
- },
- {
-  "id": "11",
-  "img": "default-image.png",
-  "name": "TEST 2",
-  "description": "Una re campera",
-  "category": "",
-  "colors": "",
-  "sizes": "",
-  "price": "6500"
- },
- {
-  "id": "12",
-  "img": "default-image.png",
-  "name": "TEST 3",
-  "description": "Una re campera",
-  "category": "",
-  "colors": "",
-  "sizes": "",
-  "price": "6500"
- },
- {
-  "id": "13",
-  "img": "",
-  "name": "TEST 4",
+  "id": "8",
+  "img": "product-1619019187967.png",
+  "name": "Mate",
   "description": "lorem",
   "category": "Mates",
   "colors": "Negro",
-  "sizes": "S",
-  "price": "100"
+  "sizes": "",
+  "price": "1000"
  }
 ]

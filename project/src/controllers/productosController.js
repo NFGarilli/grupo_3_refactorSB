@@ -12,6 +12,10 @@ let productosController = {
     index: (req, res) => {
         res.render('product-all', {products, toThousand});
     },
+
+    editList: (req, res) => {
+        res.render('product-edit-list', {products});
+    },
     
     /*** PRODUCT DETAIL ***/
     detail: (req, res) => {
@@ -26,27 +30,13 @@ let productosController = {
 
     /*** PRODUCT CREATE STORAGE ***/
     store: (req, res) => {
-
-        let producto = {
-            id: req.body.id,
-            name: req.body.name,
-            description: req.body.description,
-            img: req.body.img,
-            category: req.body.category,
-            colors: req.body.colors,
-            sizes: req.body.sizes,
-            price: req.body.price
-        }
-
         let image 
 
         if (req.file != undefined){
             image = req.file.filename
         } else {
-            image = 0
+            image = "default-image.png"
         }
-
-        //FALTA ALMACENARLO EN EL JSON.
 
         let ids = products.map(p => p.id)
         let newProduct = {
@@ -57,7 +47,7 @@ let productosController = {
 
         products.push(newProduct)
         fs.writeFileSync(productsFilePath, JSON.stringify(products, null, ' '));
-        res.redirect('/');
+        res.redirect('/product/product-edit-list');
     },
 
     /*** PRODUCT EDIT VIEW ***/
@@ -70,18 +60,18 @@ let productosController = {
     update: (req, res) => {
         let id = req.params.id;
         let productToEdit = products.find(p => p.id == id)
-        let image
+        let img
         
         if(req.file != undefined){
-			image = req.file.filename
+			img = req.file.filename
 		} else {
-			image = productToEdit.img
+			img = productToEdit.img
 		}
 
         productToEdit = {
 			id: productToEdit.id,
-			img: image,
-            ...req.body
+            ...req.body,
+            img: img
 		};
 
         let newProducts = products.map(product => {
@@ -92,7 +82,7 @@ let productosController = {
 		})
 
 		fs.writeFileSync(productsFilePath, JSON.stringify(newProducts, null, ' '));
-		res.redirect('/');
+		res.redirect('/product/product-edit-list');
     }, 
 
     /*** PRODUCT DESTROY ***/
@@ -100,7 +90,7 @@ let productosController = {
 		let id = req.params.id;
 		let finalProducts = products.filter(product => product.id != id);
 		fs.writeFileSync(productsFilePath, JSON.stringify(finalProducts, null, ' '));
-		res.redirect('/');
+		res.redirect('/product/product-edit-list');
 	}
 }
 

@@ -10,10 +10,11 @@ const productosController = require('../controllers/productosController')
 /*** MULTER ***/ 
 const storage = multer.diskStorage({ 
     destination: function (req, file, cb) { 
-       cb(null, './public/images/products'); 
+       cb(null, '../public/images/product-images'); 
     }, 
     filename: function (req, file, cb) { 
-       cb(null, `${file.fieldname}-${Date.now()}${path.extname(file.originalname)}`);  
+       const newFilename = 'product-' + Date.now() + path.extname(file.originalname);
+       cb(null, newFilename);  
     } 
 })    
 
@@ -27,11 +28,12 @@ router.get('/products/:id', productosController.detail);
 
 // /*** CREATE ONE PRODUCT ***/ 
 router.get('/product-create-form', productosController.create);
-router.post('/product-create', upload.single('image'), productosController.store);
+router.post('/product-create', upload.single('img'), productosController.store);
 
 // /*** EDIT ONE PRODUCT ***/ 
+router.get('/product-edit-list', productosController.editList);
 router.get('/:id/product-edit-form', productosController.edit); 
-router.put('/:id/actualizar', upload.single('image'), productosController.update); 
+router.put('/:id/actualizar', upload.single('img'), productosController.update); 
 
 // /*** DELETE ONE PRODUCT***/ 
 router.delete('/:id/delete', productosController.destroy); 

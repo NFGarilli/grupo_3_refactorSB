@@ -255,6 +255,24 @@ button[type='submit'] {
     cursor: pointer;
 }
 
+.edit-list-button, .delete-list-button, #dlb {
+    background-color: #000000;
+    color: #FFFFFF;
+    font-size: 11px;
+    padding: 12px;
+    margin-left: 1px;
+    text-transform: uppercase;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    width: 140px;
+    height: 35px; 
+}
+
+.edit-list-button {
+    margin-bottom: 2px;
+}
+
 button[type='submit']:hover{
     background-color: tomato;
 }
@@ -362,7 +380,6 @@ article:hover .producto-footer .title {
 }
 
 /* LOG IN / REGISTER */
-
 
 .customer-login-container {
     display: flex;
@@ -526,6 +543,26 @@ article:hover .producto-footer .title {
     border-radius: 0;
     transition: 0.15s cubic-bezier(0.4, 0, 0.2, 1) background-color, 0.15s cubic-bezier(0.4, 0, 0.2, 1) border-color;
     appearance: button;
+}
+
+.product-list {
+    margin: auto;
+    text-align: center;
+}
+
+#product-table {
+    width: 100%;
+    border: 1px solid black;
+    border-collapse: collapse;
+}
+
+#product-list-tr {
+    width: 100%;
+}
+
+#product-list-th {
+    background-color: black;
+
 }
 
 .row {
