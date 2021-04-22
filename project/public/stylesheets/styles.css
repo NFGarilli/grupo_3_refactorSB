@@ -551,7 +551,8 @@ article:hover .producto-footer .title {
 }
 
 #product-table {
-    width: 100%;
+    margin: auto;
+    width: 30%;
     border: 1px solid black;
     border-collapse: collapse;
 }
@@ -562,9 +563,19 @@ article:hover .producto-footer .title {
 
 #product-list-th {
     background-color: black;
-
+    text-align: center;
+    width: 100%;
 }
 
+#product-list-th-id {
+    width: 25%;
+    background-color: black;
+    text-align: center;
+}
+
+#product-list-td {
+    border: 1px solid black;
+}
 .row {
     display: flex;
     align-items: center;
