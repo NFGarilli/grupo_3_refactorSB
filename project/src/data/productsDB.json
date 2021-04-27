@@ -78,5 +78,15 @@
   "colors": "Negro",
   "sizes": "",
   "price": "1000"
+ },
+ {
+  "id": "17",
+  "name": "Manu",
+  "description": "Un mano re fachero",
+  "category": "Rubios",
+  "colors": "Blanco",
+  "sizes": "M",
+  "price": "20000",
+  "img": "product-1619552513411.jpg"
  }
 ]

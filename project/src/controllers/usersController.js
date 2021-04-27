@@ -17,6 +17,7 @@ let usersController = {
         if (validations.errors.length > 0) {
             return res.render('register', {
                 errors: validations.mapped(),
+                oldData: req.body,
             });
         } else {
             let image;
