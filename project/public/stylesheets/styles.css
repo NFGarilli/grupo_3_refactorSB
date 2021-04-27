@@ -255,6 +255,17 @@ button[type='submit'] {
     cursor: pointer;
 }
 
+.text-danger {
+    text-align: left; 
+    font-size: 14px; 
+    color: #dc3545; 
+    padding-top: 2px;
+}
+
+.is-invalid {
+    border-color: #dc3545!important;
+}
+
 .edit-list-button, .delete-list-button, #dlb {
     background-color: #000000;
     color: #FFFFFF;
@@ -408,7 +419,7 @@ article:hover .producto-footer .title {
     padding: 5px;
     font-size: 14px;
     line-height: 1.5;
-    color: #000000;
+    /* color: #000000; */
     text-align: left;
     cursor: pointer;
     font-weight: 400;
