@@ -61,32 +61,12 @@
  },
  {
   "id": "7",
-  "name": "TAILWIND JACKET",
+  "name": "Tailwind Jacket",
   "description": "lorem ipsum",
   "category": "Buzos",
   "colors": "Negro",
   "sizes": "S",
   "price": "6000",
   "img": "product-1619018614498.jpg"
- },
- {
-  "id": "8",
-  "img": "product-1619019187967.png",
-  "name": "Mate",
-  "description": "lorem",
-  "category": "Mates",
-  "colors": "Negro",
-  "sizes": "",
-  "price": "1000"
- },
- {
-  "id": "17",
-  "name": "Manu",
-  "description": "Un mano re fachero",
-  "category": "Rubios",
-  "colors": "Blanco",
-  "sizes": "M",
-  "price": "20000",
-  "img": "product-1619552513411.jpg"
  }
 ]

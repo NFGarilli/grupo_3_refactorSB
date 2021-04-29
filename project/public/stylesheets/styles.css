@@ -264,6 +264,7 @@ button[type='submit'] {
 
 .is-invalid {
     border-color: #dc3545!important;
+    box-shadow: none;
 }
 
 .edit-list-button, .delete-list-button, #dlb {

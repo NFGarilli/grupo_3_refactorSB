@@ -16,10 +16,6 @@
                 <div class="product-form">
 
                     <form class="login-form" action="/product/<%= productToEdit.id %>/actualizar?_method=PUT" method="POST" enctype="multipart/form-data">
-                        <div class="wrap-around id">
-                            <label>Identificador</label>
-                            <input type="text" placeholder="Identificador" value="<%= productToEdit.id %>" name="id" class="field">
-                        </div>
                         <div class="wrap-around nombre">
                             <label>Nombre</label>
                             <input type="text" placeholder="Nombre" value="<%= productToEdit.name %>" name="name" class="field">
