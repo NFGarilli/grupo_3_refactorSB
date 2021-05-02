@@ -1,0 +1,42 @@
+<%- include('./partials/head') %>
+<body>
+    <%- include('./partials/header') %> 
+    <main>
+        <section class="profile">
+            <div class="customer-login-container">
+                <div class="page-title">
+                    <h3 class="iniciar-sesion"> Bienvenido, NOMBRE USUARIO</h3>
+                </div>
+                <div class="account-form">
+                    <div class="profile-avatar">
+                        <img src="nico.jpg" alt="avatar" width="150">
+                    </div>
+                    <form class="login-form">
+                        <div class="wrap-around email">
+                            <label>Nombre Completo:</label>
+                            <div class="field-profile">
+                                Nicolito Garilli
+                            </div>
+                        </div>
+                        <div class="wrap-around password">
+                            <label>Email:</label>
+                            <div class="field-profile">
+                                NicolitoGarilli@gmail.com
+                            </div>
+                        </div>
+                        <div class="login-button-container">
+                            <button type="submit" class="login-button">LOG OUT</button>
+                        </div>
+                    </form>
+                </div>
+                <div class="new-customer">
+                    <div><a class="forgot-password">¿Olvidaste tu contraseña?</a></div>
+                    <div><p class="new-account">¿Todavia no tienes cuenta?</p></div>
+                    <div><a class="create-new-account" href="/user/register">Registrate</a></div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <%- include('./partials/footer')  %> 
+</body>
+</html>

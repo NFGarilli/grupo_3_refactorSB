@@ -795,6 +795,25 @@ th:last-child{
     font-size: 40px;
 }
 
+/* Profile */
+
+.profile-avatar {
+    border-radius: 50%;
+}
+
+.field-profile{
+    position: relative;
+    display: inline-block;
+    padding: 5px;
+    font-size: 14px;
+    line-height: 1.5;
+    text-align: left;
+    cursor: pointer;
+    font-weight: 400;
+    width: 100%;
+    border: 1px solid black;
+}
+
 @media (min-width: 480px)  {
     main section div.productos-container{
         display: flex;
