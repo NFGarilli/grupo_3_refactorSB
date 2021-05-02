@@ -5,9 +5,23 @@ const rutasProductos = require('./routes/productos');
 const rutasUsers = require('./routes/users');
 const rutasPanel = require('./routes/panel');
 const methodOverride = require('method-override');
+const session = require('express-session');
+const userLoggedMiddleware = require('./middlewares/userLoggedMiddleware');
+// const cookies = require('cookie-parser');
+
 
 app.use(express.urlencoded({extended:false}));
 app.use(express.json());
+
+app.use(session ({
+    secret: "El polaco bastia",
+    resave: false,
+    saveUninitialized: false,
+}))
+
+// app.use(cookies);
+
+app.use(userLoggedMiddleware);
 
 app.use(methodOverride('_method'));
 
