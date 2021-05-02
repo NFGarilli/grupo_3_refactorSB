@@ -7,7 +7,7 @@ const rutasPanel = require('./routes/panel');
 const methodOverride = require('method-override');
 const session = require('express-session');
 const userLoggedMiddleware = require('./middlewares/userLoggedMiddleware');
-const cookies = require('cookie-parser');
+// const cookies = require('cookie-parser');
 
 
 app.use(express.urlencoded({extended:false}));
@@ -19,7 +19,7 @@ app.use(session ({
     saveUninitialized: false,
 }))
 
-app.use(cookies);
+// app.use(cookies);
 
 app.use(userLoggedMiddleware);
 
