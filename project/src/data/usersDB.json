@@ -134,5 +134,13 @@
   "email": "t@gmail.com",
   "password": "$2a$10$DxkcTgBHepnRmnT1PiupRORnFQ9XJatbg13wNH2h4nDjEdCWFbWRu",
   "avatar": "avatar-1620067070630.png"
+ },
+ {
+  "id": 18,
+  "name": "nico",
+  "lastName": "garilli",
+  "email": "nfgarilli@hotmail.com",
+  "password": "$2a$10$0PSIzT0rgJ6d6zC/FMDH4OAbO2myr.4TCMs2HJq4mUbHMFq0WOiDy",
+  "avatar": "avatar-1620251514546.png"
  }
 ]

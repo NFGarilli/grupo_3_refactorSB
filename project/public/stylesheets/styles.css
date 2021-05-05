@@ -567,44 +567,38 @@ article:hover .producto-footer .title {
     margin-top: 5px;
 }
 
-#product-table {
+#tablePL {
     margin: auto;
     margin-top: 30px;
     width: 35%;
     border: 1px solid black;
     border-collapse: collapse;
-    border-spacing: 10px;
 }
+
 
 #product-list-tr {
     width: 100%;
-    border-bottom: 1px solid black;
+    border: 1px solid black;
+    border-collapse: collapse;    
 }
 
 #product-list-th {
     background-color: black;
     text-align: center;
-    width: 100%;
-    
+    width: 100%;  
+    border: 1px solid black;   
 }
 
 #product-list-th-id {
-    width: 25%;
     background-color: black;
+    width: 25%;
     text-align: center;
 }
 
 #product-list-td { 
-    border-bottom: 1px solid black;
-    border-right: 1px solid black;
+    border: 1px solid black;
 }
 
-#product-list-td-acciones {
-    
-    text-align: center;
-    border-bottom: 1px solid black;
-    
-}
 
 .row {
     display: flex;

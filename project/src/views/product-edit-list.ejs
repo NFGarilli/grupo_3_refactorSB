@@ -11,15 +11,15 @@
     </header>
     <main>
         <div class="product-list">
-        <h3>LISTA DE PRODUCTOS</h3>
-        <div id="product-table">
-            <table>
-                <tr id="product-list-tr">
-                    <th id="product-list-th-id">ID</th>
-                    <th id="product-list-th">Nombre</th>
-                    <th id="product-list-th">Acciones</th>
-                </tr>
-                <% for (let i = 0; i < products.length; i++) { %>
+            <h3>LISTA DE PRODUCTOS</h3>
+            <div id="product-table">
+                <table id="tablePL">
+                    <tr id="product-list-tr">
+                        <th id="product-list-th-id">ID </th>
+                        <th id="product-list-th">Nombre </th>
+                        <th id="product-list-th">Acciones</th>
+                    </tr>
+                    <% for (let i = 0; i < products.length; i++) { %>
                     <tr id="product-list-tr">
                         <td id="product-list-td">
                             <%= products[i].id %>
@@ -28,7 +28,8 @@
                             <%= products[i].name %>
                         </td>
                         <td id="product-list-td">
-                            <a href="/product/<%= products[i].id %>/product-edit-form"><button class="edit-list-button">Editar</button></a>
+                            <a href="/product/<%= products[i].id %>/product-edit-form"><button
+                                    class="edit-list-button">Editar</button></a>
                             <form action="<%= products[i].id %>/delete/?_method=DELETE" method="POST">
                                 <div>
                                     <button type="submit" id="dlb" class="delete-list-button">BORRAR</button>
@@ -36,10 +37,10 @@
                             </form>
                         </td>
                     </tr>
-                <% } %>
-            </table>
+                    <% } %>
+                </table>
+            </div>
         </div>
-    </div>
     </main>
 </body>
 
