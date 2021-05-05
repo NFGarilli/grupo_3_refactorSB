@@ -1,9 +1,9 @@
 const fs = require('fs');
-// const { createBrotliCompress } = require('node:zlib');
 const path = require('path');
+const productModel = require('../models/product');
 
 const productsFilePath = path.join(__dirname, '../data/productsDB.json');
-const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
+const products = productModel.getData();
 
 const toThousand = n => n.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".");
 
@@ -19,8 +19,13 @@ let productosController = {
     
     /*** PRODUCT DETAIL ***/
     detail: (req, res) => {
-        let product = products.find(product => product.id == req.params.id);
+        let product = productModel.findByPk(req.params.id);
         res.render('product-detail', {products, product, toThousand});
+    },
+
+    /*** PRODUCT CREATE VIEW ***/
+    panel: (req, res) => {
+        res.render('panel');
     },
 
     /*** PRODUCT CREATE VIEW ***/
@@ -40,26 +45,24 @@ let productosController = {
 
         let ids = products.map(p => p.id)
         let newProduct = {
-            id: Math.max(...ids) +1,
-            img: image,
-            ...req.body
+            ...req.body,
+            img: image
         }
 
-        products.push(newProduct)
-        fs.writeFileSync(productsFilePath, JSON.stringify(products, null, ' '));
+        let productCreated = productModel.create(newProduct);
         res.redirect('/product/product-edit-list');
     },
 
     /*** PRODUCT EDIT VIEW ***/
     edit: (req, res) => {
-        let productToEdit = products.find(p => p.id == req.params.id)
+        let productToEdit = productModel.findByPk(req.params.id);
         res.render('product-edit-form', {productToEdit, toThousand})
     },
 
-    /*** PRODUC EDIT STORAGE ***/
+    /*** PRODUCT EDIT STORAGE ***/
     update: (req, res) => {
         let id = req.params.id;
-        let productToEdit = products.find(p => p.id == id)
+        let productToEdit = productModel.findByPk(id);
         let img
         
         if(req.file != undefined){
@@ -88,9 +91,8 @@ let productosController = {
     /*** PRODUCT DESTROY ***/
     destroy : (req, res) => {
 		let id = req.params.id;
-		let finalProducts = products.filter(product => product.id != id);
-		fs.writeFileSync(productsFilePath, JSON.stringify(finalProducts, null, ' '));
-		res.redirect('/product/product-edit-list');
+		productModel.delete(id);
+        res.redirect('/product/product-edit-list');
 	}
 }
 

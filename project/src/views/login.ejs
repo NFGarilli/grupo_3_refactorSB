@@ -8,7 +8,7 @@
                     <h3 class="iniciar-sesion"> INICIAR SESIÓN</h3>
                 </div>
                 <div class="account-form">
-                    <form class="login-form">
+                    <form class="login-form" method="POST" action="/user/login">
                         <div class="wrap-around email">
                             <label>Email</label>
                             <input type="text" placeholder="tu@email.com" value="" name="email" class="field">
@@ -19,6 +19,14 @@
                         <div class="wrap-around password">
                             <label>Contraseña</label>
                             <input type="password" name="password" class="field">
+                            <% if (locals.errors && errors.password) { %>
+                                <p class="text-danger"><%= errors.password.msg %></p>
+                            <% } %>
+                        </div>
+                        <div class="wrap-around remember">
+                            <label class="form-check-label">
+                                <input type="checkbox" class="form-check-input" name="remember_user">Recordar mi usuario
+                            </label>
                         </div>
                         <div class="login-button-container">
                             <button type="submit" class="login-button">LOGIN</button>

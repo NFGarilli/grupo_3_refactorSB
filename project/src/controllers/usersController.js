@@ -1,4 +1,3 @@
-const fs = require('fs');
 const { validationResult } = require('express-validator');
 const userModel = require('../models/user');
 const bcryptjs = require('bcryptjs');
@@ -16,6 +15,11 @@ let usersController = {
             if(isOkPassword) {
                 delete userToLogin.password;
                 req.session.userLogged = userToLogin;
+
+                if(req.body.remember_user){
+                    res.cookie('userEmail', req.body.email, { maxAge: (1000 * 60) * 2 })
+                }
+
                 return res.redirect('/user/profile');
             } else {
                 return res.render('login', {
@@ -69,10 +73,7 @@ let usersController = {
     },
 
     profile: (req, res) => {
-<<<<<<< HEAD
-        res.render('profile');
-=======
-        res.render('userProfile', {
+        res.render('profile', {
             user: req.session.userLogged
         });
     },
@@ -80,7 +81,6 @@ let usersController = {
     logout: (req, res) => {
         req.session.destroy();
         return res.redirect('/');
->>>>>>> d7c6effb92e4256731b137d78099452f993dd889
     }
 }
 

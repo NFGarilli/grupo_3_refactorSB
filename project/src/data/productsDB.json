@@ -10,7 +10,7 @@
   "sizes": ""
  },
  {
-  "id": "2",
+  "id": 2,
   "name": "Rueda Rosa",
   "description": "",
   "img": "2.jpg",
@@ -60,7 +60,7 @@
   "sizes": ""
  },
  {
-  "id": "7",
+  "id": 7,
   "name": "Tailwind Jacket",
   "description": "lorem ipsum",
   "category": "Buzos",

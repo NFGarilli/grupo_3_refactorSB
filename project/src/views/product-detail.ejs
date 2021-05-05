@@ -70,21 +70,24 @@
         <section class="you-may-also-like">
             <h3 class="titulo-section">TAMBIEN TE PUEDE INTERESAR</h3>
             <div class="productos-container">
-                              
+          
                 <!-- Producto -->
-                <% for (let i = 4; i < 8; i++) { %> 
-                <article class="producto">
-                    <div class="producto-image">
-                        <a href=<%= "/products/" + products[i].id %>> <img src=<%="/images/product-images/" + products[i].img %>   alt=<%= products[i].name %> ></a>
-                    </div>
-                    <div class="producto-footer">
-                        <h2 class="title"><%= products[i].name %></h2>
-                        <span class="title-meta">
-                            <span class="title-price"><%= 'AR$' + products[i].price + '.00' %></span>
-                        </span>
-                    </div>
-                </article>
-                <% } %>
+                <% for (let i = 3; i < 7; i++) { %> 
+                    <article class="producto">
+                        <div class="producto-image">
+                            <a href=<%= "/products/" + products[i].id %>> <img src=<%="/images/product-images/" + products[i].img %>   alt=<%= products[i].name %> ></a>
+                        </div>
+                        <div class="producto-footer">
+                            <h2 class="title"><%= products[i].name %></h2>
+                            <span class="title-meta">
+                                <span class="title-price"><%= 'AR$' + products[i].price + '.00' %></span>
+                            </span>
+                        </div>
+                    </article>
+                    <% } %>
+
+            </div>
+        </section>
     </main>
     <%- include('./partials/footer')  %>
 </body>

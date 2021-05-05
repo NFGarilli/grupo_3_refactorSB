@@ -21,7 +21,14 @@
 
             <div class="usuario">
                 <div class="login-menu">
-                    <div class="user-button"><a href="/user/login"><i class="fas fa-user"></i></a></div>
+                    <% if (locals.isLogged) { %>
+                        <div class="user-button"><a href="/user/login"><i class="fas fa-user"></i></a></div>
+                    <% } else { %>
+                        <div class="login-register">
+                            <a href="/user/login" class="loginlink">Login</a>
+                            <a href="/user/register" class="registerlink">Register</a>
+                        </div>
+                    <% } %>
                     <div class="cart-button"><a href="/cart"><i class="fas fa-shopping-cart"></i></a></div>
                 </div>
             </div>

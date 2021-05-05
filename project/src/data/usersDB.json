@@ -121,33 +121,18 @@
  },
  {
   "id": 16,
-  "avatar": "avatar-1619545414573.jfif",
   "name": "Tomas",
   "lastName": "Sanchez",
-  "email": "tomassanchezescobar@gmail.com",
-  "password": "123145"
+  "email": "t@g.com",
+  "password": "$2a$10$RncQNMnDsx9COCn48p2wZuc7BL2CP4AD6.TECFcwr4RZguvcbRobW",
+  "avatar": "avatar-1620066452851.png"
  },
  {
   "id": 17,
   "name": "Tomas",
   "lastName": "Sanchez",
-  "email": "tomysanchez98@hotmail.com",
-  "password": "12345"
- },
- {
-  "id": 18,
-  "name": "Nicolas",
-  "lastName": "Garilli",
-  "email": "nf@gmail.com",
-  "password": "12345",
-  "avatar": "avatar-1619666458081.png"
- },
- {
-  "id": 19,
-  "name": "Weasley",
-  "lastName": "El gatito",
-  "email": "w@g.com",
-  "password": "$2a$10$YuQw/ShWswsrbyyEi/s5XOOqjSNx7OqL59IHRd8QbDw1jcy5Lh.SO",
-  "avatar": "avatar-1619667972964.png"
+  "email": "t@gmail.com",
+  "password": "$2a$10$DxkcTgBHepnRmnT1PiupRORnFQ9XJatbg13wNH2h4nDjEdCWFbWRu",
+  "avatar": "avatar-1620067070630.png"
  }
 ]
