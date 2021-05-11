@@ -142,5 +142,13 @@
   "email": "nfgarilli@hotmail.com",
   "password": "$2a$10$0PSIzT0rgJ6d6zC/FMDH4OAbO2myr.4TCMs2HJq4mUbHMFq0WOiDy",
   "avatar": "avatar-1620251514546.png"
+ },
+ {
+  "id": 19,
+  "name": "lucas",
+  "lastName": "alvarez",
+  "email": "alvarezlucass@hotmail.com",
+  "password": "$2a$10$3iIPZnfTGknVZ6R/7ZB2LuN9hA/yTscN0q6BZjOnO60Ze7S5AiVkS",
+  "avatar": "avatar-1620763667421.jpg"
  }
 ]
