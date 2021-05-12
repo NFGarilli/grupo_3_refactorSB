@@ -25,8 +25,6 @@ mercado del skateboarding.
 
 # Sprint 6
 
-
-
 # Bases de datos y Sequelize
 
 # Diagrama de base de datos
@@ -41,8 +39,6 @@ mercado del skateboarding.
     ○ Con detalle de quién hizo la compra, cantidad de ítems y precio total.
     ● (Opcional) Productos de cada carrito de compras.
 Les sugerimos utilizar draw.io ya que es fácil de usar y soporta diagramas DER.
-
-
 
 
 # Entregable: 
