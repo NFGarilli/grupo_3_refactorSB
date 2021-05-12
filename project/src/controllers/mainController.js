@@ -12,7 +12,10 @@ let mainController = {
     },
     cart: (req, res) => {
         res.render('product-cart', {products})
-    }  
+    },  
+    enConstruction: (req, res) => {
+        return res.render('enConstruction')
+    }
 }
 
 module.exports = mainController;

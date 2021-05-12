@@ -22,7 +22,7 @@
                 <% for (let i = 0; i < 4; i++) { %> 
                 <article class="producto">
                     <div class="producto-image">
-                        <a href=<%= "product/products/" + products[i].id %>> <img src=<%="/images/product-images/" + products[i].img %>   alt=<%= products[i].name %> ></a>
+                        <a href=<%= "/product/products/" + products[i].id %>> <img src=<%="/images/product-images/" + products[i].img %>   alt=<%= products[i].name %> ></a>
                     </div>
                     <div class="producto-footer">
                         <h2 class="title"><%= products[i].name %></h2>
@@ -53,7 +53,7 @@
                 <% for (let i = 0; i < 4; i++) { %> 
                 <article class="producto">
                     <div class="producto-image">
-                        <a href=<%= "product/products/" + products[i].id %>><img src=<%="/images/product-images/" + products[i].img %>   alt=<%= products.name %> ></a>
+                        <a href=<%= "/product/products/" + products[i].id %>><img src=<%="/images/product-images/" + products[i].img %>   alt=<%= products.name %> ></a>
                     </div>
                     <div class="producto-footer">
                         <h2 class="title"><%= products[i].name %></h2>
