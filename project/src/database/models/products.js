@@ -1,4 +1,4 @@
-module.exports = function( sequelize, dataTypes) {
+module.exports = function(sequelize, dataTypes) {
     let alias = "Product";
 
     let cols = {
@@ -35,12 +35,13 @@ module.exports = function( sequelize, dataTypes) {
             allowNull: false
         },
     }
-}
-let config = {
-    tableName: "product",
-    timestamps: false
-}
 
-let Product = sequelize.define(alias, cols, config);
+    let config = {
+        tableName: "products",
+        timestamps: false
+    }
 
-return Product;
+    let Products = sequelize.define(alias, cols, config);
+
+    return Products;
+}
