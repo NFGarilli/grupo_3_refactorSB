@@ -5,7 +5,7 @@ module.exports = function(sequelize, dataTypes) {
         id: {
             type: dataTypes.INTEGER,
             primaryKey: true,
-            autoIncrement: true            
+            autoIncrement: true
         },
         name: {
             type: dataTypes.STRING(30),
@@ -24,7 +24,8 @@ module.exports = function(sequelize, dataTypes) {
             allowNull: false
         },
         avatar: {
-            
+            type: dataTypes.STRING(100),
+            allowNull: false
         },
         admin: {
             type: dataTypes.INTEGER(1),
@@ -32,12 +33,12 @@ module.exports = function(sequelize, dataTypes) {
         },
     }
 
-let config = {
-    tableName: "Users",
-    timestamps: false
-}
+    let config = {
+        tableName: "Users",
+        timestamps: false
+    }
 
-let Users = sequelize.define(alias, cols, config);
+    let Users = sequelize.define(alias, cols, config);
 
-return Users;
+    return Users;
 }

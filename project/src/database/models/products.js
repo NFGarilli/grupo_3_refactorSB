@@ -16,7 +16,8 @@ module.exports = function(sequelize, dataTypes) {
             allowNull: false
         },
         img: {
-
+            type: dataTypes.STRING(100),
+            allowNull: false
         },
         category: {
             type: dataTypes.STRING(50),
