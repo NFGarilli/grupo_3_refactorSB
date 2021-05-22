@@ -10,22 +10,22 @@ const toThousand = n => n.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".");
 let productosController = {
     /*** SHOW ALL PRODUCTS ***/
     index: (req, res) => {
-        res.render('product-all', {products, toThousand});
+        res.render('product/product-all', {products, toThousand});
     },
 
     editList: (req, res) => {
-        res.render('product-edit-list', {products});
+        res.render('product/product-edit-list', {products});
     },
     
     /*** PRODUCT DETAIL ***/
     detail: (req, res) => {
         let product = productModel.findByPk(req.params.id);
-        res.render('product-detail', {products, product, toThousand});
+        res.render('product/product-detail', {products, product, toThousand});
     },
 
     /*** PRODUCT CREATE VIEW ***/
     panel: (req, res) => {
-        res.render('panel');
+        res.render('product/panel');
     },
 
     /*** PRODUCT CREATE VIEW ***/
@@ -50,13 +50,13 @@ let productosController = {
         }
 
         let productCreated = productModel.create(newProduct);
-        res.redirect('/product/product-edit-list');
+        res.redirect('product/product-edit-list');
     },
 
     /*** PRODUCT EDIT VIEW ***/
     edit: (req, res) => {
         let productToEdit = productModel.findByPk(req.params.id);
-        res.render('product-edit-form', {productToEdit, toThousand})
+        res.render('product/product-edit-form', {productToEdit, toThousand})
     },
 
     /*** PRODUCT EDIT STORAGE ***/

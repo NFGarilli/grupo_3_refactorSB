@@ -8,13 +8,13 @@ const toThousand = n => n.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".");
 
 let mainController = {
     index: (req, res) => {
-        res.render('index', {products});
+        res.render('main/index', {products});
     },
     cart: (req, res) => {
-        res.render('product-cart', {products})
+        res.render('main/product-cart', {products})
     },  
     enConstruction: (req, res) => {
-        res.render('enConstruction')
+        res.render('main/enConstruction')
     }
 }
 

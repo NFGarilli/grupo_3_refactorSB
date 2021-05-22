@@ -4,7 +4,7 @@ const bcryptjs = require('bcryptjs');
 
 let usersController = {
     login: (req, res) => {
-        res.render('login');
+        res.render('user/login');
     },
 
     processLogin: (req, res) => {
@@ -30,7 +30,7 @@ let usersController = {
             }
         }
 
-        return res.render('login', {
+        return res.render('user/login', {
             errors: {
                 email: {msg: 'El email no esta registrado'}
             }
@@ -38,14 +38,14 @@ let usersController = {
     },
 
     register: (req, res) => {
-        res.render('register');
+        res.render('user/register');
     },
 
     processRegister: (req, res) => {
         const validations = validationResult(req);
 
         if (validations.errors.length > 0) {
-            return res.render('register', {
+            return res.render('user/register', {
                 errors: validations.mapped(),
                 oldData: req.body,
             });
@@ -54,7 +54,7 @@ let usersController = {
         let userInDb = userModel.findByField('email', req.body.email);
 
         if (userInDb) {
-            return res.render('register', {
+            return res.render('user/register', {
                 errors: {
                     email: {msg: 'Este email ya esta registrado'}
                 },
@@ -73,7 +73,7 @@ let usersController = {
     },
 
     profile: (req, res) => {
-        res.render('profile', {
+        res.render('user/profile', {
             user: req.session.userLogged
         });
     },

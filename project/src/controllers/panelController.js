@@ -1,6 +1,6 @@
 let panelController = {
     index: (req, res) => {
-        res.render('panel');
+        res.render('panel/panel');
     }
 }
 
