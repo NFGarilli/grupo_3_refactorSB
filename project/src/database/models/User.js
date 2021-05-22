@@ -27,10 +27,6 @@ module.exports = function(sequelize, dataTypes) {
             type: dataTypes.STRING(100),
             allowNull: false
         },
-        admin: {
-            type: dataTypes.INTEGER(1),
-            allowNull: false
-        },
     }
 
     let config = {
@@ -38,7 +34,7 @@ module.exports = function(sequelize, dataTypes) {
         timestamps: false
     }
 
-    let Users = sequelize.define(alias, cols, config);
+    let User = sequelize.define(alias, cols, config);
 
-    return Users;
+    return User;
 }

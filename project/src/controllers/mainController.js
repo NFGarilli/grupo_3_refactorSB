@@ -1,14 +1,15 @@
 const fs = require('fs');
 const path = require('path');
-
-const productsFilePath = path.join(__dirname, '../data/productsDB.json');
-const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
-
-const toThousand = n => n.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".");
+const db = require('../database/models')
+const sequelize = db.sequelize;
+const { Op } = require("sequelize");
 
 let mainController = {
     index: (req, res) => {
-        res.render('main/index', {products});
+        db.Product.findAll()
+            .then(products => {
+                res.render('main/index', {products});
+            }).catch(err => {console.log(err)})
     },
     cart: (req, res) => {
         res.render('main/product-cart', {products})
