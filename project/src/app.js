@@ -12,7 +12,7 @@ const userLoggedMiddleware = require('./middlewares/userLoggedMiddleware');
 app.use(express.urlencoded({extended:false}));
 app.use(express.json());
 app.use(cookies());
-app.use(userLoggedMiddleware);
+// app.use(userLoggedMiddleware);
 app.use(methodOverride('_method'));
 app.use(express.static('../public'));
 app.set('view engine', 'ejs');

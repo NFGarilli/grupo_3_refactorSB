@@ -1,40 +1,49 @@
-const fs = require('fs');
-const path = require('path');
-const productModel = require('../models/product');
+const productModel = require('../database/models/Product');
+const db = require('../database/models');
+const sequelize = db.sequelize;
+const { Op } = require("sequelize");
 
-const productsFilePath = path.join(__dirname, '../data/productsDB.json');
-const products = productModel.getData();
+// const productsFilePath = path.join(__dirname, '../data/productsDB.json');
+// const products = productModel.getData();
 
 const toThousand = n => n.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".");
 
 let productosController = {
     /*** SHOW ALL PRODUCTS ***/
-    index: (req, res) => {
-        res.render('product/product-all', {products, toThousand});
+    index: async function (req, res) {
+        await db.Product.findAll()
+            .then(products => {
+                res.render('product/product-all', {products, toThousand});
+            })
     },
 
-    editList: (req, res) => {
-        res.render('product/product-edit-list', {products});
+    editList: async function (req, res) {
+        db.Product.findAll()
+            .then(products => {
+                res.render('product/product-edit-list', {products});
+            })
     },
     
     /*** PRODUCT DETAIL ***/
-    detail: (req, res) => {
-        let product = productModel.findByPk(req.params.id);
-        res.render('product/product-detail', {products, product, toThousand});
+    detail: async function (req, res) {
+        db.Product.findByPk(req.params.id)
+            .then( product => {
+                res.render('product/product-detail', {products, product, toThousand});
+            })
     },
 
     /*** PRODUCT CREATE VIEW ***/
-    panel: (req, res) => {
+    panel: async function  (req, res) {
         res.render('product/panel');
     },
 
     /*** PRODUCT CREATE VIEW ***/
-    create: (req, res) => {
+    create: async function (req, res) {
         res.render('product-create-form');
     },
 
     /*** PRODUCT CREATE STORAGE ***/
-    store: (req, res) => {
+    store: async function (req, res) {
         let image 
 
         if (req.file != undefined){
@@ -43,55 +52,41 @@ let productosController = {
             image = "default-image.png"
         }
 
-        let ids = products.map(p => p.id)
-        let newProduct = {
-            ...req.body,
-            img: image
-        }
+        await db.Product.create({
+            name: req.body.name,
+            description: req.body.description,
+            img: image,
+            category: category,
+            color: color,
+            sizes: sizes,
+            price: price
+        })
 
-        let productCreated = productModel.create(newProduct);
         res.redirect('product/product-edit-list');
     },
 
     /*** PRODUCT EDIT VIEW ***/
-    edit: (req, res) => {
-        let productToEdit = productModel.findByPk(req.params.id);
+    edit: async function (req, res) {
+        let productToEdit = await db.Product.findByPk(req.params.id);
         res.render('product/product-edit-form', {productToEdit, toThousand})
     },
 
     /*** PRODUCT EDIT STORAGE ***/
-    update: (req, res) => {
-        let id = req.params.id;
-        let productToEdit = productModel.findByPk(id);
-        let img
-        
-        if(req.file != undefined){
-			img = req.file.filename
-		} else {
-			img = productToEdit.img
-		}
+    update: async function (req, res) {
+        await db.Product.update(
+            {...req.body},
+            {
+                where: {id: req.params.id}
+            }
+        );
 
-        productToEdit = {
-			id: productToEdit.id,
-            ...req.body,
-            img: img
-		};
-
-        let newProducts = products.map(product => {
-			if (product.id == productToEdit.id) {
-				return product = {...productToEdit};
-			}
-			return product;
-		})
-
-		fs.writeFileSync(productsFilePath, JSON.stringify(newProducts, null, ' '));
-		res.redirect('/product/product-edit-list');
+        res.redirect('/product/product-edit-list');
     }, 
 
     /*** PRODUCT DESTROY ***/
-    destroy : (req, res) => {
-		let id = req.params.id;
-		productModel.delete(id);
+    destroy: async function (req, res) {
+		let productToDelete = await db.Product.findByPk(req.params.id);
+		await productToDelete.destroy();
         res.redirect('/product/product-edit-list');
 	}
 }

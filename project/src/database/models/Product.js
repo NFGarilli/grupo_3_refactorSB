@@ -16,20 +16,20 @@ module.exports = function(sequelize, dataTypes) {
             allowNull: false
         },
         img: {
-            type: dataTypes.STRING(100),
+            type: dataTypes.STRING(300),
             allowNull: false
         },
         category: {
             type: dataTypes.STRING(50),
-            allowNull: false
+            allowNull: true
         },
-        color: {
+        colors: {
             type: dataTypes.STRING(20),
-            allowNull: false
+            allowNull: true
         },
         sizes: {
             type: dataTypes.STRING(10),
-            allowNull: false
+            allowNull: true
         },
         price: {
             type: dataTypes.NUMBER(10),
@@ -42,7 +42,7 @@ module.exports = function(sequelize, dataTypes) {
         timestamps: false
     }
 
-    let Products = sequelize.define(alias, cols, config);
+    let Product = sequelize.define(alias, cols, config);
 
-    return Products;
+    return Product;
 }
