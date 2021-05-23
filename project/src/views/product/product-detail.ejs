@@ -7,7 +7,7 @@
             <div class="row">
                 <div class="product-gallery">
                 <div class="product-image">
-                    <img src=<%= "/images/product-images/" + product.img %>>
+                    <img src="<%= /images/product-images/ + product.img %>">
                 </div>
                 <div class="gallery-carrousel"></div>
             </div>
@@ -72,19 +72,7 @@
             <div class="productos-container">
           
                 <!-- Producto -->
-                <% for (let i = 3; i < 7; i++) { %> 
-                    <article class="producto">
-                        <div class="producto-image">
-                            <a href=<%= "/product/products/" + products.id %>> <img src="<%= products.img %>"   alt=<%= products.name %> ></a>
-                        </div>
-                        <div class="producto-footer">
-                            <h2 class="title"><%= products.name %></h2>
-                            <span class="title-meta">
-                                <span class="title-price"><%= 'AR$' + products.price + '.00' %></span>  
-                            </span>
-                        </div>
-                    </article>
-                    <% } %>
+          
 
             </div>
         </section>
