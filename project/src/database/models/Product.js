@@ -8,11 +8,11 @@ module.exports = function(sequelize, dataTypes) {
             autoIncrement: true            
         },
         name: {
-            type: dataTypes.STRING(100),
+            type: dataTypes.STRING(300),
             allowNull: false
         },
         description: {
-            type: dataTypes.STRING(300),
+            type: dataTypes.STRING(800),
             allowNull: false
         },
         img: {
@@ -38,7 +38,7 @@ module.exports = function(sequelize, dataTypes) {
     }
 
     let config = {
-        tableName: "products",
+        tableName: "Products",
         timestamps: false
     }
 

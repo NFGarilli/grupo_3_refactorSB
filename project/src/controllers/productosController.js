@@ -18,7 +18,7 @@ let productosController = {
     },
 
     editList: async function (req, res) {
-        db.Product.findAll()
+        await db.Product.findAll()
             .then(products => {
                 res.render('product/product-edit-list', {products});
             })
@@ -26,9 +26,9 @@ let productosController = {
     
     /*** PRODUCT DETAIL ***/
     detail: async function (req, res) {
-        db.Product.findByPk(req.params.id)
+        await db.Product.findByPk(req.params.id)
             .then( product => {
-                res.render('product/product-detail', {products, product, toThousand});
+                res.render('product/product-detail', {product, toThousand});
             })
     },
 
@@ -44,25 +44,26 @@ let productosController = {
 
     /*** PRODUCT CREATE STORAGE ***/
     store: async function (req, res) {
-        let image 
+        // let image 
 
-        if (req.file != undefined){
-            image = req.file.filename
-        } else {
-            image = "default-image.png"
-        }
+        // if (req.file != undefined){
+        //     img = req.file.filename
+        // } 
+        // else {
+        //     image = "default-image.png"
+        // }
 
         await db.Product.create({
             name: req.body.name,
             description: req.body.description,
-            img: image,
-            category: category,
-            color: color,
-            sizes: sizes,
-            price: price
+            img: req.file.filename,
+            category: req.body.category,
+            color: req.body.color,
+            sizes: req.body.sizes,
+            price: req.body.price
         })
 
-        res.redirect('product/product-edit-list');
+        return res.redirect('product/product-create-form');
     },
 
     /*** PRODUCT EDIT VIEW ***/

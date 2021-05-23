@@ -75,12 +75,12 @@
                 <% for (let i = 3; i < 7; i++) { %> 
                     <article class="producto">
                         <div class="producto-image">
-                            <a href=<%= "/products/" + products[i].id %>> <img src=<%="/images/product-images/" + products[i].img %>   alt=<%= products[i].name %> ></a>
+                            <a href=<%= "/product/products/" + products.id %>> <img src="<%= products.img %>"   alt=<%= products.name %> ></a>
                         </div>
                         <div class="producto-footer">
-                            <h2 class="title"><%= products[i].name %></h2>
+                            <h2 class="title"><%= products.name %></h2>
                             <span class="title-meta">
-                                <span class="title-price"><%= 'AR$' + products[i].price + '.00' %></span>
+                                <span class="title-price"><%= 'AR$' + products.price + '.00' %></span>  
                             </span>
                         </div>
                     </article>
