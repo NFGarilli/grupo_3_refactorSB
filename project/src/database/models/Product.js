@@ -12,7 +12,7 @@ module.exports = function(sequelize, dataTypes) {
             allowNull: false
         },
         description: {
-            type: dataTypes.STRING(200),
+            type: dataTypes.STRING(300),
             allowNull: false
         },
         img: {
@@ -20,19 +20,19 @@ module.exports = function(sequelize, dataTypes) {
             allowNull: false
         },
         category: {
-            type: dataTypes.STRING(50),
+            type: dataTypes.STRING(200),
             allowNull: true
         },
         colors: {
-            type: dataTypes.STRING(20),
+            type: dataTypes.STRING(100),
             allowNull: true
         },
         sizes: {
-            type: dataTypes.STRING(10),
+            type: dataTypes.STRING(100),
             allowNull: true
         },
         price: {
-            type: dataTypes.NUMBER(10),
+            type: dataTypes.NUMBER(100),
             allowNull: false
         },
     }

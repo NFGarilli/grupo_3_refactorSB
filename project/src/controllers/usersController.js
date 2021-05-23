@@ -10,8 +10,8 @@ let usersController = {
         res.render('user/login');
     },
     
-    processLogin: (req, res) => {
-        let userToLogin = db.User.findOne({
+    processLogin: async function (req, res) {
+        let userToLogin = await db.User.findOne({
             where: {
                 email: req.body.email
             }
@@ -20,7 +20,7 @@ let usersController = {
         if (userToLogin){
             let isOkPassword = bcryptjs.compareSync(req.body.password, userToLogin.password)
             if(isOkPassword) {
-                delete userToLogin.password;
+                delete userToLogin.password;    
                 req.session.userLogged = userToLogin;
 
                 if(req.body.remember_user){
@@ -29,9 +29,10 @@ let usersController = {
 
                 return res.redirect('/user/profile');
             } else {
-                return res.render('login', {
+                return res.render('/user/login', {
                     errors: {
-                        email: {msg: 'Las credenciales son inválidas'}
+                        email: {
+                            msg: 'Las credenciales son inválidas'}
                     }
                 })
             }

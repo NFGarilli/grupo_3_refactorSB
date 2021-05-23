@@ -39,7 +39,7 @@ let productosController = {
 
     /*** PRODUCT CREATE VIEW ***/
     create: async function (req, res) {
-        res.render('product-create-form');
+        res.render('product/product-create-form');
     },
 
     /*** PRODUCT CREATE STORAGE ***/
@@ -80,14 +80,14 @@ let productosController = {
             }
         );
 
-        res.redirect('/product/product-edit-list');
+        res.redirect('product/product-edit-list');
     }, 
 
     /*** PRODUCT DESTROY ***/
     destroy: async function (req, res) {
 		let productToDelete = await db.Product.findByPk(req.params.id);
 		await productToDelete.destroy();
-        res.redirect('/product/product-edit-list');
+        res.redirect('product/product-edit-list');
 	}
 }
 

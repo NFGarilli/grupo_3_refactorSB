@@ -8,23 +8,23 @@ module.exports = function(sequelize, dataTypes) {
             autoIncrement: true
         },
         name: {
-            type: dataTypes.STRING(30),
+            type: dataTypes.STRING(200),
             allowNull: false
         },
         lastName: {
-            type: dataTypes.STRING(30),
+            type: dataTypes.STRING(200),
             allowNull: false
         },
         email: {
-            type: dataTypes.STRING(50),
+            type: dataTypes.STRING(300),
             allowNull: false
         },
         password: {
-            type: dataTypes.STRING(100),
+            type: dataTypes.STRING(500),
             allowNull: false
         },
         avatar: {
-            type: dataTypes.STRING(100),
+            type: dataTypes.STRING(300),
             allowNull: false
         },
     }
