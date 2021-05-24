@@ -155,7 +155,7 @@ CREATE TABLE `users` (
   `name` varchar(50) DEFAULT NULL,
   `lastName` varchar(50) DEFAULT NULL,
   `email` varchar(50) DEFAULT NULL,
-  `password` varchar(50) DEFAULT NULL,
+  `password` varchar(500) DEFAULT NULL,
   `avatar` varchar(50) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 

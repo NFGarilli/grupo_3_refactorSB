@@ -29,7 +29,7 @@ let usersController = {
 
                 return res.redirect('/user/profile');
             } else {
-                return res.render('/user/login', {
+                return res.render('user/login', {
                     errors: {
                         email: {
                             msg: 'Las credenciales son inválidas'}
@@ -64,8 +64,6 @@ let usersController = {
                 email: req.body.email
             }
         });
-
-        console.log(userInDb);
 
         if (userInDb) {
             return res.render('user/register', {

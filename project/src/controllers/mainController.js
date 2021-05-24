@@ -5,11 +5,11 @@ const sequelize = db.sequelize;
 const { Op } = require("sequelize");
 
 let mainController = {
-    index: (req, res) => {
-        db.Product.findAll()
+    index: async function (req, res) {
+        await db.Product.findAll()
             .then(products => {
                 res.render('main/index', {products});
-            }).catch(err => {console.log(err)})
+            })
     },
     cart: (req, res) => {
         res.render('main/product-cart', {products})
