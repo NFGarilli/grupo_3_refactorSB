@@ -23,6 +23,9 @@ let mainController = {
     encontranos: (req, res) => {
         res.render('main/encontranos')
     },
+    team: (req, res) => {
+        res.render('main/team')
+    },
 }
 
 module.exports = mainController;
