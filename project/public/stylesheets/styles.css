@@ -809,7 +809,7 @@ th:last-child{
     border: 1px solid black;
 }
 
-@media (min-width: 480px)  {
+@media (min-width: 361px)  {
     main section div.productos-container{
         display: flex;
         flex-direction: row;
