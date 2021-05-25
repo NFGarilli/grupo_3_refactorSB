@@ -102,27 +102,6 @@ section .titulo-section {
     padding: 5px;
 }
 
-
-/* BANNER */
-.banner {
-    margin-top: 0;
-    display: block;
-    cursor: pointer;
-}
-
-.banner-img-elements {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: auto;
-    max-width: 1430px;
-    margin: 0px auto;
-}
-
-.banner-img-elements img {
-    width: 100%;
-}
-
 /* BANNER TRIPLE */
 
 .triple-banner {
@@ -809,6 +788,10 @@ th:last-child{
     border: 1px solid black;
 }
 
+.banner-index{
+    display: none;
+}
+
 @media (min-width: 361px)  {
     main section div.productos-container{
         display: flex;
@@ -833,6 +816,25 @@ th:last-child{
 @media (min-width: 768px)  {
     .productos-container article {
         width: 22%;
+    }
+
+    .banner {
+        margin-top: 0;
+        display: block;
+        cursor: pointer;
+    }
+    
+    .banner-img-elements {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: auto;
+        max-width: 1430px;
+        margin: 0px auto;
+    }
+    
+    .banner-img-elements img {
+        width: 100%;
     }
 
     .row {
@@ -944,6 +946,9 @@ th:last-child{
         width: 80%;
     }
     
+    .talles {
+        width: 50%;
+    }
 }
 
 @media (min-width: 1199px) {

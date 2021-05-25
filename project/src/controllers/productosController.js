@@ -26,9 +26,11 @@ let productosController = {
     
     /*** PRODUCT DETAIL ***/
     detail: async function (req, res) {
+        let products = await db.Product.findAll()
+
         await db.Product.findByPk(req.params.id)
             .then( product => {
-                res.render('product/product-detail', {product, toThousand});
+                res.render('product/product-detail', {product, products, toThousand});
             })
     },
 
@@ -63,7 +65,7 @@ let productosController = {
             price: req.body.price
         })
 
-        return res.redirect('product/product-create-form');
+        return res.redirect('/product/product-edit-list');
     },
 
     /*** PRODUCT EDIT VIEW ***/
@@ -81,14 +83,14 @@ let productosController = {
             }
         );
 
-        res.redirect('product/product-edit-list');
+        res.redirect('/product/product-edit-list');
     }, 
 
     /*** PRODUCT DESTROY ***/
     destroy: async function (req, res) {
 		let productToDelete = await db.Product.findByPk(req.params.id);
 		await productToDelete.destroy();
-        res.redirect('product/product-edit-list');
+        res.redirect('/product/product-edit-list');
 	}
 }
 
