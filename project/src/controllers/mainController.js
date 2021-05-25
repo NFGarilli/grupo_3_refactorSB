@@ -16,7 +16,13 @@ let mainController = {
     },  
     enConstruction: (req, res) => {
         res.render('main/enConstruction')
-    }
+    },
+    guiaTalles: (req, res) => {
+        res.render('main/guiaTalles')
+    },
+    encontranos: (req, res) => {
+        res.render('main/encontranos')
+    },
 }
 
 module.exports = mainController;
