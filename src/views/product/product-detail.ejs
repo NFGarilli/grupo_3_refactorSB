@@ -1,0 +1,95 @@
+<%- include('../partials/head')  %>
+
+<body>
+    <%- include('../partials/header')  %>
+    <main>
+        <div class="product-detail-container">
+            <div class="row">
+                <div class="product-gallery">
+                <div class="product-image">
+                    <img src="<%= '/images/product-images/' + product.img %>">
+                </div>
+                <div class="gallery-carrousel"></div>
+            </div>
+            <div class="product-details">
+                <div class="header-product-details">
+                    <h2><%= product.name %></h2>
+                    <div class="product-details-price">
+                        <span><%= 'AR$' + product.price %></span>
+                    </div>
+                </div>
+                <div class="options">
+                    <form action="post">
+                        <div class="product-form-grid">
+                            <div class="option-header"><span>SIZE:</span></div>
+                            <div class="option-values">
+                                <div class="option-value">
+                                    <input class="option-value-input" type="radio" name="SIZE" value="S" tabindex="0" aria-label="S" data-product-option="option1" data-soldout="false">
+                                    <span class="option-value-name">S</span>
+                                </div>
+                                <div class="option-value">
+                                    <input class="option-value-input" type="radio" name="SIZE" value="S" tabindex="0" aria-label="M" data-product-option="option1" data-soldout="false">
+                                    <span class="option-value-name">M</span>
+                                </div>
+                                <div class="option-value">
+                                    <input class="option-value-input" type="radio" name="SIZE" value="S" tabindex="0" aria-label="L" data-product-option="option1" data-soldout="false">
+                                    <span class="option-value-name">L</span>
+                                </div>
+                                <div class="option-value">
+                                    <input class="option-value-input" type="radio" name="SIZE" value="S" tabindex="0" aria-label="XL" data-product-option="option1" data-soldout="false">
+                                    <span class="option-value-name">XL</span>
+                                </div>
+                                <div class="option-value">
+                                    <input class="option-value-input" type="radio" name="SIZE" value="S" tabindex="0" aria-label="XXL" data-product-option="option1" data-soldout="false">
+                                    <span class="option-value-name">XXL</span>
+                                </div>
+                            </div>
+                            <div class="option-header"><span>COLOR:</span></div>
+                            <div class="option-values">
+                                <div class="option-value">
+                                    <input class="option-value-input" type="radio" name="SIZE" value="S" tabindex="0" aria-label="S" data-product-option="option1" data-soldout="false">
+                                    <span class="option-value-name">BLACK</span>
+                                </div>
+                                <div class="option-value">
+                                    <input class="option-value-input" type="radio" name="SIZE" value="S" tabindex="0" aria-label="S" data-product-option="option1" data-soldout="false">
+                                    <span class="option-value-name">WHITE</span>
+                                </div>
+                            </div>
+                            <div class="option-header"><span>QUANTITY:</span></div>
+                            <input type="number" class="product-quantity-input" name="quantity" value="1" min="0">
+                            <button class="product-submit" value="Add to cart">
+                                <span>ADD TO CART</span>
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+         </div>
+        </div>
+
+        <section class="you-may-also-like">
+            <h3 class="titulo-section">TAMBIEN TE PUEDE INTERESAR</h3>
+            <div class="productos-container">
+          
+                <!-- Producto -->
+                <% for (let i = 4; i < 8; i++) { %> 
+                    <article class="producto">
+                        <div class="producto-image">
+                            <a href=<%= "/product/products/" + products[i].id %>> <img src="/images/product-images/<%= products[i].img %>"   alt=<%= products[i].name %> ></a>
+                        </div>
+                        <div class="producto-footer">
+                            <h2 class="title"><%= products[i].name %></h2>
+                            <span class="title-meta">
+                                <span class="title-price"><%= 'AR$ ' + products[i].price %></span>
+                            </span>
+                        </div>
+                    </article>
+                <% } %>
+          
+            </div>
+        </section>
+    </main>
+    <%- include('../partials/footer')  %>
+</body>
+
+</html>

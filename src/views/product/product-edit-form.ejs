@@ -1,0 +1,70 @@
+<%- include('../partials/head')  %>
+
+<body>
+    <%- include('../partials/header') %>
+
+    <header class="header-panel">
+        <div>
+            <h2>REFACTOR SKATEBOARDING</h2>
+        </div>
+        <div class="page-title">
+            <h3>BIENVENIDO AL PANEL DE ADMINISTRACION DE PRODUCTO</h3>
+        </div>
+    </header>
+    <main>
+        <section class="product-creation">
+            <div class="product-creation-container">
+
+                <div class="product-form">
+
+                    <form class="login-form" action="/product/<%= productToEdit.id %>/actualizar?_method=PUT" method="POST" enctype="multipart/form-data">
+                        <div class="wrap-around nombre">
+                            <label>Nombre</label>
+                            <input type="text" placeholder="Nombre" value="<%= productToEdit.name %>" name="name" class="field">
+                        </div>
+                        <div class="wrap-around descripcion">
+                            <label>Descripcion</label>
+                            <input type="text" placeholder="max. 140 caracteres" value="<%= productToEdit.description %>" name="description"
+                                class="field">
+                        </div>
+                        <div class="wrap-around image">
+                            <label>Imagen</label>
+                            <input type="file" name="img" value="<%= productToEdit.img %>" class="field">
+                        </div>
+                        <div class="wrap-around gender">
+                            <label>Genero</label>
+                            <input type="text" name="gender" value="<%= productToEdit.gender %>" class="field">
+                        </div> 
+                        <div class="wrap-around category">
+                            <label>Categoria</label>
+                            <input type="text" name="category" value="<%= productToEdit.category %>" class="field">
+                        </div>
+                        <div class="wrap-around color">
+                            <label>Colores</label>
+                            <input type="text" name="colors" value="<%= productToEdit.colors %>" class="field">
+                        </div>
+                        <div class="wrap-around size">
+                            <label>Talles</label>
+                            <input type="text" name="sizes" value="<%= productToEdit.sizes %>" class="field">
+                        </div>
+                        <div class="wrap-around price">
+                            <label>Precio</label>
+                            <input type="number" name="price" value="<%= productToEdit.price %>" class="field">
+                        </div>
+                        <div class="login-button-container">
+                            <button type="submit" class="login-button">EDITAR PRODUCTO</button>
+                        </div>
+                        <form action="<%= productToEdit.id %>/delete/?_method=DELETE/" method="POST">
+                            <div class="login-button-container">
+                                <button type="submit" class="login-button">BORRAR PRODUCTO</button>
+                            </div>
+                        </form>
+                    </form>
+
+                </div>
+            </div>
+        </section>
+    </main>
+</body>
+
+</html>
