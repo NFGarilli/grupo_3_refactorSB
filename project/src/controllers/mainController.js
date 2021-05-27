@@ -23,6 +23,9 @@ let mainController = {
     guiaTalles: (req, res) => {
         res.render('main/guiaTalles')
     },
+    guiaTablas: (req, res) => {
+        res.render('main/guiaTablas')
+    },
     encontranos: (req, res) => {
         res.render('main/encontranos')
     },

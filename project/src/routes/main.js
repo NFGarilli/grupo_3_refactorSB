@@ -12,6 +12,7 @@ router.get('/enConstruction', mainController.enConstruction);
 router.get('/guiaTalles', mainController.guiaTalles);
 router.get('/encontranos', mainController.encontranos);
 router.get('/team', mainController.team);
+router.get('/guiaTablas', mainController.guiaTablas);
 
 
 module.exports = router;

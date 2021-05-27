@@ -46,19 +46,20 @@ let productosController = {
 
     /*** PRODUCT CREATE STORAGE ***/
     store: async function (req, res) {
-        // let image 
+        let image 
 
-        // if (req.file != undefined){
-        //     img = req.file.filename
-        // } 
-        // else {
-        //     image = "default-image.png"
-        // }
+        if (req.file != undefined){
+            image = req.file.filename
+        } 
+        else {
+            image = "default-image.png"
+        }
 
         await db.Product.create({
             name: req.body.name,
             description: req.body.description,
-            img: req.file.filename,
+            img: image,
+            gender: req.body.gender,
             category: req.body.category,
             color: req.body.color,
             sizes: req.body.sizes,

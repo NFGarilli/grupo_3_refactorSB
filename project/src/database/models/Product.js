@@ -19,6 +19,10 @@ module.exports = function(sequelize, dataTypes) {
             type: dataTypes.STRING(300),
             allowNull: false
         },
+        gender: {
+            type: dataTypes.STRING(100),
+            allowNull: true
+        },
         category: {
             type: dataTypes.STRING(200),
             allowNull: true
