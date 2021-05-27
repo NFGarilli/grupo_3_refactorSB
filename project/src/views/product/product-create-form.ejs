@@ -1,0 +1,57 @@
+<%- include('../partials/head')  %>
+<body>
+    <%- include('../partials/header') %>
+
+    <header class="header-panel">
+        <div><h2>REFACTOR SKATEBOARDING</h2></div>
+        <div class="page-title">
+            <h3>BIENVENIDO AL PANEL DE ADMINISTRACION DE PRODUCTO</h3>
+        </div>
+    </header>
+    <main>
+        <section class="product-creation">
+            <div class="product-creation-container">
+                
+                <div class="product-form">
+                    
+                    <form class="login-form" action='/product/product-create' method="POST" enctype="multipart/form-data">
+                        <div class="wrap-around nombre">
+                            <label>Nombre</label>
+                            <input type="text" placeholder="Nombre" value="" name="name" class="field">
+                        </div>
+                        <div class="wrap-around descripcion">
+                            <label>Descripcion</label>
+                            <input type="text" placeholder="max. 500 caracteres" value="" name="description" class="field">
+                        </div>
+                        <div class="wrap-around image">
+                            <label>Imagen</label>
+                            <input type="file" name="img" class="field">
+                        </div>
+                        <div class="wrap-around category">
+                            <label>Categoria</label>
+                            <input type="text" name="category" class="field">
+                        </div>
+                        <div class="wrap-around color">
+                            <label>Colores</label>
+                            <input type="text" name="colors" class="field">
+                        </div>
+                        <div class="wrap-around size">
+                            <label>Talles</label>
+                            <input type="text" name="sizes" class="field">
+                        </div>
+                        <div class="wrap-around price">
+                            <label>Precio</label>
+                            <input type="number" name="price" class="field">
+                        </div>
+                        <div class="login-button-container">
+                            <button type="submit" class="login-button">CREAR PRODUCTO</button>
+                        </div>
+                    </form>
+
+                </div>
+            </div>
+        </section>
+    </main>
+</body>
+</html>
+ 
