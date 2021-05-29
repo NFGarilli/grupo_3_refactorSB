@@ -1,4 +1,3 @@
-/* GENERAL */
 *{
     margin: 0px;
     padding: 0px;    
@@ -246,7 +245,7 @@ button[type='submit'] {
     box-shadow: none;
 }
 
-.edit-list-button, .delete-list-button, #dlb {
+.edit-list-button, .delete-list-button, #dlb, .create, .edit {
     background-color: #000000;
     color: #FFFFFF;
     font-size: 11px;
@@ -829,12 +828,12 @@ th:last-child{
         align-items: center;
         justify-content: center;
         width: auto;
-        max-width: 1430px;
+        max-width: 70%;
         margin: 0px auto;
     }
     
-    .banner-img-elements img {
-        width: 100%;
+    .banner-img-elements, .img {
+        width: 30%;
     }
 
     .row {
@@ -946,10 +945,7 @@ th:last-child{
         width: 80%;
     }
     
-    .talles {
-        width: 30%;
-    }
-    .tablas {
+    .talles, .tablas {
         width: 50%;
     }
 }
