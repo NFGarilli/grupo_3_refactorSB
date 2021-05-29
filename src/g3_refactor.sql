@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: localhost:3306
--- Tiempo de generación: 26-05-2021 a las 05:57:47
+-- Tiempo de generación: 25-05-2021 a las 06:36:12
 -- Versión del servidor: 5.7.24
 -- Versión de PHP: 7.2.19
 
@@ -32,7 +32,6 @@ CREATE TABLE `products` (
   `name` varchar(300) CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
   `description` varchar(800) CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
   `img` varchar(300) CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
-  `gender` varchar(100) CHARACTER SET utf8 COLLATE utf8_unicode_ci DEFAULT NULL,
   `category` varchar(200) CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
   `colors` varchar(100) CHARACTER SET utf8 COLLATE utf8_unicode_ci DEFAULT NULL,
   `sizes` varchar(100) CHARACTER SET utf8 COLLATE utf8_unicode_ci DEFAULT NULL,
@@ -43,15 +42,15 @@ CREATE TABLE `products` (
 -- Volcado de datos para la tabla `products`
 --
 
-INSERT INTO `products` (`id`, `name`, `description`, `img`, `gender`, `category`, `colors`, `sizes`, `price`) VALUES
-(101, 'Buzo Canguro', 'Buzo Canguro', 'product-1621735363887.jpg', 'Hombre', 'Buzo', '', 'Unicio', 4990),
-(106, 'Kerrosover 6.0 Surfboard', 'Parte de la colección Kerrlection, es la tabla elegida por Josh Kerr para competir. Construida para soportar todas las condiciones e instancias de la ola. Desde la formación de la tubería hasta el quiebre de la ola en la playa. KERROSOVER  MEDIDAS: ALTO: 6\'00\' ANCHO: 19.12 ESPESOR: 2.43 VOLUMEN: 28.30', 'product-1621741582552.jpg', 'Accesorio', 'Surfboard', '', 'Ver Medidas', 65000),
-(107, 'Canguro Sommerset Oversize Hood Negro', 'Canguro de PIel con escote medio cierre y bolsillos. Confort Fit hood con logo bordado', 'product-1621741781041.jpg', 'Mujer', 'Buzos', '', 'Varios', 6590),
-(108, 'Campera Bungaloo Azul', 'Campera de Nylon con Capucha. 2 Bolsillos Fronto-inferiores con broches de presion. Forreria interna de nylon. Cintura y Puños elastizados.', 'product-1621741955083.jpg', 'Niño', 'Campera', '', 'Varios', 11990),
-(113, 'Chaleco Mavericks Negro', 'Chaleco con capucha desmontable. 2 Bolsillos Fronto-inferiores con cierre tipo termosellado a contratono. Forreria interna de alto contraste. Doble regulación de apertura en el frente', 'product-1621891720078.jpg', 'Hombre', 'Chalecos', '', 'Unico', 9790),
-(114, ' Campera Brave', 'Tapado tipo mongomery con capucha de piel sintética, realizada con paño de lana a cuadros estilo principe de Gales y rellena de guata siliconada. Posee alamares y cierres metálicos delanteros. Fashion fit.', 'product-1621923947403.jpg', 'Mujer', 'Campera', '', 'Unico', 13590),
-(115, 'Pantalon Upper Hand', 'Pantalon Twill a cuadros. Tipo pinzado tiro alto con bolsillos. Fashion Fit', 'product-1621924181260.jpg', 'Mujer', 'Pantalon Mujer', '', 'varios', 6390),
-(116, 'Jean Wonder Super Skinny', 'Jean stretch denim super skinny fit. Tiro alto. Lavado enzimatico suave con pliegues laser.', 'product-1621924430452.jpg', 'Mujer', 'Jean', '', 'Varios', 5890);
+INSERT INTO `products` (`id`, `name`, `description`, `img`, `category`, `colors`, `sizes`, `price`) VALUES
+(101, 'Buzo Canguro', 'Buzo Canguro', 'product-1621735363887.jpg', 'Buzo', '', 'Unicio', 4990),
+(106, 'Kerrosover 6.0 Surfboard', 'Parte de la colección Kerrlection, es la tabla elegida por Josh Kerr para competir. Construida para soportar todas las condiciones e instancias de la ola. Desde la formación de la tubería hasta el quiebre de la ola en la playa. KERROSOVER  MEDIDAS: ALTO: 6\'00\' ANCHO: 19.12 ESPESOR: 2.43 VOLUMEN: 28.30', 'product-1621741582552.jpg', 'Surfboard', NULL, 'Ver Medidas', 65000),
+(107, 'Canguro Sommerset Oversize Hood Negro', 'Canguro de PIel con escote medio cierre y bolsillos. Confort Fit hood con logo bordado', 'product-1621741781041.jpg', 'Buzos', NULL, 'Varios', 6590),
+(108, 'Campera Bungaloo Azul', 'Campera de Nylon con Capucha. 2 Bolsillos Fronto-inferiores con broches de presion. Forreria interna de nylon. Cintura y Puños elastizados.', 'product-1621741955083.jpg', 'Campera', NULL, 'Varios', 11990),
+(113, 'Chaleco Mavericks Negro', 'Chaleco con capucha desmontable. 2 Bolsillos Fronto-inferiores con cierre tipo termosellado a contratono. Forreria interna de alto contraste. Doble regulación de apertura en el frente', 'product-1621891720078.jpg', 'Chalecos', NULL, 'Unico', 9790),
+(114, ' Campera Brave', 'Tapado tipo mongomery con capucha de piel sintética, realizada con paño de lana a cuadros estilo principe de Gales y rellena de guata siliconada. Posee alamares y cierres metálicos delanteros. Fashion fit.', 'product-1621923947403.jpg', 'Campera', NULL, 'Unico', 13590),
+(115, 'Pantalon Upper Hand', 'Pantalon Twill a cuadros. Tipo pinzado tiro alto con bolsillos. Fashion Fit', 'product-1621924181260.jpg', 'Pantalon Mujer', NULL, 'varios', 6390),
+(116, 'Jean Wonder Super Skinny', 'Jean stretch denim super skinny fit. Tiro alto. Lavado enzimatico suave con pliegues laser.', 'product-1621924430452.jpg', 'Jean', NULL, 'Varios', 5890);
 
 -- --------------------------------------------------------
 

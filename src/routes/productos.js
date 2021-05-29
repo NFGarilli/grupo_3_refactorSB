@@ -20,12 +20,12 @@ router.get('/panel', authMiddleware, productosController.panel);
 
 /*** CREATE ONE PRODUCT ***/ 
 router.get('/product-create-form', authMiddleware, productosController.create);
-router.post('/product-create', upload.single('img'), authMiddleware, productosController.store);
+router.post('/product-create', upload.single('img'), productosController.store);
 
 /*** EDIT ONE PRODUCT ***/ 
 router.get('/product-edit-list', authMiddleware, productosController.editList);
 router.get('/:id/product-edit-form', authMiddleware, productosController.edit); 
-router.put('/:id/actualizar', upload.single('img'), authMiddleware, productosController.update); 
+router.put('/:id/actualizar', upload.single('img'), productosController.update); 
 
 /*** DELETE ONE PRODUCT***/ 
 router.delete('/:id/delete', productosController.destroy); 
