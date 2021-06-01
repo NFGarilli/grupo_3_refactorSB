@@ -4,6 +4,7 @@ const app = express();
 const methodOverride = require('method-override');
 const session = require('express-session');
 const cookies = require('cookie-parser');
+const path = require('path');
 
 /*** MIDDLEWARES ***/
 const userLoggedMiddleware = require('./middlewares/userLoggedMiddleware');

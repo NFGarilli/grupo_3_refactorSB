@@ -7,6 +7,9 @@
                 <div class="page-title">
                     <h3 class="iniciar-sesion"> REGISTRATE</h3>
                 </div>
+                <div class="errores">
+                    <ul></ul>
+                </div>
                 <div class="account-form">
                     <form class="login-form" method="POST" action="/user/register" enctype="multipart/form-data">
                         <div class="wrap-around nombre">
@@ -65,5 +68,6 @@
         </section>
     </main>
     <%- include('../partials/footer') %> 
+    <script src="/js/usersValidator.js"></script>
 </body>
 </html>
