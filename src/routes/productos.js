@@ -7,7 +7,9 @@ const upload = require ('../middlewares/multerProductsMiddleware');
 const authMiddleware = require('../middlewares/authMiddleware');
 
 /************ Controller Require ************/
-const productosController = require('../controllers/productosController')
+const productosController = require('../controllers/productosController');
+const validateProductCreateMiddleware = require('../middlewares/validateProductCreateMiddleware');
+const validateProductEditMiddleware = require('../middlewares/validateProductEditMiddleware');
 
 /*** GET ALL PRODUCTS ***/ 
 router.get('/products', productosController.index);
@@ -20,12 +22,12 @@ router.get('/panel', authMiddleware, productosController.panel);
 
 /*** CREATE ONE PRODUCT ***/ 
 router.get('/product-create-form', authMiddleware, productosController.create);
-router.post('/product-create', upload.single('img'), productosController.store);
+router.post('/product-create', upload.single('img'), validateProductCreateMiddleware, productosController.store);
 
 /*** EDIT ONE PRODUCT ***/ 
 router.get('/product-edit-list', authMiddleware, productosController.editList);
 router.get('/:id/product-edit-form', authMiddleware, productosController.edit); 
-router.put('/:id/actualizar', upload.single('img'), productosController.update); 
+router.put('/:id/actualizar', upload.single('img'), validateProductEditMiddleware, productosController.update); 
 
 /*** DELETE ONE PRODUCT***/ 
 router.delete('/:id/delete', productosController.destroy); 
