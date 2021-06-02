@@ -61,7 +61,7 @@ let productosController = {
             img: image,
             gender: req.body.gender,
             category: req.body.category,
-            color: req.body.color,
+            colors: req.body.colors,
             sizes: req.body.sizes,
             price: req.body.price
         })
