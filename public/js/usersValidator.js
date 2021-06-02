@@ -34,7 +34,6 @@ window.onload = function() {
         } else {
             formulario.userEmail.focus();
         };
-                //IMPORTANTE VER VALIDACIONES DE EMAIL
 
         if( userEmail.value == "") {
             errores.push("Tienes que escribir un formato de email valido");            
@@ -43,7 +42,6 @@ window.onload = function() {
         } else {
             formulario.userPassword.focus();
         };
-        //IMPORTANTE VER VALIDACIONES DE PASSWORD
         if( userPassword.value == "") {
             errores.push("La contraseña no puede ser vacia");            
         } else if (!expPassword.test(userPassword.value)){

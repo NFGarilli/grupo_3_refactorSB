@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: localhost:3306
--- Tiempo de generación: 01-06-2021 a las 20:32:17
+-- Tiempo de generación: 02-06-2021 a las 22:07:28
 -- Versión del servidor: 5.7.24
 -- Versión de PHP: 7.2.19
 
@@ -32,10 +32,10 @@ CREATE TABLE `products` (
   `name` varchar(300) CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
   `description` varchar(800) CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
   `img` varchar(300) CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
-  `gender` varchar(100) CHARACTER SET utf8 COLLATE utf8_unicode_ci DEFAULT NULL,
+  `gender` varchar(100) CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
   `category` varchar(200) CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
-  `colors` varchar(100) CHARACTER SET utf8 COLLATE utf8_unicode_ci DEFAULT NULL,
-  `sizes` varchar(100) CHARACTER SET utf8 COLLATE utf8_unicode_ci DEFAULT NULL,
+  `colors` varchar(100) CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
+  `sizes` varchar(100) CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
   `price` int(100) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
@@ -103,7 +103,7 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT de la tabla `products`
 --
 ALTER TABLE `products`
-  MODIFY `id` int(50) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=117;
+  MODIFY `id` int(50) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=118;
 
 --
 -- AUTO_INCREMENT de la tabla `users`

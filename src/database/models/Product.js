@@ -21,19 +21,19 @@ module.exports = function(sequelize, dataTypes) {
         },
         gender: {
             type: dataTypes.STRING(100),
-            allowNull: true
+            allowNull: false
         },
         category: {
             type: dataTypes.STRING(200),
-            allowNull: true
+            allowNull: false
         },
         colors: {
             type: dataTypes.STRING(100),
-            allowNull: true
+            allowNull: false
         },
         sizes: {
             type: dataTypes.STRING(100),
-            allowNull: true
+            allowNull: false
         },
         price: {
             type: dataTypes.NUMBER(100),

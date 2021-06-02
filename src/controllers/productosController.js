@@ -52,7 +52,7 @@ let productosController = {
             image = req.file.filename
         } 
         else {
-            image = "default-image.png"
+            // image = "/images/product-images/default-image.png"
         }
 
         await db.Product.create({
