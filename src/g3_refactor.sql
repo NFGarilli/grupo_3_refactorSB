@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: localhost:3306
--- Tiempo de generación: 02-06-2021 a las 22:07:28
+-- Tiempo de generación: 03-06-2021 a las 16:06:26
 -- Versión del servidor: 5.7.24
 -- Versión de PHP: 7.2.19
 
@@ -51,7 +51,9 @@ INSERT INTO `products` (`id`, `name`, `description`, `img`, `gender`, `category`
 (113, 'Chaleco Mavericks Negro', 'Chaleco con capucha desmontable. 2 Bolsillos Fronto-inferiores con cierre tipo termosellado a contratono. Forreria interna de alto contraste. Doble regulación de apertura en el frente', 'product-1621891720078.jpg', 'Hombre', 'Chalecos', 'varios', 'Unico', 9790),
 (114, ' Campera Brave', 'Tapado tipo mongomery con capucha de piel sintética, realizada con paño de lana a cuadros estilo principe de Gales y rellena de guata siliconada. Posee alamares y cierres metálicos delanteros. Fashion fit.', 'product-1621923947403.jpg', 'Mujer', 'Campera', 'Varios', 'Unico', 13590),
 (115, 'Pantalon Upper Hand', 'Pantalon Twill a cuadros. Tipo pinzado tiro alto con bolsillos. Fashion Fit', 'product-1621924181260.jpg', 'Mujer', 'Pantalon Mujer', 'varios', 'varios', 6390),
-(116, 'Jean Wonder Super Skinny', 'Jean stretch denim super skinny fit. Tiro alto. Lavado enzimatico suave con pliegues laser.', 'product-1621924430452.jpg', 'Mujer', 'Jean', 'Jean', 'Varios', 5890);
+(116, 'Jean Wonder Super Skinny', 'Jean stretch denim super skinny fit. Tiro alto. Lavado enzimatico suave con pliegues laser.', 'product-1621924430452.jpg', 'Mujer', 'Jean', 'Jean', 'Varios', 5890),
+(117, 'Beanie Rip Curl Ledge', ' Beanie Rip Curl, interior forrado en polar. Talle único. ', 'product-1622733451725.png', 'Hombre', 'Gorro', 'Negro y Crema', 'Unico', 2300),
+(118, 'Gorro', 'Gorro Lana Artesanal', 'product-1622733526833.html', 'Hombre', 'Gorro', 'Negro', 'Unico', 2300);
 
 -- --------------------------------------------------------
 
@@ -103,7 +105,7 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT de la tabla `products`
 --
 ALTER TABLE `products`
-  MODIFY `id` int(50) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=118;
+  MODIFY `id` int(50) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=123;
 
 --
 -- AUTO_INCREMENT de la tabla `users`
