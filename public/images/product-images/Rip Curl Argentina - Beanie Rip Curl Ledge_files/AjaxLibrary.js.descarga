@@ -1,0 +1,57 @@
+﻿function AjaxCall(url, objectId)
+{
+  //return;
+  var objXMLHttp = getXMLHttp();
+  if(objXMLHttp == null)
+  {
+    document.getElementById(objectId).innerHTML = "Error de Ajax";
+    return;
+  }
+  objXMLHttp.onreadystatechange = function()
+  {
+    showResponseText(objXMLHttp, objectId)
+  }
+  url += "&" + Math.random(); 
+  objXMLHttp.open("GET", url, true) // asignamos los mtodos open y send
+  objXMLHttp.send(null)
+}
+
+function AjaxExec(url)
+{
+	pedido = new XMLHttpRequest();
+	//pedido.onreadystatechange = respuesta;
+	pedido.open("GET", true);
+	pedido.send(null);
+
+}
+
+function getXMLHttp() 
+{
+  var xmlhttp = null;
+	try 
+	{
+		xmlhttp = new ActiveXObject("Msxml2.XMLHTTP");
+  } 
+  catch (e) 
+  {
+    try 
+    {
+      xmlhttp = new ActiveXObject("Microsoft.XMLHTTP");
+    } 
+    catch (E) 
+    {
+      xmlhttp = false;
+    }
+  }
+  if (!xmlhttp && typeof(XMLHttpRequest) != "undefined") 
+    xmlhttp = new XMLHttpRequest();
+  return xmlhttp
+}
+
+function showResponseText(objXMLHttp, objectId)
+{
+  if (objXMLHttp.readyState == 4 && (objXMLHttp.status==200 || window.location.href.indexOf("http")==-1))
+  {
+    document.getElementById(objectId).innerHTML = objXMLHttp.responseText;
+  }
+}

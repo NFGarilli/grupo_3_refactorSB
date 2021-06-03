@@ -95,16 +95,19 @@ Estar dias sin realizar ningun avance.
 ### Sprint7
 
 1. **Comenzar a hacer** ->
-Empezar a ser mas constantes.
+No encontramos nada nuevo estos días.
 
 2. **Hacer mas** ->
-Dividir de manera mas equitativa las tareas.
+Dayli
 
 3. **Continuar haciendo** ->
-Seguir administrandonos los tiempos de la manera que venimos haciendo desde el sprint anterior.
+
+Revisando detalles y avanzar en le mejora. 
 
 4. **Hacer menos** ->
-Estar dias sin realizar ningun avance.
 
-5. **Dejar de hacer** ->
+Hemos mejorado mucho, estos días.
+
+5. **Dejar de hacer** 
+Al momento estamos mejor.
 -

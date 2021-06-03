@@ -58,7 +58,7 @@ let productosController = {
         await db.Product.create({
             name: req.body.name,
             description: req.body.description,
-            img: image,
+            img: req.file.filename,
             gender: req.body.gender,
             category: req.body.category,
             colors: req.body.colors,

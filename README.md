@@ -247,3 +247,101 @@ implementación de validator.js (documentación/descarga) o validaciones "custom
             ○ Login de usuarios.
             ○ Creación y modificación de productos.
             ○ (Opcional) Resto de los formularios del sitio.
+
+
+# Sprint 8
+
+# APIs y dashboard
+
+# API de usuarios
+
+Nuestra API de usuarios va a proveernos de dos endpoints muy importantes. El primero
+nos entregará la lista completa de usuarios y el segundo nos permitirá consultar los
+detalles de un usuario en particular.
+# Vamos con esas consignas:
+    ● api/users/
+        ○ Deberá devolver un objeto literal con la siguiente estructura:
+            ■ count → cantidad total de usuarios en la base.
+            ■ users → array con la colección de usuarios, cada uno con:
+    ● id
+    ● name
+    ● email
+    ● detail → URL para obtener el detalle.
+    ● api/users/:id
+        ○ Deberá devolver un objeto literal con la siguiente estructura:
+            ■ Una propiedad por cada campo en base.
+            ■ Una URL para la imagen de perfil (para mostrar la imagen).
+            ■ Sin información sensible (ej: password y categoría).
+# Entregable: 
+URL funcionales devolviendo datos de usuarios en formato JSON.
+
+# API de productos
+Nuestra API de productos será muy similar. Sus dos endpoints entregarán la lista completa de productos y el detalle de un producto en particular.
+# Vamos con esas consignas:
+    ● api/products/
+        ○ Deberá devolver un objeto literal con la siguiente estructura:
+            ■ count → cantidad total de productos en la base.
+            ■ countByCategory → objeto literal con una propiedad por categoría             con el total de productos.
+            ■ products → array con la colección de productos, cada uno con:
+    ● id
+    ● name
+    ● description
+    ● un array con principal relación de uno a muchos (ej: categories).
+    ● detail → URL para obtener el detalle.
+    ● api/products/:id
+        ○ Deberá devolver un objeto literal con la siguiente estructura:
+            ■ una propiedad por cada campo en base.
+            ■ un array por cada relación de uno a muchos (categories, colors, sizes, etc).
+            ■ Una URL para la imagen del producto (para mostrar la imagen).
+# Entregable:
+ URL funcionales devolviendo datos de productos en formato JSON
+
+ # (Opcional) Paginado
+Agregar a los endpoints de listado, la posibilidad de paginar los resultados.
+    ● api/users/
+    ● api/products/
+        ○ 10 resultados por página (recuerden limit y offset 😉☝️).
+        ○ next → URL a la próxima página (si corresponde).
+        ○ previous → URL a la página previa (si corresponde).
+Pueden tomar de referencia la API de Star Wars:
+    ➔ https://swapi.co/
+    ➔ https://swapi.co/api/people/?page=3
+
+# Dashboard en React
+Ya tenemos nuestra fuente de datos y ahora solo queda consumirlas para darle vida a
+nuestro dashboard.
+Para este punto les recomendamos que partan de los archivos que les compartimos
+durante las ejercitaciones presenciales de React.
+El dashboard deberá contener al menos:
+    ● 3 a 6 paneles simples con los siguientes totales:
+        ○ Total de productos
+        ○ Total de usuarios
+        ○ Total de categorías
+    ● Panel de detalle de último producto o usuario creado.
+    ● Panel de categorías con el total de productos de cada una.
+    ● Panel con el listado de productos.8
+# (Opcional) Funcionalidades adicionales:
+    ● Total de productos vendidos / total de ventas.
+    ● Últimos 5 productos vendidos / los 5 más vendidos.
+    ● Vista de creación de productos como Administrador.
+    ● Vista de edición de productos como Administrador.
+    ● Opción de eliminar productos como Administrador.8
+
+# Resumen de entregables
+★ Archivo retro.md con el resultado de la retrospectiva.
+★ (Opcional) Archivo daily.md con sus opiniones sobre las dailies/weeklies.
+★ Tablero de trabajo actualizado.
+★ Endpoints de usuarios:
+    ○ Listado de usuarios.
+        ■ (Opcional) Paginado.
+    ○ Detalle de usuario.
+★ Endpoints de productos:
+    ○ Listado de productos.
+        ■ (Opcional) Paginado.
+    ○ Detalle de producto.
+★ Dashboard del sitio hecho en React:
+    ○ 3 a 6 paneles simples con totales.
+    ○ Panel de detalle de último producto o usuario creado.
+    ○ Panel de categorías con el total de productos de cada una.
+    ○ Panel con el listado de productos.
+    ○ (Opcional) Funcionalidades adicionales.

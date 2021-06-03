@@ -2,13 +2,10 @@ window.onload = function() {
     let productForm = document.querySelector("#product-form");
     console.log(productForm);
 
-    productForm.addEventListener("submit", function(e) {
-        
-        
-     
+    productForm.addEventListener("submit", function(e) {   
+             
         let errores = [];
-        
-         
+                 
         let productName = productForm.name;
         let productDescription = productForm.description;
         let productImg = productForm.img;
@@ -19,11 +16,8 @@ window.onload = function() {
         let productPrice = productForm.price;     
 
         //console.log(productName.value, productDescription.value);
-        let acceptedExtensions = ['.jpg', '.jpeg', '.png', '.gif'];
-        
-        // let fileExtension = path.extname(productAvatar.value);
-         
-       
+        let acceptedExtensions = ['.jpg', '.jpeg', '.png', '.gif'];        
+        // let fileExtension = path.extname(productAvatar.value);               
          if( productName.value == "") {
              errores.push("Nombre comercial del producto");            
          } else if (productName.value.length < 5 ){
@@ -31,7 +25,6 @@ window.onload = function() {
          } else {
              productDescription.focus()
          };
-
          if( productDescription.value == "") {
              errores.push("Descripción del producto");                      
          } else if (productDescription.value.length <20 ){
@@ -74,11 +67,11 @@ window.onload = function() {
          };
                  
 
-       //  if( productImg.value == "") {
-       //      errores.push("Debes subir una foto.");            
-        // } else if (!acceptedExtensions.includes(fileExtension)){
-        //     errores.push('Las extensiones de archivo permitidas son ' + acceptedExtensions.join(', '));
-         //};
+        if( productImg.value == "") {
+            errores.push("Debes subir una foto.");            
+        } else if (!acceptedExtensions.includes(fileExtension)){
+            errores.push('Las extensiones de archivo permitidas son ' + acceptedExtensions.join(', '));
+         };
         
          e.preventDefault();
         if (errores.length > 0) {

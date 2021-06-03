@@ -1,0 +1,15 @@
+// JavaScript Document
+	
+			$(function() {
+				$('nav#menu-mobile').mmenu({
+					extensions	: [ 'effect-slide', 'pageshadow' ],
+					header		: true,
+					searchfield	: true,
+					counters	: true,
+					footer		: {
+						add			: false,
+						content		: '<div id="follow"><a href="#"><img alt="carro de compras" src="images/carrito2.png"></a> 0 &nbsp; items &nbsp;&nbsp; $ 0,00.-<a href="#" class="checkout-mobile" style="color: #000000;">CHECKOUT</a><br /><a href="#">Iniciar Sesion</a> &nbsp;| &nbsp; <a href="#">Registrarse</a></div>'
+					}
+				});
+			});
+		

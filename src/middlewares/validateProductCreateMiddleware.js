@@ -1,4 +1,6 @@
 const { body } = require('express-validator');
+const path = require('path');
+
 
 module.exports = [
     body('name').notEmpty().withMessage('Tienes que escribir un nombre'),
@@ -7,5 +9,20 @@ module.exports = [
     body('category').notEmpty().withMessage('Tienes que escribir una categoria'),
     body('colors').notEmpty().withMessage('Tienes que escribir un color'),
     body('sizes').notEmpty().withMessage('Tienes que escribir un tamaño'),
-    body('price').notEmpty().withMessage('Tienes que escribir un precio')
+    body('price').notEmpty().withMessage('Tienes que escribir un precio'),
+    body('img').custom((value, { req }) => {
+        let file = req.file;
+        let acceptedExtensions = ['.jpg', '.jpeg', '.png', '.gif'];
+
+        if (!file){
+            throw new Error('Debes subir una imagen');
+        } else {
+            let fileExtension = path.extname(file.originalname);
+            if (!acceptedExtensions.includes(fileExtension)) {
+                throw new Error('Las extensiones de archivo permitidas son ' + acceptedExtensions.join(', '));
+            }
+        }
+        
+        return true;
+    })
 ]
