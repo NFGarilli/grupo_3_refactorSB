@@ -16,7 +16,8 @@ window.onload = function() {
         let productPrice = productForm.price;     
 
         //console.log(productName.value, productDescription.value);
-        let acceptedExtensions = ['.jpg', '.jpeg', '.png', '.gif'];        
+        let fileExtension =  productImg.value.split('.').pop();
+        let acceptedExtensions = ['jpg', 'jpeg', 'png', 'gif'];        
         // let fileExtension = path.extname(productAvatar.value);               
          if( productName.value == "") {
              errores.push("Nombre comercial del producto");            

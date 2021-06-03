@@ -136,7 +136,26 @@ section .titulo-section {
     max-width: 372px;
     width: 100%;
 }
-
+#banner {
+    width: 80%;
+    max-width: 500px;
+    height: 25vw;
+    max-height: 150px;
+    position: relative;
+  }
+  
+  #banner img {
+    opacity: 0;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: opacity 800ms;
+  }
+  
+  #banner img.selected {
+    opacity: 1;
+  }
 /* PRODUCTOS */
 .titulo-section {
     margin-bottom: 10px;

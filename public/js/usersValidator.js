@@ -15,7 +15,8 @@ window.onload = function() {
 
         let expresion = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3,4})+$/;
         let expPassword = /^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#\$%\^&\*])/;
-        let acceptedExtensions = ['.jpg', '.jpeg', '.png', '.gif'];
+        let fileExtension =  productImg.value.split('.').pop();
+        let acceptedExtensions = ['jpg', 'jpeg', 'png', 'gif'];
 
         // let fileExtension = path.extname(userAvatar.value);
 
@@ -50,11 +51,11 @@ window.onload = function() {
             formulario.userAvatar.focus();
         };
 
-        // if( userAvatar.value == "") {
-        //     errores.push("Debes subir una foto.");            
-        // } else if (!acceptedExtensions.includes(fileExtension)){
-        //     errores.push('Las extensiones de archivo permitidas son ' + acceptedExtensions.join(', '));
-        // };
+        if( userAvatar.value == "") {
+            errores.push("Debes subir una foto.");            
+        } else if (!acceptedExtensions.includes(fileExtension)){
+            errores.push('Las extensiones de archivo permitidas son ' + acceptedExtensions.join(', '));
+        };
         
         if (errores.length > 0) {
             e.preventDefault();
