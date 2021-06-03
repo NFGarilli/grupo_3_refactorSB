@@ -27,7 +27,7 @@ window.onload = function() {
          if( productName.value == "") {
              errores.push("Nombre comercial del producto");            
          } else if (productName.value.length < 5 ){
-             errores.push("Tienes que escribir un nombre de mas de 5 caracteres.");      
+             errores.push("El Nombre del producto debe tener al menos 5 caracteres.");      
          } else {
              productDescription.focus()
          };
@@ -35,42 +35,42 @@ window.onload = function() {
          if( productDescription.value == "") {
              errores.push("Descripción del producto");                      
          } else if (productDescription.value.length <20 ){
-             errores.push("La descripcion debe tener un minimo de 20 caracteres.");    
+             errores.push("La descripcion del producto debe tener un minimo de 20 caracteres.");    
          } else {
              productGender.focus();
          };
          if( productGender.value == "") {
              errores.push("Genero del producto");            
          } else if (productGender.value.length < 4 ){
-             errores.push("Tienes que escribir al menos 4 caracteres.");      
+             errores.push("El Genero del producto debe tener al menos 4 caracteres.");      
          } else {
              productCategory.focus()
          };
          if( productCategory.value == "") {
              errores.push("Categoría del producto");            
          } else if (productCategory.value.length < 4 ){
-             errores.push("Tienes que escribir al menos 4 caracteres.");      
+             errores.push("La categoria del producto debe de tener al menos 4 caracteres.");      
          } else {
              productColor.focus()
          };
          if( productColor.value == "") {
              errores.push("Color del producto");            
          } else if (productColor.value.length < 4 ){
-             errores.push("Tienes que escribir al menos 4 caracteres.");      
+             errores.push("El color del producto debe de tener al menos 4 caracteres.");      
          } else {
              productSize.focus()
          };
          if( productSize.value == "") {
              errores.push("Talle del producto");            
          } else if (productSize.value.length < 2 ){
-             errores.push("Tienes que escribir al menos 2 caracteres.");      
+             errores.push("El talle del producto debe tener al menos 2 caracteres.");      
          } else {
              productPrice.focus()
          };
          if( productPrice.value == "") {
              errores.push("Precio del producto");            
          } else if (productPrice.value.length < 2 ){
-             errores.push("Tienes que escribir al menos 2 caracteres.");      
+             errores.push("El Precio del producto debe ser mayor a 2 cifras.");      
          };
                  
 
@@ -90,7 +90,7 @@ window.onload = function() {
             }
         } else {
             alert("El producto se cargo correctamente")
-            submit();
+           productForm.submit(); 
         }
     })
 } 
