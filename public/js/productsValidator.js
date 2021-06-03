@@ -1,77 +1,78 @@
 window.onload = function() {
-    let productForm = document.querySelector ("#product-form");
+    let productForm = document.querySelector("#product-form");
+    console.log(productForm);
 
     productForm.addEventListener("submit", function(e) {
         
-
-        console.log(this.name);
-        let errores = [];
-         console.log(productForm);
-
-        let productName = document.querySelector(this.name);
-        let productDescription = document.querySelector(this.description);
-        let productImg = document.querySelector(this.img);
-         let productGender = document.querySelector(this.gender);
-         let productCategory = document.querySelector(this.category);
-         let productColor = document.querySelector(this.colors);
-         let productSize = document.querySelector(this.sizes);
-         let productPrice = document.querySelector(this.price);        
         
-         let acceptedExtensions = ['.jpg', '.jpeg', '.png', '.gif'];
+     
+        let errores = [];
+        
+         
+        let productName = productForm.name;
+        let productDescription = productForm.description;
+        let productImg = productForm.img;
+        let productGender = productForm.gender;
+        let productCategory = productForm.category;
+        let productColor = productForm.colors;
+        let productSize = productForm.sizes;
+        let productPrice = productForm.price;     
 
-         // let fileExtension = path.extname(productAvatar.value);
-          
-
+        //console.log(productName.value, productDescription.value);
+        let acceptedExtensions = ['.jpg', '.jpeg', '.png', '.gif'];
+        
+        // let fileExtension = path.extname(productAvatar.value);
+         
+       
          if( productName.value == "") {
              errores.push("Nombre comercial del producto");            
          } else if (productName.value.length < 5 ){
              errores.push("Tienes que escribir un nombre de mas de 5 caracteres.");      
          } else {
-             formulario.productDescription.focus()
+             productDescription.focus()
          };
 
          if( productDescription.value == "") {
              errores.push("Descripción del producto");                      
          } else if (productDescription.value.length <20 ){
-             errores.push("Tienes que escribir un minimo de 20 caracteres.");    
+             errores.push("La descripcion debe tener un minimo de 20 caracteres.");    
          } else {
-             formulario.productDescription.focus();
+             productGender.focus();
          };
          if( productGender.value == "") {
              errores.push("Genero del producto");            
          } else if (productGender.value.length < 4 ){
              errores.push("Tienes que escribir al menos 4 caracteres.");      
          } else {
-             formulario.productLastName.focus()
+             productCategory.focus()
          };
          if( productCategory.value == "") {
              errores.push("Categoría del producto");            
          } else if (productCategory.value.length < 4 ){
              errores.push("Tienes que escribir al menos 4 caracteres.");      
          } else {
-             formulario.productLastName.focus()
+             productColor.focus()
          };
          if( productColor.value == "") {
              errores.push("Color del producto");            
-         } else if (productName.value.length < 4 ){
+         } else if (productColor.value.length < 4 ){
              errores.push("Tienes que escribir al menos 4 caracteres.");      
          } else {
-             formulario.productLastName.focus()
+             productSize.focus()
          };
          if( productSize.value == "") {
              errores.push("Talle del producto");            
-         } else if (productName.value.length < 2 ){
+         } else if (productSize.value.length < 2 ){
              errores.push("Tienes que escribir al menos 2 caracteres.");      
          } else {
-             formulario.productLastName.focus()
+             productPrice.focus()
          };
          if( productPrice.value == "") {
              errores.push("Precio del producto");            
-         } else if (productName.value.length < 2 ){
+         } else if (productPrice.value.length < 2 ){
              errores.push("Tienes que escribir al menos 2 caracteres.");      
-         } else {
-             formulario.productLastName.focus()
-         };         
+         };
+                 
 
        //  if( productImg.value == "") {
        //      errores.push("Debes subir una foto.");            
@@ -79,7 +80,7 @@ window.onload = function() {
         //     errores.push('Las extensiones de archivo permitidas son ' + acceptedExtensions.join(', '));
          //};
         
-        e.preventDefault();
+         e.preventDefault();
         if (errores.length > 0) {
             // e.preventDefault();
             let ulErrores = document.querySelector('div.errores ul')
@@ -89,7 +90,7 @@ window.onload = function() {
             }
         } else {
             alert("El producto se cargo correctamente")
-            formulario.submit();
+            submit();
         }
     })
 } 
