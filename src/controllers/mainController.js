@@ -32,6 +32,9 @@ let mainController = {
     guiaTablas: (req, res) => {
         res.render('main/guiaTablas')
     },
+    comunicate: (req, res) => {
+        res.render('main/comunicate')
+    },
 }
 
 module.exports = mainController;

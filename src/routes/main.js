@@ -13,6 +13,8 @@ router.get('/guiaTalles', mainController.guiaTalles);
 router.get('/encontranos', mainController.encontranos);
 router.get('/team', mainController.team);
 router.get('/guiaTablas', mainController.guiaTablas);
+router.get('/comunicate', mainController.comunicate);
+
 
 
 module.exports = router;
