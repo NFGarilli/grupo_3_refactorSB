@@ -15,10 +15,9 @@ window.onload = function() {
         let productSize = productForm.sizes;
         let productPrice = productForm.price;     
 
-        //console.log(productName.value, productDescription.value);
         let fileExtension =  productImg.value.split('.').pop();
         let acceptedExtensions = ['jpg', 'jpeg', 'png', 'gif'];        
-        // let fileExtension = path.extname(productAvatar.value);               
+                 
          if( productName.value == "") {
              errores.push("Nombre comercial del producto");            
          } else if (productName.value.length < 5 ){
@@ -74,9 +73,9 @@ window.onload = function() {
             errores.push('Las extensiones de archivo permitidas son ' + acceptedExtensions.join(', '));
          };
         
-         e.preventDefault();
+        
         if (errores.length > 0) {
-            // e.preventDefault();
+            e.preventDefault();
             let ulErrores = document.querySelector('div.errores ul')
             
             for (let i = 0; i < errores.length; i++) {
