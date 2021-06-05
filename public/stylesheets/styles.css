@@ -101,7 +101,7 @@ section .titulo-section {
     padding: 5px;
 }
 /* REDES */
-.redes{
+/* .redes{
     box-sizing: border-box;
     display: flex;
     margin: 0;
@@ -196,10 +196,117 @@ section .titulo-section {
 }
 .redes ul li:hover:nth-child(3) a::after{
     background: #dd4b39;
+} */
+@import url('//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css');
+* {
+  padding: 0px;
+  margin: 0px;
 }
-
+.redes{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 50vh;
+  background: white;
+}
+.redes ul {
+   position: relative;
+   display: flex;
+   transform: rotate(-25deg) skew(25deg);
+   transform-style: preserve-3d;
+}
+.redes ul li {
+  position: relative;
+  list-style: none;
+  width: 60px;
+  height: 60px;
+  margin: 0px 20px;
+}
+.redes ul li:before{
+  content: '';
+  position: absolute;
+  bottom: -10px;
+  left: -5px;
+  width: 100%;
+  height: 10px;
+  background: rgb(108, 250, 115);
+  trnasform-origin: top;
+  transform: skewX(-41deg);
+}
+.redes ul li:after{
+  content: '';
+  position: absolute;
+  top:5px;
+  left: -9px;
+  width: 9px;
+  height: 100%;
+  background: rgb(108, 250, 115);;
+  trnasform-origin: right;
+  transform: skewY(-49deg);
+}
+.redes ul li span{
+  position: absolute;
+  top: 0;
+  lef: 0;
+  width: 100%;
+  height: 100%;
+  display: flex !important;
+  background: #9e9d9d;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  font-size: 30px !important;
+  transition: 1.5s ease-out;
+}
+.redes ul li:hover span {
+  z-index: 1000;
+  transition: .3s;
+  color: #fff;
+  box-shadw: -1px 1px 1px rgba(0, 0, 0, .5);
+}
+.redes ul li:hover span:nth-child(5){
+  transform: translate(40px, -40px);
+  opacity: 1;
+}
+.redes ul li:hover span:nth-child(4){
+  transform: translate(30px, -30px);
+  opacity: .8;
+}
+.redes ul li:hover span:nth-child(3){
+  transform: translate(20px, -20px);
+  opacity: .6;
+}
+.redes ul li:hover span:nth-child(2){
+  transform: translate(10px, -10px);
+  opacity: .4;
+}
+.redes ul li:hover span:nth-child(1){
+  transform: translate(0px, 0px);
+  opacity: .2;
+}
+.redes ul li:nth-child(1):hover span{
+  background: #00aced !important;
+}
+.redes ul li:nth-child(2):hover span{
+  background: #097aa5 !important;
+}
+.redes ul li:nth-child(3):hover span{
+  background: #EA6E96 !important;
+}
+.redes ul li:nth-child(4):hover span{
+  background: #FCEB00 !important;
+}
+.redes ul li:nth-child(5):hover span{
+    background: green !important;
+  }
+.redes ul li:nth-child(6):hover span{
+    background: red !important;
+  }
+.redes ul li:nth-child(7):hover span{
+    background: rgb(17, 0, 255) !important;
+  }
 /* BANNER TRIPLE */
-
+/* 
 .triple-banner {
     display: inline;
     margin: 20px auto;
@@ -249,7 +356,7 @@ section .titulo-section {
   }
   
   #banner img.selected {
-    opacity: 1;
+    opacity: 1; */
   }
 /* PRODUCTOS */
 .titulo-section {
