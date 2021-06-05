@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: localhost:3306
--- Tiempo de generación: 03-06-2021 a las 16:06:26
+-- Tiempo de generación: 05-06-2021 a las 06:22:29
 -- Versión del servidor: 5.7.24
 -- Versión de PHP: 7.2.19
 
@@ -53,7 +53,8 @@ INSERT INTO `products` (`id`, `name`, `description`, `img`, `gender`, `category`
 (115, 'Pantalon Upper Hand', 'Pantalon Twill a cuadros. Tipo pinzado tiro alto con bolsillos. Fashion Fit', 'product-1621924181260.jpg', 'Mujer', 'Pantalon Mujer', 'varios', 'varios', 6390),
 (116, 'Jean Wonder Super Skinny', 'Jean stretch denim super skinny fit. Tiro alto. Lavado enzimatico suave con pliegues laser.', 'product-1621924430452.jpg', 'Mujer', 'Jean', 'Jean', 'Varios', 5890),
 (117, 'Beanie Rip Curl Ledge', ' Beanie Rip Curl, interior forrado en polar. Talle único. ', 'product-1622733451725.png', 'Hombre', 'Gorro', 'Negro y Crema', 'Unico', 2300),
-(118, 'Gorro', 'Gorro Lana Artesanal', 'product-1622733526833.html', 'Hombre', 'Gorro', 'Negro', 'Unico', 2300);
+(124, 'Beanie Rip Curl Urban', 'Beanie Rip Curl, talle único. ', 'product-1622755433947.jpg', 'Hombre', 'Gorro', 'Negro', 'Unico', 1999),
+(125, 'Steamer Rip Curl 4/3 G BOMB ZIP FREE', 'Steamer 4/3 Zip Free Neoprene E6. Thermo lining E6 de secado rapido. Maxima elasticidad y confort. Todas las costuras selladas. E6 taped en puntos criticos. Ultra livian. Facil de poner.   E6 neoprene  E6 taped  E6 thermo lining', 'product-1622755557516.jpg', 'Mujer', 'Neoprene', 'Negro', 'Varios', 5999);
 
 -- --------------------------------------------------------
 
@@ -105,7 +106,7 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT de la tabla `products`
 --
 ALTER TABLE `products`
-  MODIFY `id` int(50) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=123;
+  MODIFY `id` int(50) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=126;
 
 --
 -- AUTO_INCREMENT de la tabla `users`
