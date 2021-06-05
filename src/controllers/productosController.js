@@ -52,7 +52,7 @@ let productosController = {
             image = req.file.filename
         } 
         else {
-            // image = "/images/product-images/default-image.png"
+            image = "default-image.png"
         }
         console.log (req.body)
         await db.Product.create({
@@ -71,32 +71,31 @@ let productosController = {
 
     /*** PRODUCT EDIT VIEW ***/
     edit: async function (req, res) {
-        
         let productToEdit = await db.Product.findByPk(req.params.id);
         res.render('product/product-edit-form', {productToEdit, toThousand})
     },
 
     /*** PRODUCT EDIT STORAGE ***/
     update: async function (req, res) {
-        let image 
+        let image
+        let id = req.params.id;
+        let product = await db.Product.findByPk(id);
 
-        if (req.file != undefined){
+        if (req.file){
             image = req.file.filename
-        } 
-        else {
-            image = courseToEdit.image
+        } else {
+            image = product.img;
         }
         await db.Product.update(
             {...req.body,
-            image: image,
+                img: image,
             },
             {
-                where: {id: req.params.id}
+                where: {id: id}
             }
             
         );
         console.log (req.body)
-
         res.redirect('/product/product-edit-list');
     }, 
 

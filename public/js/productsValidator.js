@@ -64,20 +64,22 @@ window.onload = function() {
              errores.push("Precio del producto");            
          } else if (productPrice.value.length < 2 ){
              errores.push("El Precio del producto debe ser mayor a 2 cifras.");      
+         } else {
+             productImg.focus()
          };
                  
-
         if( productImg.value == "") {
             errores.push("Debes subir una foto.");            
         } else if (!acceptedExtensions.includes(fileExtension)){
             errores.push('Las extensiones de archivo permitidas son ' + acceptedExtensions.join(', '));
-         };
+        };
         
         
         if (errores.length > 0) {
             e.preventDefault();
             let ulErrores = document.querySelector('div.errores ul')
             
+            ulErrores.innerHTML = "";
             for (let i = 0; i < errores.length; i++) {
                 ulErrores.innerHTML += '<li>' + errores[i] + '</li>'
             }

@@ -12,9 +12,9 @@ window.onload = function() {
         let userPassword = loginForm.password;
         let userAvatar = loginForm.avatar;
 
-        let expresion = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3,4})+$/;
+        let expresion = /^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/;
         let expPassword = /^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#\$%\^&\*])/;
-        let fileExtension =  productImg.value.split('.').pop();
+        let fileExtension =  userAvatar.value.split('.').pop();
         let acceptedExtensions = ['jpg', 'jpeg', 'png', 'gif'];
 
         if( userName.value == "") {
@@ -22,15 +22,15 @@ window.onload = function() {
         } else if (userName.value.length < 3 ){
             errores.push("Tienes que escribir un nombre de mas de 3 caracteres.");      
         } else {
-            loginForm.userLastName.focus()
+            userLastName.focus()
         };
 
         if( userLastName.value == "") {
             errores.push("Tienes que escribir un apellido");                      
-        } else if (userLastName.value.length <3 ){
+        } else if (userLastName.value.length < 3 ){
             errores.push("Tienes que escribir un apellido de mas de 3 caracteres.");    
         } else {
-            loginForm.userEmail.focus();
+            userEmail.focus();
         };
 
         if( userEmail.value == "") {
@@ -38,14 +38,15 @@ window.onload = function() {
         } else if (!expresion.test(userEmail.value)){
             errores.push("El email debe ser un formato valido");
         } else {
-            loginForm.userPassword.focus();
+            userPassword.focus();
         };
+
         if( userPassword.value == "") {
             errores.push("La contraseña no puede ser vacia");            
         } else if (!expPassword.test(userPassword.value)){
             errores.push("Deben ser al menos 8 caracteres, un numero, una mayuscula y un caracter especial")
         } else {
-            loginForm.userAvatar.focus();
+            userAvatar.focus();
         };
 
         if( userAvatar.value == "") {
@@ -54,10 +55,13 @@ window.onload = function() {
             errores.push('Las extensiones de archivo permitidas son ' + acceptedExtensions.join(', '));
         };
         
+        console.log(errores)
+
         if (errores.length > 0) {
             e.preventDefault();
             let ulErrores = document.querySelector('div.errores ul')
             
+            ulErrores.innerHTML = "";
             for (let i = 0; i < errores.length; i++) {
                 ulErrores.innerHTML += '<li>' + errores[i] + '</li>'
             }
