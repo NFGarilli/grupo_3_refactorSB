@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title class="titulo">Editar Usuario</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+
+<body>
+    <figure>
+        <img src="/img/refactorlogo.jpg" alt="Logo Refactor">
+      </figure>
+    <h1 class="titulo">Usuario Editado:  <%= user.name %></h1>
+    <section class="formulario">
+        <form action="/product/update/<%= user.id %>?_method=PUT" method="POST">
+            <label for="name">Nombre </label>
+            <p><input type="text" name="name" id="" value=<%= user.name %> required></p>
+           
+            <label for="lastName">Apellido </label>
+            <p><input type="text" name="lastName" id="" value=<%= user.lastName %> required> </p>
+            
+            <label for="email">Email </label>
+            <p><input type="file" name="email" id="" value=<%= user.email %> required></p>
+            
+            <label for="password">Password </label>
+            <p><input type="text" name="password" id="" value=<%= user.password %>></p>
+           
+            <label for="avatar">Avatar </label>
+            <p><input type="text" name="avatar" id="" value=<%= user.avatar %>></p>
+            
+            <br>
+            <p> <button class="botonAgregar" type="submit">Actualizar</button>
+        
+            <a class="botonVolver" href="/user">Listado de Usuarios</a></p>
+        </form>
+    </section>
+</body>
+
+</html>

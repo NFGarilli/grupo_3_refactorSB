@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><%= product.name %> </title>
+    <link rel='stylesheet' href='/css/style.css' />
+
+</head>
+<body>
+    <figure>
+        <img src="/img/refactorlogo.jpg" alt="Logo Refactor">
+    </figure>
+    <h1><%= product.name %> </h1>    
+    <br>
+    <p>IMAGEN: <%= product.img %> </p>
+    <p>PRECIO: <%= product.price %> </p>
+    <br>
+    <section>
+        <a class="botonModificar" href="/product/edit/<%= product.id %>">Modificar</a>
+        <a class="botonBorrar" href="/product/delete/<%= product.id %>">Borrar</a>
+        <a class="botonVolver" href="/product">Listado de Productos</a>
+    </section>
+
+</body>
+</html>

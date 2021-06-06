@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title class="titulo">Editar Producto</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+
+<body>
+    <figure>
+        <img src="/img/refactorlogo.jpg" alt="Logo Refactor">
+      </figure>
+    <h1 class="titulo">Producto Editado:  <%= product.name %></h1>
+    <section class="formulario">
+        <form action="/product/update/<%= product.id %>?_method=PUT" method="POST">
+            <label for="name">Nombre </label>
+            <p><input type="text" name="name" id="" value=<%= product.name %> required></p>
+           
+            <label for="description">Descripcion </label>
+            <p><input type="text" name="description" id="" value=<%= product.description %> required> </p>
+            
+            <label for="img">Imagen </label>
+            <p><input type="file" name="img" id="" value=<%= product.img %> required></p>
+            
+            <label for="category">Categoria </label>
+            <p><input type="text" name="category" id="" value=<%= product.category %>></p>
+           
+            <label for="colors">Colores </label>
+            <p><input type="text" name="colors" id="" value=<%= product.colors %>></p>
+            
+            <label for="sizes">Talles </label>
+            <p><input type="text" name="sizes" id="" value=<%= product.sizes %>></p>
+
+            <label for="price">Precio </label>
+            <p><input type="number" name="price" id="" value=<%= product.price %> required></p>
+
+            <br>
+            <p> <button class="botonAgregar" type="submit">Actualizar</button>
+        
+            <a class="botonVolver" href="/">Listado de Productos</a></p>
+        </form>
+    </section>
+</body>
+
+</html>

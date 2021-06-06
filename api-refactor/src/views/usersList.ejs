@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Listado de Usuarios</title>
+    <link rel='stylesheet' href='/css/style.css' />
+</head>
+
+<body>
+    <figure>
+        <img src="/img/refactorlogo.jpg" alt="Logo Refactor">
+    </figure>
+    <h1>LISTADO DE USUARIOS</h1>
+    <br>
+    <p>
+        <a class="botonVolver" href="/">Inicio</a>
+    </p>
+    <br>
+    <ul>
+        <% for( let i = 0; i < users.length; i++ ) { %>
+        <li>
+            <a href="/user/detail/<%= users[i].id %>"><%= users[i].name %></a>
+        </li>
+        <% } %>
+    </ul>
+</body>
+
+</html>
