@@ -3,9 +3,10 @@
     <%- include('../partials/header') %>
     <main>
     <section class="new-arrivals">
-        <h3 class="titulo-section">TODOS NUESTROS PRODUCTOS + <%= genre.gender %></h3>
+        <h3 class="titulo-section">TODOS NUESTROS PRODUCTOS + <%= gender.gender %></h3>
         <div class="productos-container">
                           
+            
             <!-- Producto -->
             <% for (let i = 0; i < products.length; i++) { %> 
                 <article class="producto">
