@@ -1201,6 +1201,65 @@ th:last-child{
     .talles, .tablas {
         width: 50%;
     }
+    /* NUEVO NAVEGADOR */
+    .tab {
+        max-width: 800%;
+        padding: 0 2em;
+        border-radius: 0.5em;
+        background-color: #333;
+        line-height: 4em;
+        font-weight: bold;
+        white-space: nowrap;
+        overflow: auto;
+        transition: all 0.5s linear;
+        box-shadow: 5px 5px 20px #000;
+    }
+    .tab-items {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+        display: inline-grid;
+        grid-gap: 1em;
+        transition: color 5s ease-in;
+    }
+    .tab-items> :nth-child(1) {
+        grid-column: 1/2;
+    }
+    .tab-items> :nth-child(2) {
+        grid-column: 2/3;
+    }
+    .tab-items> :nth-child(3) {
+        grid-column: 3/4;
+    }
+    .tab-items> :nth-child(4) {
+        grid-column: 4/5;
+    }
+    .tab-item {
+        display:inline;
+        grid-row: 1/2;
+    }
+    .tab-item.active .item-link {
+        color: rgb(74, 167, 167);
+    }
+    .item-link {
+        padding: 0 0.75em;
+        color: #fff;
+        text-decoration: none;
+        display: inline-block;
+        transition: color 256ms;
+    }
+    .item-link:hover{
+        color: #297;
+        text-decoration: underline;
+    }
+    .tab-indicator{
+        height: 3px;
+        background-color: yellow;
+        border-radius: 3px 3px 0 0;
+        grid-column: var(--index)/span 1 !important;
+        grid-row: 1/2;
+        align-self: end;
+    }
 }
 
 @media (min-width: 1199px) {
