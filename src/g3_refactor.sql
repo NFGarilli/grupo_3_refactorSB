@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: localhost:3306
--- Tiempo de generación: 05-06-2021 a las 06:22:29
+-- Tiempo de generación: 09-06-2021 a las 18:53:33
 -- Versión del servidor: 5.7.24
 -- Versión de PHP: 7.2.19
 
@@ -54,7 +54,12 @@ INSERT INTO `products` (`id`, `name`, `description`, `img`, `gender`, `category`
 (116, 'Jean Wonder Super Skinny', 'Jean stretch denim super skinny fit. Tiro alto. Lavado enzimatico suave con pliegues laser.', 'product-1621924430452.jpg', 'Mujer', 'Jean', 'Jean', 'Varios', 5890),
 (117, 'Beanie Rip Curl Ledge', ' Beanie Rip Curl, interior forrado en polar. Talle único. ', 'product-1622733451725.png', 'Hombre', 'Gorro', 'Negro y Crema', 'Unico', 2300),
 (124, 'Beanie Rip Curl Urban', 'Beanie Rip Curl, talle único. ', 'product-1622755433947.jpg', 'Hombre', 'Gorro', 'Negro', 'Unico', 1999),
-(125, 'Steamer Rip Curl 4/3 G BOMB ZIP FREE', 'Steamer 4/3 Zip Free Neoprene E6. Thermo lining E6 de secado rapido. Maxima elasticidad y confort. Todas las costuras selladas. E6 taped en puntos criticos. Ultra livian. Facil de poner.   E6 neoprene  E6 taped  E6 thermo lining', 'product-1622755557516.jpg', 'Mujer', 'Neoprene', 'Negro', 'Varios', 5999);
+(125, 'Steamer Rip Curl 4/3 G BOMB ZIP FREE', 'Steamer 4/3 Zip Free Neoprene E6. Thermo lining E6 de secado rapido. Maxima elasticidad y confort. Todas las costuras selladas. E6 taped en puntos criticos. Ultra livian. Facil de poner.   E6 neoprene  E6 taped  E6 thermo lining', 'product-1622755557516.jpg', 'Mujer', 'Neoprene', 'Negro', 'Varios', 5999),
+(126, 'Reloj Rip Curl Revelstoke', 'CUADRANTE:  - 3 agujas  CARCASA:  - Plástico ABS  - Sumergible hasta 50m  - Ancho:33mm.  MALLA:   - Silicona', 'product-1623258270194.jpg', 'Hombre', 'Reloj', 'Unico', 'Unico', 8999),
+(127, 'Anteojos Vulk Sunday XL', 'Anteojos Vulk Sunday XL. Marco de acetato. Barra superior de metal. Protección UV 100%.', 'product-1623258358147.jpg', 'Mujer', 'Lentes', 'Unico', 'Unico', 5990),
+(128, 'Anteojos Vulk Group', 'Anteojos Vulk Group. Marco Grilamid. Lentes de policarbonato. Protección UV 100%. ', 'product-1623258435653.jpg', 'Niño', 'Lentes', 'Unico', 'Unico', 4190),
+(129, 'Remera  Santa Cruz Over Print Remera  Santa Cruz Over Print Remera  Santa Cruz Over Print Remera Santa Cruz Over Print', 'Remera Santa Cruz Over Print Jersey 24/1. Estampa en frente y espalda. ', 'product-1623258523598.jpg', 'Niño', 'Remera', 'Unico', 'Varios', 2599),
+(130, 'Rollers K2 Kinetic 80', 'El modelo Kinetic 80 es el la mejor opción para todos aquellos que buscan calidad. Posee un marco F.B.I., que minimiza vibraciones del camino brindando suavidad en el andar. Su característica “stability plus” otorga confianza al usarlos ya que posee la combinación perfecta de soporte y flexibilidad. Sus ruedas de 80 mm pueden alcanzar mayor velocidad en comparación al modelo de 78mm. El sistema K2 speed lacing asegura un rápido y fácil ajuste del patín y mejora el calce gracias a su ya original y probada bota SoftBoot.', 'product-1623258657992.jpg', 'Productos técnicos', 'Rollers', 'Unico', 'Unico', 19900);
 
 -- --------------------------------------------------------
 
@@ -106,7 +111,7 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT de la tabla `products`
 --
 ALTER TABLE `products`
-  MODIFY `id` int(50) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=126;
+  MODIFY `id` int(50) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=131;
 
 --
 -- AUTO_INCREMENT de la tabla `users`
