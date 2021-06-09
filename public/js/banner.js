@@ -18,6 +18,5 @@ window.onload = function() {
 
       setInterval(() => {
         nextImage();
-        console.log(currentImageIndex)
       }, time)
 }

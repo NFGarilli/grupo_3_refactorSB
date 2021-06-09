@@ -4,8 +4,17 @@
     <div class="main-header">
         <div class="top-header">
             <div class="hamburger-search">
-                <i class="fas fa-bars"></i>
+                <button id="hamburger"><i class="fas fa-bars"></i></button>
                 <i class="fas fa-search"></i>
+            </div>
+
+            <div class="leftMenu" id="leftMenu">
+                <button id="close-button" class="">Close &times;</button>
+                <a href="/">INICIO</a>
+                <a href="/product/products">PRODUCTOS</a>
+                <a href="/enConstruction">OFERTAS</a>
+                <a href="/enConstruction">CATEGORIAS</a>
+                <a href="/team">TEAM</a>
             </div>
 
             <div class="main-logo">
@@ -14,7 +23,7 @@
 
             <div class="search-form-container">
                 <form class="search-form" action="">
-                    <FORM METHOD=GET ACTION="../g3_refactor" role="search"><INPUT TYPE="text" placeholder="Encontrame Aqui!!" NAME="busqueda"><i class="fas fa-search"></i></FORM>
+                    <FORM METHOD=GET ACTION="../g3_refactor" role="search"><INPUT TYPE="text" placeholder="Que estas buscando?" NAME="busqueda"><i class="fas fa-search"></i></FORM>
                     <!-- <input type="text" name="" id="" placeholder="Encontrame Aqui!!"> -->
                 </form>
             </div>          
@@ -74,4 +83,5 @@
         </div>
     </div>
     <!-- <script src="/js/headerValidator.js"></script> -->
+    
 </header>
