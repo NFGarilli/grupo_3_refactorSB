@@ -90,7 +90,7 @@ a {
 }
 
 #leftMenu {
-    display: block;
+    display: none;
     width: 200px;
     height: 100%;
     top: 0;
