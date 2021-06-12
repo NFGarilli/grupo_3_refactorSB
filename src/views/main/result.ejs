@@ -1,0 +1,79 @@
+<%- include('../partials/head') %>
+<body>
+    <%- include('../partials/header') %>
+    <main>
+    <section class="new-arrivals">
+        <h3 class="titulo-section">TODOS NUESTROS PRODUCTOS</h3>
+        <div class="productos-container">
+                          
+            <!-- Producto -->
+            <% for (let i = 0; i < products.length; i++) { %> 
+                <article class="producto">
+                    <div class="producto-image">
+                        <a href=<%= "/product/products/" + products[i].id %>> <img src="/images/product-images/<%= products[i].img %>" alt=<%= products[i].name %> ></a>
+                    </div>
+                    <div class="producto-footer">
+                        <h2 class="title"><%= products[i].name %></h2>
+                        <span class="title-meta">
+                            <span class="title-price"><%= 'AR$ ' + products[i].price %></span>
+                        </span>
+                    </div>
+                </article>
+            <% } %>
+            <!-- PAGINADO -->
+            <!-- <div id="container">
+                <div id="outer">
+                    <div class="first">0</div>
+                    <div>1</div>
+                    <div>2</div>
+                    <div>3</div>
+                    <div>4</div>
+                    <div>5</div>
+                    <div>6</div>
+                    <div>7</div>
+                </div>
+                <div>
+                    <table>
+                        <tr>
+                            <td class="prev" title="Previous"><<>
+                            <td class="next" title="Next">>></td>
+                        </tr>
+                    </table>
+                </div>
+            </div> -->
+        </main>
+    <%- include('../partials/footer') %>
+    <!-- JS PROBANDO PAGINADO -->
+    <!-- <script>
+        $(document).ready(function () {
+            var $first = $(".first");
+            var i = 0;
+            $(".prev").click(function () {
+                ++i;
+                if ($('#outer div').length / 2 < i) {
+                    i = 0;
+                    $('#outer .first').css('background', 'blue');
+                    $first = $(".first");                   
+                } else {
+                    $first = $first.prev();
+                    $("#outer div").css("background", "green");
+                    $first.css("background", "blue");
+                }
+            });
+            $(".next").click(function () {
+                ++i;
+                if ($('#outer div').length / 2 < i) {
+                    i = 0;
+                    $('#outer .first').css('background', 'blue');
+                    $first = $(".first");
+                } else {
+                    $first = $first.next();
+                    $("#outer div").css("background", "green");
+                    $first.css("background", "blue");
+                }
+            });
+        });
+    </script> -->
+</body>
+</html>
+
