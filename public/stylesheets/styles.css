@@ -90,7 +90,7 @@ a {
 }
 
 #leftMenu {
-    display: block;
+    display: none;
     width: 200px;
     height: 100%;
     top: 0;
@@ -103,7 +103,7 @@ a {
 
 #close-button {
     margin-top: 20px;
-    display: block;
+    display: none;
     z-index: 2;
     width: 100%;
     font-size: 20px;
@@ -1102,6 +1102,7 @@ th:last-child{
     .productos-container article {
         width: 45%;
     }
+    
 
     input[type='email'] {
         width: 300px;
