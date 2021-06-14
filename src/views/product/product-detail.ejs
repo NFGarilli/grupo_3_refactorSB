@@ -19,7 +19,7 @@
                     </div>
                 </div>
                 <div class="options">
-                    <form action="post">
+                    <form method="POST" action="/main/product-cart" >
                         <div class="product-form-grid">
                             <div class="option-header"><span>SIZE:</span></div>
                             <div class="option-values">
@@ -58,7 +58,7 @@
                             <div class="option-header"><span>QUANTITY:</span></div>
                             <input type="number" class="product-quantity-input" name="quantity" value="1" min="0">
                             <div class="login-button-container">
-                                <button type="submit" class="product-submit">AGREGAR AL CARRITO</button>
+                                <a href="/cart" class="product-submit">AGREGAR AL CARRITO</a>
                             </div>
                         </form>
                         </div>
