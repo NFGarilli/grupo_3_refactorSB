@@ -4,12 +4,12 @@
     <div class="main-header">
         <div class="top-header">
             <div class="hamburger-search">
-                <button id="hamburger"><i class="fas fa-bars"></i></button>
+                <button id="hamburger" onclick="openMenu()"><i class="fas fa-bars"></i></button>
                 <i class="fas fa-search"></i>
             </div>
 
             <div class="leftMenu" id="leftMenu">
-                <button id="close-button" class="">Close &times;</button>
+                <button id="close-button"  onclick="closeMenu()" class="">Close &times;</button>
                 <a href="/">INICIO</a>
                 <a href="/product/products">PRODUCTOS</a>
                 <a href="/enConstruction">OFERTAS</a>
@@ -28,10 +28,13 @@
 
             <div class="usuario">
                 <div class="login-menu">
-                    <% if (locals.isLogged) { %>
+                    <% if (locals.isLogged) { %> <!-- locals.isLogged da que user es undefined, sin embargo, req.sessions.userLogged si me da el usuario loggeado-->
+                        <div class="profile-avatar"><img src="/images/user-avatars/<%= user.avatar %>" alt="avatar" width="150"></div>
+                        
                         <div class="user-button"><a href="/user/login"><i class="fas fa-user"></i></a></div>
                     <% } else { %>
                         <div class="login-register">
+                           
                             <a href="/user/login" class="loginlink">Loguearse</a>
                             <a href="/user/register" class="registerlink">Registrarse</a>
                         </div>
@@ -81,5 +84,31 @@
         </div>
     </div>
     <!-- <script src="/js/headerValidator.js"></script> -->
-    
+   <!-- <script>
+        function toggleMenu() {
+    document.getElementById("leftMenu").style.display = 'none';
+    var x = document.getElementById("leftMenu");
+    if (x.style.display === "block") {
+      x.style.display = "none";
+    } else {
+      x.style.display = "block";
+    }
+  }
+    </script>
+    --> <!-- Este toggle me permitia usar una unica funcion, pero como tenemos dos botones distintos, la solucion siguiente es mas adecuada.-->
+<script>
+    function openMenu() {
+    document.getElementById("leftMenu").style.display = 'block';
+}
+</script>
+
+<script>
+    function closeMenu() {
+    document.getElementById("leftMenu").style.display = 'none';
+}
+</script>
+
+
+
 </header>
+

@@ -30,4 +30,15 @@ router.get('/profile', authMiddleware, usersController.profile);
 /*** USER LOGOUT ***/
 router.get('/logout', usersController.logout);
 
+router.get('/check', function(req, res){
+    if (req.session.userLogged == undefined){
+        res.send("No estas logeado")
+    } else {
+        res.send("Hola " + req.session.userLogged.name);
+    }
+});
+    
+
+
+
 module.exports = router;
