@@ -29,9 +29,7 @@
             <div class="usuario">
                 <div class="login-menu">
                     <% if (locals.isLogged) { %> <!-- locals.isLogged da que user es undefined, sin embargo, req.sessions.userLogged si me da el usuario loggeado-->
-                        <div class="profile-avatar"><img src="/images/user-avatars/<%= user.avatar %>" alt="avatar" width="150"></div>
-                        
-                        <div class="user-button"><a href="/user/login"><i class="fas fa-user"></i></a></div>
+                        <div class="profile-avatar-pic"><a href="/user/login"><img src="/images/user-avatars/<%= userLogged.avatar %>" alt="avatar"></a></div>
                     <% } else { %>
                         <div class="login-register">
                            

@@ -38,6 +38,10 @@ a {
     flex-direction: row;
 }
 
+#hamburger {
+    border: none;
+    background: none;
+}
 
 .hamburger-search {
     display: flex;
@@ -89,6 +93,18 @@ a {
     display: none;
 }
 
+.profile-avatar-pic {
+    width: 50px;
+    height: 50px;
+}
+
+.profile-avatar-pic img {
+    border-radius: 50%;
+    border: 0.5px solid black;
+    width: 25px;
+    height: 25px;
+}
+
 #leftMenu {
     display: none;
     width: 200px;
@@ -97,13 +113,12 @@ a {
     left: 0;
     background-color: black;
     z-index: 1;
-    transition: left 1;
+    transition: display 1s;
     position: absolute;
 }
 
 #close-button {
     margin-top: 20px;
-    display: none;
     z-index: 2;
     width: 100%;
     font-size: 20px;
@@ -485,8 +500,17 @@ h2.title {
     width: 100%;
     margin: 0px auto !important;
     display: flex;
+    flex-wrap: wrap;
     flex-direction: row;
     justify-content: center;
+}
+
+.tablas img{
+    width: 100%;
+}
+
+.talles img{
+    width: 100%;
 }
 
 input[type='email'] {
@@ -823,7 +847,7 @@ article:hover .producto-footer .title {
 #tablePL {
     margin: auto;
     margin-top: 30px;
-    width: 35%;
+    width: 100%;
     border: 1px solid black;
     border-collapse: collapse;
 }
@@ -1315,9 +1339,14 @@ th:last-child{
         grid-row: 1/2;
         align-self: end;
     }
+
 }
 
 @media (min-width: 1199px) {
+    #tablePL {
+        width: 60%;
+    }
+
     .small-container {
         width: 70%;
     }

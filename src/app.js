@@ -9,6 +9,12 @@ const path = require('path');
 /*** MIDDLEWARES ***/
 const userLoggedMiddleware = require('./middlewares/userLoggedMiddleware');
 
+app.use(session ({
+    secret: "El polaco bastia",
+    resave: false,
+    saveUninitialized: false,
+}));
+
 app.use(express.urlencoded({extended:false}));
 app.use(express.json());
 app.use(cookies());
@@ -16,12 +22,6 @@ app.use(userLoggedMiddleware);
 app.use(methodOverride('_method'));
 app.use(express.static('../public'));
 app.set('view engine', 'ejs');
-
-app.use(session ({
-    secret: "El polaco bastia",
-    resave: false,
-    saveUninitialized: false,
-}));
 
 const rutasMain = require('./routes/main');
 const rutasProductos = require('./routes/productos');
@@ -31,6 +31,7 @@ const rutasUsers = require('./routes/users');
 app.use('/', rutasMain);
 app.use('/product', rutasProductos);
 app.use('/user', rutasUsers);
+
 // ************ error handler ************
 // ************ catch 404 and forward to error handler ************
 app.use((req, res, next) => {
