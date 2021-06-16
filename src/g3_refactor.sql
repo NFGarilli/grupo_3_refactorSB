@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 5.1.0
+-- version 5.0.4
 -- https://www.phpmyadmin.net/
 --
--- Servidor: localhost:3306
--- Tiempo de generación: 09-06-2021 a las 18:53:33
--- Versión del servidor: 5.7.24
--- Versión de PHP: 7.2.19
+-- Servidor: 127.0.0.1
+-- Tiempo de generación: 16-06-2021 a las 22:56:04
+-- Versión del servidor: 10.4.17-MariaDB
+-- Versión de PHP: 8.0.2
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -58,7 +58,7 @@ INSERT INTO `products` (`id`, `name`, `description`, `img`, `gender`, `category`
 (126, 'Reloj Rip Curl Revelstoke', 'CUADRANTE:  - 3 agujas  CARCASA:  - Plástico ABS  - Sumergible hasta 50m  - Ancho:33mm.  MALLA:   - Silicona', 'product-1623258270194.jpg', 'Hombre', 'Reloj', 'Unico', 'Unico', 8999),
 (127, 'Anteojos Vulk Sunday XL', 'Anteojos Vulk Sunday XL. Marco de acetato. Barra superior de metal. Protección UV 100%.', 'product-1623258358147.jpg', 'Mujer', 'Lentes', 'Unico', 'Unico', 5990),
 (128, 'Anteojos Vulk Group', 'Anteojos Vulk Group. Marco Grilamid. Lentes de policarbonato. Protección UV 100%. ', 'product-1623258435653.jpg', 'Niño', 'Lentes', 'Unico', 'Unico', 4190),
-(129, 'Remera  Santa Cruz Over Print Remera  Santa Cruz Over Print Remera  Santa Cruz Over Print Remera Santa Cruz Over Print', 'Remera Santa Cruz Over Print Jersey 24/1. Estampa en frente y espalda. ', 'product-1623258523598.jpg', 'Niño', 'Remera', 'Unico', 'Varios', 2599),
+(129, 'Remera  Santa Cruz Over Print ', 'Remera Santa Cruz Over Print Jersey 24/1. Estampa en frente y espalda. ', 'product-1623258523598.jpg', 'Niño', 'Remera', 'Unico', 'Varios', 2599),
 (130, 'Rollers K2 Kinetic 80', 'El modelo Kinetic 80 es el la mejor opción para todos aquellos que buscan calidad. Posee un marco F.B.I., que minimiza vibraciones del camino brindando suavidad en el andar. Su característica “stability plus” otorga confianza al usarlos ya que posee la combinación perfecta de soporte y flexibilidad. Sus ruedas de 80 mm pueden alcanzar mayor velocidad en comparación al modelo de 78mm. El sistema K2 speed lacing asegura un rápido y fácil ajuste del patín y mejora el calce gracias a su ya original y probada bota SoftBoot.', 'product-1623258657992.jpg', 'Productos técnicos', 'Rollers', 'Unico', 'Unico', 19900);
 
 -- --------------------------------------------------------
@@ -85,7 +85,8 @@ INSERT INTO `users` (`id`, `name`, `lastName`, `email`, `password`, `avatar`) VA
 (48, 'Abbe', 'MacCaffrey', 'amaccaffrey1b@google.com.hk', 'XV2LCkhGS', 'https://robohash.org/repellatdoloremquenobis.png?s'),
 (49, 'Ferdy', 'Dudin', 'fdudin1c@google.com.hk', 'G8hOV8v', 'https://robohash.org/officiisevenietnemo.png?size='),
 (50, 'Yuma', 'Fritche', 'yfritche1d@netscape.com', 'v3G3YsD6f', 'https://robohash.org/etetsit.png?size=50x50&set=se'),
-(57, 'lucas', 'alvarez', 'alvarezlucass@hotmail.com', '$2a$10$rvVZsCZtQwLTBlpYxwlOre5spL5.EXQkECgoOLcZHP/Vevt/XDOtq', 'avatar-1621728054506.jpg');
+(57, 'lucas', 'alvarez', 'alvarezlucass@hotmail.com', '$2a$10$rvVZsCZtQwLTBlpYxwlOre5spL5.EXQkECgoOLcZHP/Vevt/XDOtq', 'avatar-1621728054506.jpg'),
+(58, 'Tomas', 'Sanchez', 't@gmail.com', '$2a$10$Z28z5p8w2MER22M0fZkoU.mg6Q6o173ntOh80xZ48n642X8cUUI6e', 'avatar-1623269497214.jpeg');
 
 --
 -- Índices para tablas volcadas
@@ -117,7 +118,7 @@ ALTER TABLE `products`
 -- AUTO_INCREMENT de la tabla `users`
 --
 ALTER TABLE `users`
-  MODIFY `id` int(50) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=58;
+  MODIFY `id` int(50) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=64;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

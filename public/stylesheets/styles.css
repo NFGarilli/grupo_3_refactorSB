@@ -414,14 +414,14 @@ section .titulo-section {
     position: relative;
   }
   
-  
   #banner img {
     opacity: 0;
     position: absolute;
     width: 100%;
     height: 100%;
-    object-fit: cover;
+    object-fit: scale-down;
     transition: opacity 2000ms;
+    padding: 10px;
   }
   
   #banner img.selected {
@@ -1177,12 +1177,14 @@ th:last-child{
         align-items: center;
         justify-content: center;
         width: auto;
+        height: 100%;
         max-width: 100%;
         margin: 0px auto;
     }
     
     .banner-img-elements img {
         width: 100%;
+        height: 100%;
     }
 
     .row {
