@@ -457,6 +457,8 @@ h2.title {
 
 }
 
+
+
 /* FOOTER */
 .subscribe {
     border-bottom: 1px solid black;
@@ -717,6 +719,7 @@ article:hover .producto-footer .title {
     align-items: flex-start;
     flex-direction: column;
     width: 100%;
+    padding: 15px;
 }
 
 .options {
