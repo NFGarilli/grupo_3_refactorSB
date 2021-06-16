@@ -648,6 +648,14 @@ button {
     transition: 0.5s;
 }
 
+.user-button {
+    display: block;
+}
+
+.login-register {
+    display: none !important;
+}
+
 i:hover {
     color: tomato;
 }
@@ -1118,6 +1126,10 @@ th:last-child{
     display: none;
 }
 
+.banner-pagina img {
+    width: 100%;
+}
+
 @media (min-width: 361px)  {
     main section div.productos-container{
         display: flex;
@@ -1141,6 +1153,15 @@ th:last-child{
 }
 
 @media (min-width: 768px)  {
+    .user-button {
+        display: none !important;
+    }
+    
+    .login-register {
+        display: flex !important;
+    }
+    
+
     .productos-container article {
         width: 22%;
     }
