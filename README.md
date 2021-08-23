@@ -1,5 +1,8 @@
 # Refactor Skateboarding
 
+### Video Presentacion:
+[![Refactor Skateboarding](https://img.youtube.com/vi/n1SuXPxPd84/0.jpg)](https://www.youtube.com/watch?v=n1SuXPxPd84)
+
 ### Trello:
 https://trello.com/b/mFVDvh26/refactorsb
 
@@ -21,5 +24,6 @@ mercado del skateboarding.
 3. https://www.volcom.com.ar/
 4. https://www.dcshoes.com.ar/
 5. https://www.quiksilver.com.ar/
+
 
 
